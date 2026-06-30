@@ -1,0 +1,4047 @@
+[
+  {
+    "id": "frieren",
+    "slug": "provozhayuschaya-v-posledniy-put-friren",
+    "malId": 52991,
+    "aniLibriaReleaseId": 9542,
+    "source": "local",
+    "title": "Sousou no Frieren",
+    "titleRu": "Провожающая в последний путь Фрирен",
+    "type": "TV",
+    "year": 2023,
+    "episodes": 28,
+    "franchise": "Фрирен",
+    "genres": [
+      "Фэнтези",
+      "Приключения",
+      "Драма",
+      "Магия"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1015/138006l.jpg",
+    "synopsis": "После десяти лет странствий группа искателей приключений вместе с волшебницей Фрирен одолели короля демонов, освободив мир от гнёта монстров. Имена героев увековечены в легендах и балладах, и теперь их ждёт спокойная размеренная жизнь до самой старости. Но у Фрирен другая судьба. Она эльф, и способна прожить больше тысячи лет. Человеческая жизнь для неё — лишь мгновение, поэтому, не успев опомниться, она остаётся совсем одна.\r\nЭто история о неизменной героине, путешествующей в постоянно меняющемся мире, и пытающейся скрыться от теней прошлого, которые её преследуют.",
+    "altTitles": [
+      "Провожающая в последний путь Фрирен",
+      "Sousou no Frieren",
+      "sousou-no-frieren"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 94000,
+    "requestBase": 9800,
+    "shikimori": {
+      "id": 52991,
+      "title": "Sousou no Frieren",
+      "titleRu": "Провожающая в последний путь Фрирен",
+      "score": 9.27,
+      "votes": 69238,
+      "url": "https://shikimori.one/animes/52991-sousou-no-frieren",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-188176-52991",
+        "name": "Fern",
+        "role": "Главный герой",
+        "image": "/assets/characters/52991-188176.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-184947-52991",
+        "name": "Frieren",
+        "role": "Главный герой",
+        "image": "/assets/characters/52991-184947.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-188177-52991",
+        "name": "Stark",
+        "role": "Главный герой",
+        "image": "/assets/characters/52991-188177.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-206722-52991",
+        "name": "Aura",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-206722.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-298195-52991",
+        "name": "Bakery Owner",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-298195.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-271503-52991",
+        "name": "Bartender",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-271503.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-215341-52991",
+        "name": "Blei",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-215341.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-215302-52991",
+        "name": "Burg",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-215302.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-271502-52991",
+        "name": "Captain of the Guard",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-271502.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-271501-52991",
+        "name": "Castellan",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-271501.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-238061-52991",
+        "name": "Chief of the Village of the Sword",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-238061.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      },
+      {
+        "id": "mal-character-271507-52991",
+        "name": "Church Father",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/52991-271507.jpg",
+        "tags": [
+          "Провожающая Фрирен"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jujutsu-kaisen",
+    "slug": "magicheskaya-bitva",
+    "malId": 40748,
+    "aniLibriaReleaseId": 8789,
+    "source": "local",
+    "title": "Jujutsu Kaisen",
+    "titleRu": "Магическая битва",
+    "type": "TV",
+    "year": 2020,
+    "episodes": 24,
+    "franchise": "Магическая битва",
+    "genres": [
+      "Экшен",
+      "Сверхъестественное",
+      "Школа",
+      "Сёнен",
+      "Демоны",
+      "Фэнтези"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1171/109222l.jpg",
+    "synopsis": "Действие аниме происходит в мире, где люди оказались вовсе не последним звеном в пищевой цепи, и любой ничего не подозревающий обыватель при должной доле невезения может оказаться съеденным демонами, которые воплощают собой негативные человеческие эмоции. Таких созданий называют проклятиями. Пускай люди в большинстве своём не догадываются о существовании проклятий, те имеют уже давнюю историю, одним из эпизодов которой являются деяния легендарного демона Сукуны Рёмэна, которого с большим трудом удалось одолеть. Его тело было поделено на двадцать частей, которые оказались разбросаны по миру. Если найдётся некто, кто поглотит все фрагменты его плоти, то он обретёт мощь, способную уничтожить современную цивилизацию.\n\nВот такая сложилась ситуация в мире, где в полном неведении о нависшей над человечеством угрозе проживает старшеклассник Юдзи Итадори. У Юдзи совершенно иные заботы: он каждый день навещает дедушку в больнице и отбрыкивается от спортивных кружков, которые мечтают заполучить его из-за выдающейся физической силы и выносливости. Юдзи предпочёл вступить в клуб оккультных наук, с которого и начались все неприятности, когда в руки членов клуба попал таинственный предмет, на который наложено проклятье. Недолго думая, школьники разбили запечатывающее заклинание и выпустили на свет ужасные силы.",
+    "altTitles": [
+      "Магическая битва",
+      "Jujutsu Kaisen",
+      "jujutsu-kaisen"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 132000,
+    "requestBase": 12800,
+    "shikimori": {
+      "id": 40748,
+      "title": "Jujutsu Kaisen",
+      "titleRu": "Магическая битва",
+      "score": 8.5,
+      "votes": 106981,
+      "url": "https://shikimori.one/animes/40748-jujutsu-kaisen",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-164470-40748",
+        "name": "Fushiguro, Megumi",
+        "role": "Главный герой",
+        "image": "/assets/characters/40748-164470.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-164471-40748",
+        "name": "Gojou, Satoru",
+        "role": "Главный герой",
+        "image": "/assets/characters/40748-164471.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-163847-40748",
+        "name": "Itadori, Yuuji",
+        "role": "Главный герой",
+        "image": "/assets/characters/40748-163847.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-164472-40748",
+        "name": "Kugisaki, Nobara",
+        "role": "Главный герой",
+        "image": "/assets/characters/40748-164472.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-257843-40748",
+        "name": "Aida",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-257843.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-180764-40748",
+        "name": "Chousou",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-180764.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-184441-40748",
+        "name": "Dagon",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-184441.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-193867-40748",
+        "name": "Esou",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-193867.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-248508-40748",
+        "name": "Finger Bearer",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-248508.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-199620-40748",
+        "name": "Fujinuma",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-199620.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-199621-40748",
+        "name": "Fujinuma's Brother",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-199621.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      },
+      {
+        "id": "mal-character-189233-40748",
+        "name": "Fushiguro, Tsumiki",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/40748-189233.jpg",
+        "tags": [
+          "Магическая битва"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimetsu",
+    "slug": "klinok-rassekayuschiy-demonov",
+    "malId": 38000,
+    "aniLibriaReleaseId": 8325,
+    "source": "local",
+    "title": "Kimetsu no Yaiba",
+    "titleRu": "Клинок, рассекающий демонов",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 26,
+    "franchise": "Клинок, рассекающий демонов",
+    "genres": [
+      "Экшен",
+      "Историческое",
+      "Демоны",
+      "Сёнен",
+      "Исторический",
+      "Приключения",
+      "Сверхъестественное",
+      "Фэнтези"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1286/99889l.jpg",
+    "synopsis": "С древних времён, люди боятся демонов. \r\nПосле смерти своего отца Танжиро пришлось самому заботиться о своей маме и братьях с сёстрами. Несмотря на трагедию, их жизнь казалась счастливой. Но в один день счастью приходит конец. Семья Танжиро убита, а единственная выжившая сестра Нэзуко превратилась в демона. В довершение трагедии появляется охотник на демонов Томиока Гию. Он уже собирался прикончить Нэзуко, когда к его удивлению, брат с сестрой встали на защиту друг друга. Увидев навыки Танжиро и странность ситуации, Гию решает отправить ребят к своему старому учителю.\r\nТак начинается жизнь Танжиро в качестве охотника на демонов. Он отправляется на поиски способа вылечить свою сестру, а также не забывает о мести убийце своей семьи.",
+    "altTitles": [
+      "Клинок, рассекающий демонов",
+      "Kimetsu no Yaiba",
+      "Убийца демонов",
+      "kimetsu-no-yaiba"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 125000,
+    "requestBase": 11900,
+    "shikimori": {
+      "id": 38000,
+      "title": "Kimetsu no Yaiba",
+      "titleRu": "Клинок, рассекающий демонов",
+      "score": 8.41,
+      "votes": 127663,
+      "url": "https://shikimori.one/animes/z38000-kimetsu-no-yaiba",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-146158-38000",
+        "name": "Agatsuma, Zenitsu",
+        "role": "Главный герой",
+        "image": "/assets/characters/38000-146158.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-146159-38000",
+        "name": "Hashibira, Inosuke",
+        "role": "Главный герой",
+        "image": "/assets/characters/38000-146159.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-146157-38000",
+        "name": "Kamado, Nezuko",
+        "role": "Главный герой",
+        "image": "/assets/characters/38000-146157.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-146156-38000",
+        "name": "Kamado, Tanjirou",
+        "role": "Главный герой",
+        "image": "/assets/characters/38000-146156.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246846-38000",
+        "name": "Blue-Haired Demon",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246846.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246847-38000",
+        "name": "Brown-Haired Demon",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246847.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246848-38000",
+        "name": "Cocky Demon Slayer",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246848.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246849-38000",
+        "name": "Doctor",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246849.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246843-38000",
+        "name": "Eldest Sister Spider Demon",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246843.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-173936-38000",
+        "name": "Enmu",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-173936.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-172053-38000",
+        "name": "Father Spider Demon",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-172053.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      },
+      {
+        "id": "mal-character-246850-38000",
+        "name": "Female Kakushi",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/38000-246850.jpg",
+        "tags": [
+          "Клинок, рассекающий демонов"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attack-on-titan",
+    "slug": "ataka-titanov",
+    "malId": 16498,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Shingeki no Kyojin",
+    "titleRu": "Атака титанов",
+    "type": "TV",
+    "year": 2013,
+    "episodes": 25,
+    "franchise": "Атака титанов",
+    "genres": [
+      "Экшен",
+      "Драма",
+      "Мистика"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/10/47347l.jpg",
+    "synopsis": "Люди живут за стенами, пока появление титанов не запускает историю войны, свободы и жестких решений.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 160000,
+    "requestBase": 11000,
+    "shikimori": {
+      "id": 16498,
+      "title": "Shingeki no Kyojin",
+      "titleRu": "Атака титанов",
+      "score": 8.57,
+      "votes": 161278,
+      "url": "https://shikimori.one/animes/16498-shingeki-no-kyojin",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-40881-16498",
+        "name": "Ackerman, Mikasa",
+        "role": "Главный герой",
+        "image": "/assets/characters/16498-40881.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-46494-16498",
+        "name": "Arlert, Armin",
+        "role": "Главный герой",
+        "image": "/assets/characters/16498-46494.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-40882-16498",
+        "name": "Yeager, Eren",
+        "role": "Главный герой",
+        "image": "/assets/characters/16498-40882.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-150717-16498",
+        "name": "Abel",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-150717.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-84339-16498",
+        "name": "Ackerman, Father",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-84339.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-84341-16498",
+        "name": "Ackerman, Mother",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-84341.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-84313-16498",
+        "name": "Arlert, Grandfather",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-84313.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-84327-16498",
+        "name": "Balto",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-84327.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-89387-16498",
+        "name": "Berner, Moblit",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-89387.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-45887-16498",
+        "name": "Blouse, Sasha",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-45887.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-62479-16498",
+        "name": "Bott, Marco",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-62479.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      },
+      {
+        "id": "mal-character-92955-16498",
+        "name": "Bozado, Mother",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/16498-92955.jpg",
+        "tags": [
+          "Атака титанов"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spy-family",
+    "slug": "semya-shpiona",
+    "malId": 50265,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Spy x Family",
+    "titleRu": "Семья шпиона",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 12,
+    "franchise": "Семья шпиона",
+    "genres": [
+      "Комедия",
+      "Экшен",
+      "Семья"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1441/122795l.jpg",
+    "synopsis": "Шпион, наемница и девочка-телепат строят фальшивую семью, которая неожиданно становится самой настоящей.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 75000,
+    "requestBase": 8100,
+    "shikimori": {
+      "id": 50265,
+      "title": "Spy x Family",
+      "titleRu": "Семья шпиона",
+      "score": 8.42,
+      "votes": 70211,
+      "url": "https://shikimori.one/animes/50265-spy-x-family",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-170329-50265",
+        "name": "Forger, Yor",
+        "role": "Главный герой",
+        "image": "/assets/characters/50265-170329.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-170258-50265",
+        "name": "Forger, Loid",
+        "role": "Главный герой",
+        "image": "/assets/characters/50265-170258.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-170256-50265",
+        "name": "Forger, Anya",
+        "role": "Главный герой",
+        "image": "/assets/characters/50265-170256.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-214065-50265",
+        "name": "Aquarist",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-214065.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-283541-50265",
+        "name": "Austin, Thomas",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-283541.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-210565-50265",
+        "name": "Barnes",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-210565.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-220743-50265",
+        "name": "Black-Suited Man A",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-220743.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-220744-50265",
+        "name": "Black-Suited Man B",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-220744.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-177510-50265",
+        "name": "Blackbell, Becky",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-177510.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-208895-50265",
+        "name": "Bondman",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-208895.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-211227-50265",
+        "name": "Bondman's Boss",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-211227.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      },
+      {
+        "id": "mal-character-209754-50265",
+        "name": "Brennan",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/50265-209754.jpg",
+        "tags": [
+          "Семья шпиона"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "one-piece",
+    "slug": "van-pis",
+    "malId": 21,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "One Piece",
+    "titleRu": "Ван-Пис",
+    "type": "TV",
+    "year": 1999,
+    "episodes": null,
+    "franchise": "Ван-Пис",
+    "genres": [
+      "Приключения",
+      "Комедия",
+      "Сёнэн"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/6/73245l.jpg",
+    "synopsis": "Манки Д. Луффи собирает команду и отправляется за легендарным сокровищем, превращая море в карту дружбы и приключений.",
+    "altTitles": [
+      "One Piece",
+      "Ван-Пис"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 200000,
+    "requestBase": 15000,
+    "shikimori": {
+      "id": 21,
+      "title": "One Piece",
+      "titleRu": "Ван-Пис",
+      "score": 8.73,
+      "votes": 47791,
+      "url": "https://shikimori.one/animes/21-one-piece",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-5627-21",
+        "name": "Brook",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-5627.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-64-21",
+        "name": "Franky",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-64.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-18938-21",
+        "name": "Jinbe",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-18938.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-40-21",
+        "name": "Monkey D., Luffy",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-40.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-723-21",
+        "name": "Nami",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-723.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-61-21",
+        "name": "Nico, Robin",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-61.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-62-21",
+        "name": "Roronoa, Zoro",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-62.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-305-21",
+        "name": "Sanji",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-305.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-309-21",
+        "name": "Tony Tony, Chopper",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-309.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-724-21",
+        "name": "Usopp",
+        "role": "Главный герой",
+        "image": "/assets/characters/21-724.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-269774-21",
+        "name": "18th Fleet Gallery Head Chef",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/21-269774.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      },
+      {
+        "id": "mal-character-161858-21",
+        "name": "A.O",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/21-161858.jpg",
+        "tags": [
+          "Ван-Пис"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "naruto",
+    "slug": "naruto",
+    "malId": 20,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Naruto",
+    "titleRu": "Наруто",
+    "type": "TV",
+    "year": 2002,
+    "episodes": 220,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения",
+      "Сёнэн"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/13/17405l.jpg",
+    "synopsis": "Наруто Узумаки хочет стать хокаге и доказать деревне, что внутри шумного мечтателя живет настоящий ниндзя.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 220000,
+    "requestBase": 14200,
+    "shikimori": {
+      "id": 20,
+      "title": "Naruto",
+      "titleRu": "Наруто",
+      "score": 8.02,
+      "votes": 110756,
+      "url": "https://shikimori.one/animes/z20-naruto",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-145-20",
+        "name": "Haruno, Sakura",
+        "role": "Главный герой",
+        "image": "/assets/characters/20-145.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-85-20",
+        "name": "Hatake, Kakashi",
+        "role": "Главный герой",
+        "image": "/assets/characters/20-85.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-13-20",
+        "name": "Uchiha, Sasuke",
+        "role": "Главный герой",
+        "image": "/assets/characters/20-13.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-17-20",
+        "name": "Uzumaki, Naruto",
+        "role": "Главный герой",
+        "image": "/assets/characters/20-17.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-8997-20",
+        "name": "Abumi, Zaku",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-8997.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-3428-20",
+        "name": "Aburame, Shino",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-3428.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-10697-20",
+        "name": "Aburame, Shibi",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-10697.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-294140-20",
+        "name": "Agari",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-294140.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-9699-20",
+        "name": "Akado, Yoroi",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-9699.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-17538-20",
+        "name": "Akado, Manabu",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-17538.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-10698-20",
+        "name": "Akahoshi",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-10698.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      },
+      {
+        "id": "mal-character-4799-20",
+        "name": "Akamaru",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/20-4799.jpg",
+        "tags": [
+          "Наруто"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cowboy-bebop",
+    "slug": "kovboy-bibop",
+    "malId": 1,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Cowboy Bebop",
+    "titleRu": "Ковбой Бибоп",
+    "type": "TV",
+    "year": 1998,
+    "episodes": 26,
+    "franchise": "Ковбой Бибоп",
+    "genres": [
+      "Sci-Fi",
+      "Нуар",
+      "Приключения"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/4/19644l.jpg",
+    "synopsis": "Охотники за головами дрейфуют между планетами, джазом, долгами и прошлым, которое всегда догоняет.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 80000,
+    "requestBase": 6200,
+    "shikimori": {
+      "id": 1,
+      "title": "Cowboy Bebop",
+      "titleRu": "Ковбой Бибоп",
+      "score": 8.75,
+      "votes": 64334,
+      "url": "https://shikimori.one/animes/1-cowboy-bebop",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": [
+      {
+        "id": "mal-character-3-1",
+        "name": "Black, Jet",
+        "role": "Главный герой",
+        "image": "/assets/characters/1-3.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-1-1",
+        "name": "Spiegel, Spike",
+        "role": "Главный герой",
+        "image": "/assets/characters/1-1.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-2-1",
+        "name": "Valentine, Faye",
+        "role": "Главный герой",
+        "image": "/assets/characters/1-2.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-16-1",
+        "name": "Wong Hau Pepelu Tivrusky IV, Edward",
+        "role": "Главный герой",
+        "image": "/assets/characters/1-16.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-131427-1",
+        "name": "Actress",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-131427.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-131428-1",
+        "name": "Alisa",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-131428.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-137292-1",
+        "name": "Amjad",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-137292.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-137299-1",
+        "name": "Angel",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-137299.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-131429-1",
+        "name": "Annie",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-131429.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-128656-1",
+        "name": "Antonio",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-128656.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-137293-1",
+        "name": "Bartender A",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-137293.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      },
+      {
+        "id": "mal-character-137294-1",
+        "name": "Bartender B",
+        "role": "Второстепенный персонаж",
+        "image": "/assets/characters/1-137294.jpg",
+        "tags": [
+          "Ковбой Бибоп"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mal-35507",
+    "slug": "dobro-pozhalovat-v-klass-prevoshodstva",
+    "malId": 35507,
+    "aniLibriaReleaseId": 4578,
+    "source": "local",
+    "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+    "titleRu": "Добро пожаловать в класс превосходства",
+    "type": "TV",
+    "year": 2017,
+    "episodes": 12,
+    "franchise": "Класс превосходства",
+    "genres": [
+      "Драма",
+      "Школа",
+      "Психология",
+      "Комедия",
+      "Романтика"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/5/86830l.jpg",
+    "synopsis": "Старшая школа имени Кёдо Икусей - ведущая престижная школа с самыми высокими показателями, из которой практически 100% выпускников поступают в университеты или находят работу. Учащимся разрешается ходить с любыми прическами и приносить из личных вещей в школу всё, что они пожелают. Кёдо Икусей - райская школа, но правда в том, что так обращаются только с лучшими. Киотака Аянокеджи - ученик D класса, куда школа \"сбрасывает\" учеников с низкими результатами. По непонятной причине Киотака был небрежен на вступительном экзамене, поэтому попал туда. После встречи с Сузуне Хорикитой и Кикуо Кушидой, двумя его одноклассницами, его положение начинает меняться.",
+    "altTitles": [
+      "Добро пожаловать в класс превосходства",
+      "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+      "youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 72000,
+    "requestBase": 7600,
+    "shikimori": {
+      "id": 35507,
+      "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+      "titleRu": "Добро пожаловать в класс превосходства",
+      "score": 7.83,
+      "votes": 74300,
+      "url": "https://shikimori.one/animes/35507-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-51096",
+    "slug": "dobro-pozhalovat-v-klass-prevoshodstva-2",
+    "malId": 51096,
+    "aniLibriaReleaseId": 9212,
+    "source": "local",
+    "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
+    "titleRu": "Добро пожаловать в класс превосходства 2",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 13,
+    "franchise": "Класс превосходства",
+    "genres": [
+      "Драма",
+      "Школа",
+      "Психология"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1010/124180l.jpg",
+    "synopsis": "После экзамена на необитаемом острове классы продолжают соревнование, а планы Аянокоджи становятся ещё сложнее и опаснее.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 68000,
+    "requestBase": 7200,
+    "shikimori": {
+      "id": 51096,
+      "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 2nd Season",
+      "titleRu": "Добро пожаловать в класс превосходства 2",
+      "score": 8.05,
+      "votes": 41341,
+      "url": "https://shikimori.one/animes/51096-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-2nd-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-51180",
+    "slug": "dobro-pozhalovat-v-klass-prevoshodstva-3",
+    "malId": 51180,
+    "aniLibriaReleaseId": 9601,
+    "source": "local",
+    "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
+    "titleRu": "Добро пожаловать в класс превосходства 3",
+    "type": "TV",
+    "year": 2024,
+    "episodes": 13,
+    "franchise": "Класс превосходства",
+    "genres": [
+      "Драма",
+      "Школа",
+      "Психология"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1332/139318l.jpg",
+    "synopsis": "Класс поднимается выше, но новые экзамены и противостояние с сильнейшими учениками проверяют союзников Аянокоджи.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 70000,
+    "requestBase": 7400,
+    "shikimori": {
+      "id": 51180,
+      "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
+      "titleRu": "Добро пожаловать в класс превосходства 3",
+      "score": 7.93,
+      "votes": 25218,
+      "url": "https://shikimori.one/animes/51180-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-3rd-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-59708",
+    "slug": "dobro-pozhalovat-v-klass-prevoshodstva-4-vtoroy-god-pervyy-semestr",
+    "malId": 59708,
+    "aniLibriaReleaseId": 10155,
+    "source": "local",
+    "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 4th Season: 2-nensei-hen 1 Gakki",
+    "titleRu": "Добро пожаловать в класс превосходства 4: Второй год — Первый семестр",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 15,
+    "franchise": "Класс превосходства",
+    "genres": [
+      "Драма",
+      "Школа",
+      "Психология"
+    ],
+    "image": "/assets/classroom-elite-season-4.webp",
+    "synopsis": "Аянокоджи переходит на второй год обучения, где его ждут новые ученики, экзамены и ещё более серьёзная борьба за превосходство.",
+    "altTitles": [
+      "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 4th Season: 2-nensei-hen 1 Gakki",
+      "Добро пожаловать в класс превосходства 4: Второй год — Первый семестр"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 76000,
+    "requestBase": 7900,
+    "shikimori": {
+      "id": 59708,
+      "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 4th Season: 2-nensei-hen 1 Gakki",
+      "titleRu": "Добро пожаловать в класс превосходства 4: Второй год — Первый семестр",
+      "score": 7.98,
+      "votes": 4029,
+      "url": "https://shikimori.one/animes/59708-youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-4th-season-2-nensei-hen-1-gakki",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-49596",
+    "slug": "sinyaya-tyurma-blyu-lok",
+    "malId": 49596,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Blue Lock",
+    "titleRu": "Синяя тюрьма: Блю Лок",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 24,
+    "franchise": "Синяя тюрьма: Блю Лок",
+    "genres": [
+      "Спорт",
+      "Сёнен",
+      "Триллер"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1258/126929l.jpg",
+    "synopsis": "Триста молодых нападающих участвуют в жёстком проекте, который должен создать лучшего футбольного форварда Японии.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 92000,
+    "requestBase": 9000,
+    "shikimori": {
+      "id": 49596,
+      "title": "Blue Lock",
+      "titleRu": "Синяя тюрьма: Блю Лок",
+      "score": 8.11,
+      "votes": 36483,
+      "url": "https://shikimori.one/animes/49596-blue-lock",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-54865",
+    "slug": "sinyaya-tyurma-blyu-lok-2",
+    "malId": 54865,
+    "aniLibriaReleaseId": null,
+    "source": "local",
+    "title": "Blue Lock vs. U-20 Japan",
+    "titleRu": "Синяя тюрьма: Блю Лок 2",
+    "type": "TV",
+    "year": 2024,
+    "episodes": 14,
+    "franchise": "Синяя тюрьма: Блю Лок",
+    "genres": [
+      "Спорт",
+      "Сёнен",
+      "Триллер"
+    ],
+    "image": "https://cdn.myanimelist.net/images/anime/1584/144860l.jpg",
+    "synopsis": "Участники Blue Lock сражаются за право продолжить проект в матче против молодёжной сборной Японии до 20 лет.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 84000,
+    "requestBase": 8600,
+    "shikimori": {
+      "id": 54865,
+      "title": "Blue Lock vs. U-20 Japan",
+      "titleRu": "Синяя тюрьма: Блю Лок против юношеской сборной Японии",
+      "score": 7.51,
+      "votes": 14018,
+      "url": "https://shikimori.one/animes/54865-blue-lock-vs-u-20-japan",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-442",
+    "slug": "naruto-1-kniga-iskusstv-nindzya-snezhnoy-printsessy",
+    "malId": 442,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+    "titleRu": "Наруто 1: Книга искусств ниндзя Снежной принцессы",
+    "type": "MOVIE",
+    "year": 2004,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/442.jpg?1711965668",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 16000,
+    "requestBase": 2400,
+    "shikimori": {
+      "id": 442,
+      "title": "Naruto Movie 1: Dai Katsugeki!! Yuki Hime Ninpouchou Dattebayo!",
+      "titleRu": "Наруто 1: Книга искусств ниндзя Снежной принцессы",
+      "score": 7.13,
+      "votes": 17244,
+      "url": "https://shikimori.one/animes/442-naruto-movie-1-dai-katsugeki-yuki-hime-ninpouchou-dattebayo",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-936",
+    "slug": "naruto-2-bolshoe-stolknovenie-prizrachnye-ruiny-v-glubine-zemli",
+    "malId": 936,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+    "titleRu": "Наруто 2: Большое столкновение! Призрачные руины в глубине земли",
+    "type": "MOVIE",
+    "year": 2005,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/936.jpg?1711965657",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 15100,
+    "requestBase": 2280,
+    "shikimori": {
+      "id": 936,
+      "title": "Naruto Movie 2: Dai Gekitotsu! Maboroshi no Chiteiiseki Dattebayo!",
+      "titleRu": "Наруто 2: Большое столкновение! Призрачные руины в глубине земли",
+      "score": 6.88,
+      "votes": 14640,
+      "url": "https://shikimori.one/animes/936-naruto-movie-2-dai-gekitotsu-maboroshi-no-chiteiiseki-dattebayo",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-2144",
+    "slug": "naruto-3-grandioznyy-perepoloh-bunt-zverey-na-ostrove-mikazuki",
+    "malId": 2144,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+    "titleRu": "Наруто 3: Грандиозный переполох! Бунт зверей на острове Миказуки!",
+    "type": "MOVIE",
+    "year": 2006,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/2144.jpg?1711965648",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 14200,
+    "requestBase": 2160,
+    "shikimori": {
+      "id": 2144,
+      "title": "Naruto Movie 3: Dai Koufun! Mikazuki-jima no Animal Panic Dattebayo!",
+      "titleRu": "Наруто 3: Грандиозный переполох! Бунт зверей на острове Миказуки!",
+      "score": 6.93,
+      "votes": 13434,
+      "url": "https://shikimori.one/animes/2144-naruto-movie-3-dai-koufun-mikazuki-jima-no-animal-panic-dattebayo",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-761",
+    "slug": "naruto-nayti-tyomno-krasnyy-chetyryohlistnyy-klever",
+    "malId": 761,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto: Akaki Yotsuba no Clover wo Sagase",
+    "titleRu": "Наруто: Найти тёмно-красный четырёхлистный клевер!",
+    "type": "SPECIAL",
+    "year": 2003,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/761.jpg?1711965645",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 13300,
+    "requestBase": 2040,
+    "shikimori": {
+      "id": 761,
+      "title": "Naruto: Akaki Yotsuba no Clover wo Sagase",
+      "titleRu": "Наруто: Найти тёмно-красный четырёхлистный клевер!",
+      "score": 6.58,
+      "votes": 9989,
+      "url": "https://shikimori.one/animes/761-naruto-akaki-yotsuba-no-clover-wo-sagase",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-594",
+    "slug": "naruto-bitva-na-hidden-fols",
+    "malId": 594,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+    "titleRu": "Наруто: Битва на Хидден-Фолс",
+    "type": "SPECIAL",
+    "year": 2003,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/594.jpg?1711965739",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 12400,
+    "requestBase": 1920,
+    "shikimori": {
+      "id": 594,
+      "title": "Naruto: Takigakure no Shitou - Ore ga Eiyuu Dattebayo!",
+      "titleRu": "Наруто: Битва на Хидден-Фолс",
+      "score": 6.77,
+      "votes": 8949,
+      "url": "https://shikimori.one/animes/594-naruto-takigakure-no-shitou-ore-ga-eiyuu-dattebayo",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-7367",
+    "slug": "naruto-peresechenie-dorog",
+    "malId": 7367,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto: The Cross Roads",
+    "titleRu": "Наруто: Пересечение дорог",
+    "type": "SPECIAL",
+    "year": 2009,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/7367.jpg?1711965642",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 11500,
+    "requestBase": 1800,
+    "shikimori": {
+      "id": 7367,
+      "title": "Naruto: The Cross Roads",
+      "titleRu": "Наруто: Пересечение дорог",
+      "score": 6.78,
+      "votes": 6718,
+      "url": "https://shikimori.one/animes/z7367-naruto-the-cross-roads",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-1074",
+    "slug": "naruto-sorevnovaniya-dzyoninov-protiv-geninov",
+    "malId": 1074,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!!",
+    "titleRu": "Наруто: Соревнования дзёнинов против гэнинов!",
+    "type": "OVA",
+    "year": 2005,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/1074.jpg?1711965681",
+    "synopsis": "Связанная часть франшизы «Наруто». Официальный трейлер загружается через Jikan, если он доступен.",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 10600,
+    "requestBase": 1680,
+    "shikimori": {
+      "id": 1074,
+      "title": "Naruto Narutimate Hero 3: Tsuini Gekitotsu! Jounin vs. Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+      "titleRu": "Наруто: Наконец-таки! Соревнования дзёнинов против гэнинов!",
+      "score": 6.77,
+      "votes": 8164,
+      "url": "https://shikimori.one/animes/z1074-naruto-narutimate-hero-3-tsuini-gekitotsu-jounin-vs-genin-musabetsu-dairansen-taikai-kaisai",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-53236",
+    "slug": "put-naruto",
+    "malId": 53236,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Road of Naruto",
+    "titleRu": "Путь Наруто",
+    "type": "SPECIAL",
+    "year": 2022,
+    "episodes": 1,
+    "franchise": "Наруто",
+    "genres": [
+      "Ниндзя",
+      "Приключения"
+    ],
+    "image": "https://shikimori.one/system/animes/original/53236.jpg?1711935441",
+    "synopsis": "Официальный юбилейный спецвыпуск VIZ, посвящённый двадцатилетию аниме «Наруто».",
+    "altTitles": [],
+    "trailer": "",
+    "status": "unknown",
+    "popularityBase": 9700,
+    "requestBase": 1560,
+    "shikimori": {
+      "id": 53236,
+      "title": "Road of Naruto",
+      "titleRu": "Путь Наруто",
+      "score": 8.38,
+      "votes": 3462,
+      "url": "https://shikimori.one/animes/53236-road-of-naruto",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-235",
+    "slug": "detektiv-konan",
+    "malId": 235,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Meitantei Conan",
+    "titleRu": "Детектив Конан",
+    "type": "TV",
+    "year": 1996,
+    "episodes": 1204,
+    "franchise": "Meitantei Conan",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/235.jpg?1717859752",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Meitantei Conan",
+      "Детектив Конан"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 235,
+      "title": "Meitantei Conan",
+      "titleRu": "Детектив Конан",
+      "score": 8.18,
+      "votes": 2338,
+      "url": "https://shikimori.one/animes/z235-meitantei-conan",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-51553",
+    "slug": "atele-koldovskih-kolpakov",
+    "malId": 51553,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Tongari Boushi no Atelier",
+    "titleRu": "Ателье колдовских колпаков",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 13,
+    "franchise": "Tongari Boushi no Atelier",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/51553.jpg?1714590953",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Tongari Boushi no Atelier",
+      "Ателье колдовских колпаков"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 51553,
+      "title": "Tongari Boushi no Atelier",
+      "titleRu": "Ателье колдовских колпаков",
+      "score": 8.62,
+      "votes": 5251,
+      "url": "https://shikimori.one/animes/51553-tongari-boushi-no-atelier",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-61316",
+    "slug": "re-zero-zhizn-s-nulya-v-alternativnom-mire-4",
+    "malId": 61316,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
+    "titleRu": "Re:Zero. Жизнь с нуля в альтернативном мире 4",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 19,
+    "franchise": "Re",
+    "genres": [],
+    "image": "https://cdn.myanimelist.net/images/anime/1540/155824l.jpg",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
+      "Re:Zero. Жизнь с нуля в альтернативном мире 4"
+    ],
+    "trailer": "https://www.youtube-nocookie.com/embed/jVl4bY81iIs?enablejsapi=1&wmode=opaque&autoplay=1",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 61316,
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
+      "titleRu": "Re:Zero. Жизнь с нуля в альтернативном мире 4",
+      "score": 9.2,
+      "votes": 3059,
+      "url": "https://shikimori.one/animes/61316-re-zero-kara-hajimeru-isekai-seikatsu-4th-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-61469",
+    "slug": "neveroyatnoe-priklyuchenie-dzhodzho-gonka-stalnoy-shar",
+    "malId": 61469,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+    "titleRu": "Невероятное приключение ДжоДжо: Гонка «Стальной шар»",
+    "type": "ONA",
+    "year": 2026,
+    "episodes": 1,
+    "franchise": "Steel Ball Run",
+    "genres": [],
+    "image": "https://cdn.myanimelist.net/images/anime/1448/154111l.jpg",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "Невероятное приключение ДжоДжо: Гонка «Стальной шар»"
+    ],
+    "trailer": "https://www.youtube-nocookie.com/embed/TWw06YDOQy0?si=SxzUyy3Q-7R6PxzG?enablejsapi=1&wmode=opaque&autoplay=1",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 61469,
+      "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "titleRu": "Невероятное приключение ДжоДжо: Гонка «Стальной шар»",
+      "score": 9.11,
+      "votes": 3356,
+      "url": "https://shikimori.one/animes/61469-steel-ball-run-jojo-no-kimyou-na-bouken",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-59970",
+    "slug": "o-moyom-pererozhdenii-v-sliz-4",
+    "malId": 59970,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Tensei shitara Slime Datta Ken 4th Season",
+    "titleRu": "О моём перерождении в слизь 4",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 11,
+    "franchise": "Tensei shitara Slime Datta Ken 4th Season",
+    "genres": [],
+    "image": "/assets/slime-season-4.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Tensei shitara Slime Datta Ken 4th Season",
+      "О моём перерождении в слизь 4"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 59970,
+      "title": "Tensei shitara Slime Datta Ken 4th Season",
+      "titleRu": "О моём перерождении в слизь 4",
+      "score": 8.11,
+      "votes": 1568,
+      "url": "https://shikimori.one/animes/59970-tensei-shitara-slime-datta-ken-4th-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-62001",
+    "slug": "tsugai-zagrobnogo-mira",
+    "malId": 62001,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Yomi no Tsugai",
+    "titleRu": "Цугаи загробного мира",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 24,
+    "franchise": "Yomi no Tsugai",
+    "genres": [],
+    "image": "/assets/yomi-no-tsugai.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Yomi no Tsugai",
+      "Цугаи загробного мира"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 62001,
+      "title": "Yomi no Tsugai",
+      "titleRu": "Цугаи загробного мира",
+      "score": 7.92,
+      "votes": 991,
+      "url": "https://shikimori.one/animes/62001-yomi-no-tsugai",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-59983",
+    "slug": "mech-i-zhezl-vistorii-2",
+    "malId": 59983,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Tsue to Tsurugi no Wistoria Season 2",
+    "titleRu": "Меч и жезл Вистории 2",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Tsue to Tsurugi no Wistoria Season 2",
+    "genres": [],
+    "image": "/assets/wistoria-season-2.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Tsue to Tsurugi no Wistoria Season 2",
+      "Меч и жезл Вистории 2"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 59983,
+      "title": "Tsue to Tsurugi no Wistoria Season 2",
+      "titleRu": "Меч и жезл Вистории 2",
+      "score": 8.26,
+      "votes": 1213,
+      "url": "https://shikimori.one/animes/59983-tsue-to-tsurugi-no-wistoria-season-2",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-62568",
+    "slug": "doktor-stoun-nauchnoe-buduschee-chast-3",
+    "malId": 62568,
+    "aniLibriaReleaseId": 10162,
+    "source": "shikimori",
+    "title": "Dr. Stone: Science Future Part 3",
+    "titleRu": "Доктор Стоун: Научное будущее. Часть 3",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 13,
+    "franchise": "Dr. Stone",
+    "genres": [
+      "Сёнен",
+      "Приключения",
+      "Комедия"
+    ],
+    "image": "/assets/dr-stone-future-3.webp",
+    "synopsis": "Подготовка к самому дерзкому проекту в истории человечества завершена: Царство науки начинает строительство ракеты для полета на Луну. Чтобы навсегда покончить с угрозой окаменения, Сэнку и его команда должны преодолеть земное притяжение и встретиться лицом к лицу с таинственным Вопрошателем.\r\nВ этом решающем финале наука станет мостом между прошлым и будущим. Героям предстоит не просто раскрыть тайну катастрофы, но и заложить фундамент для новой эры, где знания станут общим достоянием всего мира. Путь к звездам открыт, и теперь судьба цивилизации зависит от одного точного расчета и непоколебимой веры в человеческий разум.",
+    "altTitles": [
+      "Dr. Stone: Science Future Part 3",
+      "Доктор Стоун: Научное будущее. Часть 3",
+      "dr-stone-science-future-part-3"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 22600,
+    "requestBase": 3390,
+    "shikimori": {
+      "id": 62568,
+      "title": "Dr. Stone: Science Future Part 3",
+      "titleRu": "Доктор Стоун: Научное будущее. Часть 3",
+      "score": 8.3,
+      "votes": 1851,
+      "url": "https://shikimori.one/animes/62568-dr-stone-science-future-part-3",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-56734",
+    "slug": "ya-podruzhilsya-so-vtoroy-samoy-simpatichnoy-devushkoy-v-klasse",
+    "malId": 56734,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+    "titleRu": "Я подружился со второй самой симпатичной девушкой в классе",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+    "genres": [],
+    "image": "/assets/second-cutest-girl-class.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+      "Я подружился со второй самой симпатичной девушкой в классе"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 56734,
+      "title": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+      "titleRu": "Я подружился со второй самой симпатичной девушкой в классе",
+      "score": 7.91,
+      "votes": 2329,
+      "url": "https://shikimori.one/animes/56734-class-de-2-banme-ni-kawaii-onnanoko-to-tomodachi-ni-natta",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-62601",
+    "slug": "brachnyy-toksin",
+    "malId": 62601,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Marriagetoxin",
+    "titleRu": "Брачный токсин",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 13,
+    "franchise": "Marriagetoxin",
+    "genres": [],
+    "image": "/assets/marriagetoxin.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Marriagetoxin",
+      "Брачный токсин"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 62601,
+      "title": "Marriagetoxin",
+      "titleRu": "Брачный токсин",
+      "score": 7.52,
+      "votes": 833,
+      "url": "https://shikimori.one/animes/62601-marriagetoxin",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10183",
+    "slug": "dnevnik-nablyudeniy-za-moey-nevestoy-provozglasivshey-sebya-zlodeykoy",
+    "malId": 61687,
+    "aniLibriaReleaseId": 10183,
+    "source": "anilibria",
+    "title": "Jishou Akuyaku Reijou na Konyakusha no Kansatsu Kiroku.",
+    "titleRu": "Дневник наблюдений за моей невестой, провозгласившей себя злодейкой",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Дневник наблюдений за моей невестой, провозгласившей себя злодейкой",
+    "genres": [
+      "Комедия",
+      "Фэнтези",
+      "Романтика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10183/TFx7yAUvvP8VYjbpLy5utY4DeAH6KcO5.webp",
+    "synopsis": "Принц Сесил, исключительный, по мнению всего высшего общества, человек, считал это самое общество и в целом свою жизнь ужасно скучной и однообразной. Рутина продолжалась ровно до того дня, как его семья объявила помолвку с леди Бертией, дочерью канцлера. Стандартная практика среди знати, казалось бы, но как бы не так! Ведь его невеста вдруг заявляет, что является главной злодейкой всей этой истории! Кроме того, она бредит про то, этот мир — игра, ещё и слова какие-то непонятные выдумывает: отомэ, исекай, аниме…\r\nБлаго, наблюдать, как твоя суженная пытается стать самой злодейской злодейкой в истории, оказалось невероятно весело. Так что, возможно, жизнь у принца теперь будет не такой уж и скучной.",
+    "altTitles": [
+      "Дневник наблюдений за моей невестой, провозгласившей себя злодейкой",
+      "Jishou Akuyaku Reijou na Konyakusha no Kansatsu Kiroku.",
+      "jishou-akuyaku-reijou-na-konyakusha-no-kansatsu-kiroku"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 26800,
+    "requestBase": 4020,
+    "shikimori": {
+      "id": 61687,
+      "title": "Jishou Akuyaku Reijou na Konyakusha no Kansatsu Kiroku.",
+      "titleRu": "Дневник наблюдений за моей невестой, провозгласившей себя злодейкой",
+      "score": 7.71,
+      "votes": 1399,
+      "url": "https://shikimori.one/animes/61687-jishou-akuyaku-reijou-na-konyakusha-no-kansatsu-kiroku",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10159",
+    "slug": "vtoraya-yunost-haybary",
+    "malId": 61943,
+    "aniLibriaReleaseId": 10159,
+    "source": "anilibria",
+    "title": "Haibara-kun no Tsuyokute Seishun New Game",
+    "titleRu": "Вторая юность Хайбары",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Вторая юность Хайбары",
+    "genres": [
+      "Комедия",
+      "Романтика",
+      "Школа"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10159/prvVTZETznIgucqYlLP2FLkQrQOMsdri.webp",
+    "synopsis": "У каждого из нас найдётся что-то такое из школьных лет, о чём до сих пор стыдно вспоминать. У Нацуки Хайбары такое воспоминание не далеко не одно — их целая коллекция. И наш застенчивый школьник, перешедший уже в выпускной класс, до сих пор грезит о той беззаботной школьной жизни, которой так и не случилось.\r\nНо вот происходит невероятное — его бросает назад во времени, прямо к первому звонку в старшей школе! Теперь у него есть второй шанс: стать своим в компании популярных ребят, покорить сердце девушки мечты — будь то обаятельная Хикари или загадочная Ута. Тренировки, советы из интернета, помощь подруги детства, несгибаемая воля — всё идёт в ход. Ведь во второй раз Нацуки проигрывать не намерен.",
+    "altTitles": [
+      "Вторая юность Хайбары",
+      "Haibara-kun no Tsuyokute Seishun New Game",
+      "haibara-kun-no-tsuyokute-seishun-new-game"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 27400,
+    "requestBase": 4110,
+    "shikimori": {
+      "id": 61943,
+      "title": "Haibara-kun no Tsuyokute Seishun New Game",
+      "titleRu": "Вторая юность Хайбары",
+      "score": 6.62,
+      "votes": 783,
+      "url": "https://shikimori.one/animes/61943-haibara-kun-no-tsuyokute-seishun-new-game",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10176",
+    "slug": "devushka-na-chas-5",
+    "malId": 62485,
+    "aniLibriaReleaseId": 10176,
+    "source": "anilibria",
+    "title": "Kanojo, Okarishimasu 5th Season",
+    "titleRu": "Девушка на час 5",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Девушка на час",
+    "genres": [
+      "Сёнен",
+      "Комедия",
+      "Романтика",
+      "Гарем"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10176/QVVP3R2MBhnn0D7PyfXKoMGs7INnrxtP.webp",
+    "synopsis": "Представьте: лазурный берег, шезлонги и ленивое потягивание коктейлей под пальмами. И Кадзуя ведь уже почти поверил, что этот отпуск пройдет без валидола, но не тут-то было!\r\nНа тропу войны выходит Мами! Ей уже нечего терять, и она готова раскрыть перед всеми их с Чизуру маленький секрет. Семейный отдых превращается в зону боевых действий, где каждая ошибка — это риск превратиться из счастливой пары в главных обманщиков года.\r\nКак же они из этого всего выкрутятся — узнаем в новом сезоне!",
+    "altTitles": [
+      "Девушка на час 5",
+      "Kanojo, Okarishimasu 5th Season",
+      "kanojo-okarishimasu-5th-season"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 26200,
+    "requestBase": 3930,
+    "shikimori": {
+      "id": 62485,
+      "title": "Kanojo, Okarishimasu 5th Season",
+      "titleRu": "Девушка на час 5",
+      "score": 6.19,
+      "votes": 539,
+      "url": "https://shikimori.one/animes/62485-kanojo-okarishimasu-5th-season",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10196",
+    "slug": "avantyurist-pozhirayuschiy-demonov-ya-edinstvennyy-kto-stanovitsya-silnee-pozhiraya-monstrov",
+    "malId": 63304,
+    "aniLibriaReleaseId": 10196,
+    "source": "anilibria",
+    "title": "Mamonogurai no Boukensha: Ore dake Mamono wo Kuratte Tsuyoku Naru",
+    "titleRu": "Авантюрист, пожирающий демонов: Я единственный, кто становится сильнее, пожирая монстров",
+    "type": "TV",
+    "year": 2026,
+    "episodes": null,
+    "franchise": "Авантюрист, пожирающий демонов: Я единственный, кто становится сильнее, пожирая монстров",
+    "genres": [
+      "Экшен",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10196/gHTZFz4qpfSLK07TStJHOBK7DhZoRV6p.webp",
+    "synopsis": "По меркам своей эпохи Рудд — ничтожный авантюрист ранга E, а его единственный талант — иммунитет к изменению статуса — кажется всем абсолютно бесполезным.\r\nБудучи изгоем в городе, одержимом охотой в подземельях, он вынужден работать \"падальщиком\". Балансируя между политикой гильдии и жестокостью других авантюристов, Рудд борется за право просто прожить ещё один день. Но когда из-за предательства он оказывается в ловушке — без припасов и какой-либо надежды на спасение — Рудд решается на немыслимое: он начинает есть плоть павших монстров...",
+    "altTitles": [
+      "Авантюрист, пожирающий демонов: Я единственный, кто становится сильнее, пожирая монстров",
+      "Mamonogurai no Boukensha: Ore dake Mamono wo Kuratte Tsuyoku Naru",
+      "Monster Eater",
+      "mamonogurai-no-boukensha-ore-dake-mamono-wo-kuratte-tsuyoku-naru"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 25600,
+    "requestBase": 3840,
+    "shikimori": {
+      "id": 63304,
+      "title": "Mamonogurai no Boukensha: Ore dake Mamono wo Kuratte Tsuyoku Naru",
+      "titleRu": "Авантюрист, пожирающий демонов: Я единственный, кто становится сильнее, пожирая монстров",
+      "score": 6.01,
+      "votes": 768,
+      "url": "https://shikimori.one/animes/63304-mamonogurai-no-boukensha-ore-dake-mamono-wo-kuratte-tsuyoku-naru",
+      "confidence": 21,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10153",
+    "slug": "angel-po-sosedstvu-menya-uzhasno-baluet-2",
+    "malId": 56876,
+    "aniLibriaReleaseId": 10153,
+    "source": "anilibria",
+    "title": "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken 2",
+    "titleRu": "Ангел по соседству меня ужасно балует 2",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Ангел по соседству меня ужасно балует",
+    "genres": [
+      "Романтика",
+      "Школа"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10153/h5CIKx4FS1YB1xs2cMOQAIHmDc8JllX4.webp",
+    "synopsis": "После того как Аманэ и Махиру признались друг другу в чувствах на глазах у всей школы, их жизнь из тихой соседской идиллии превращается в официальный роман под пристальным вниманием окружающих. Теперь, когда маски сброшены, героям предстоит учиться быть настоящей парой не только за закрытыми дверями квартир, но и в глазах общества. В новом сезоне их чистые и робкие отношения пройдут проверку на прочность первыми совместными каникулами, новыми открытиями в характерах друг друга и осознанием того, что за идеальным образом «Ангела» скрывается обычная девушка, жаждущая искренней любви и защиты.",
+    "altTitles": [
+      "Ангел по соседству меня ужасно балует 2",
+      "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken 2",
+      "otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken-2"
+    ],
+    "trailer": "",
+    "status": "anons",
+    "popularityBase": 25000,
+    "requestBase": 3750,
+    "shikimori": {
+      "id": 56876,
+      "title": "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken 2",
+      "titleRu": "Ангел по соседству 2",
+      "score": 7.17,
+      "votes": 2102,
+      "url": "https://shikimori.one/animes/56876-otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken-2",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10194",
+    "slug": "levsha-eren",
+    "malId": 53732,
+    "aniLibriaReleaseId": 10194,
+    "source": "anilibria",
+    "title": "Hidarikiki no Eren",
+    "titleRu": "Левша Эрен",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 13,
+    "franchise": "Левша Эрен",
+    "genres": [
+      "Сёнен",
+      "Драма"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10194/y3wFMREDbe9bYEqv9D1yxAZMn2liJ6Q2.webp",
+    "synopsis": "Коичи Асакура пашет в рекламном агентстве, надеясь когда-нибудь стать знаменитым дизайнером. Он из тех, кто берет своё зубами и бесконечными правками, но потолок собственной заурядности всё равно давит на плечи.\r\nВсё меняется, когда на пути встает Эрен — гениальная художница-левша, которой дар хоть и достался без боя, но в итоге стал настоящим проклятием. Пока один из кожи вон лезет, чтобы дотянуться до звезд, другая пытается не задохнуться под весом собственного таланта в мире, где за успех порой приходится платить слишком высокую цену.",
+    "altTitles": [
+      "Левша Эрен",
+      "Hidarikiki no Eren",
+      "hidarikiki-no-eren"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 24400,
+    "requestBase": 3660,
+    "shikimori": {
+      "id": 53732,
+      "title": "Hidarikiki no Eren",
+      "titleRu": "Левша Эрен",
+      "score": 6.09,
+      "votes": 195,
+      "url": "https://shikimori.one/animes/53732-hidarikiki-no-eren",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10190",
+    "slug": "vas-snova-ubili-mister-detektiv",
+    "malId": 62964,
+    "aniLibriaReleaseId": 10190,
+    "source": "anilibria",
+    "title": "Mata Korosarete Shimatta no desu ne, Tantei-sama",
+    "titleRu": "Вас снова убили, мистер детектив",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Вас снова убили, мистер детектив",
+    "genres": [
+      "Детектив",
+      "Романтика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10190/xJiQmfZ4c1CZ0fXBpylumR3Vo8RNOPjA.webp",
+    "synopsis": "Знакомьтесь, Сакуя Оцуки — сын знаменитого детектива, который вместе со своей помощницей Лилитеей продолжает дело своего отца. Однако в этом юном сыщике скрыта странная и пугающая особенность. Какое бы дело он ни расследовал, Сакуя неизменно оказывается в самом эпицентре событий — и каждый раз становится жертвой убийства!\r\nПолучив задание проникнуть на борт роскошного круизного лайнера, Сакуя вновь погибает. Но смерть для него — лишь начало. Ведь каждый раз, когда он открывает глаза, Лилитея оказывается рядом, готовая помочь своему бессмертному напарнику разгадать очередную тайну.",
+    "altTitles": [
+      "Вас снова убили, мистер детектив",
+      "Mata Korosarete Shimatta no desu ne, Tantei-sama",
+      "mata-korosarete-shimatta-no-desu-ne-tantei-sama"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 23800,
+    "requestBase": 3570,
+    "shikimori": {
+      "id": 62964,
+      "title": "Mata Korosarete Shimatta no desu ne, Tantei-sama",
+      "titleRu": "Вас снова убили, мистер детектив",
+      "score": 6.24,
+      "votes": 478,
+      "url": "https://shikimori.one/animes/62964-mata-korosarete-shimatta-no-desu-ne-tantei-sama",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10193",
+    "slug": "ledyanaya-stena",
+    "malId": 60852,
+    "aniLibriaReleaseId": 10193,
+    "source": "anilibria",
+    "title": "Koori no Jouheki",
+    "titleRu": "Ледяная стена",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 14,
+    "franchise": "Ледяная стена",
+    "genres": [
+      "Комедия",
+      "Романтика",
+      "Школа"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10193/ROyUNWGYZmAyM1cFD3Of0UFQ0DVW87HI.webp",
+    "synopsis": "Школьная жизнь не всегда оказывается такой радужной и яркой, как хотелось бы. \r\nПережив множество издевательств в средней школе, Коюки Хикава стала настолько социально и эмоционально отстранённой, что мало кто может найти с ней общий язык. Кроме, пожалуй, друга детства и по совместительству главного красавчика всего класса, Мики Адзуми. Так бы и дальше длились её тихие дни в старшей школе, если бы не попытки одного очень бесцеремонного парня, Минато Амамии, прорваться сквозь стены, которые окружили Коюки. \r\nВот начинается эта горькая, но в то же время, и сладкая драма, наполненная духом юности.",
+    "altTitles": [
+      "Ледяная стена",
+      "Koori no Jouheki",
+      "The Ramparts of Ice",
+      "koori-no-jouheki"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 23200,
+    "requestBase": 3480,
+    "shikimori": {
+      "id": 60852,
+      "title": "Koori no Jouheki",
+      "titleRu": "Ледяная стена",
+      "score": 8.02,
+      "votes": 681,
+      "url": "https://shikimori.one/animes/60852-koori-no-jouheki",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10285",
+    "slug": "smertelnyy-bilyard",
+    "malId": 14353,
+    "aniLibriaReleaseId": 10285,
+    "source": "anilibria",
+    "title": "Death Billiards",
+    "titleRu": "Смертельный бильярд",
+    "type": "MOVIE",
+    "year": 2013,
+    "episodes": null,
+    "franchise": "Смертельный бильярд",
+    "genres": [],
+    "image": "https://anilibria.top/storage/releases/posters/10285/BJjXewOnVezeWTeeeA46PLpalU5hd4ax.webp",
+    "synopsis": "Описание релиза пока недоступно.",
+    "altTitles": [
+      "Смертельный бильярд",
+      "Death Billiards",
+      "death-billiards"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 22000,
+    "requestBase": 3300,
+    "shikimori": {
+      "id": 14353,
+      "title": "Death Billiards",
+      "titleRu": "Смертельный бильярд",
+      "score": 7.87,
+      "votes": 20958,
+      "url": "https://shikimori.one/animes/14353-death-billiards",
+      "confidence": 21,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-10042",
+    "slug": "printsessa-rytsar-nevesta-varvara",
+    "malId": 60028,
+    "aniLibriaReleaseId": 10042,
+    "source": "anilibria",
+    "title": "Himekishi wa Barbaroi no Yome",
+    "titleRu": "Принцесса-рыцарь — невеста варвара",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 12,
+    "franchise": "Принцесса-рыцарь — невеста варвара",
+    "genres": [
+      "Сёнен",
+      "Комедия",
+      "Фэнтези",
+      "Романтика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/10042/GuZH0NkqoqU3zLGmZJktSjHhSLb0f0Ua.webp",
+    "synopsis": "После очередной жестокой схватки между западными и восточными землями сильнейшая воительница Серафина была взята в плен варварами с востока. Заточённая в темнице, девушка размышляла о грядущей судьбе и никак не ожидала предложения руки и сердца.\n\nВ роду у Веора, главаря варваров, который захватил Серафину в плен, было принято брать в жёны воительниц из армии западных земель. Эта традиция передавалась из поколения в поколение, и Веор не собирался её нарушать, но Серафина была категорически против, предпочитая брачным узам смерть. Варвару придётся приложить все силы, чтобы снискать расположение гордой воительницы, завоевать её сердце и сделать своей женой!",
+    "altTitles": [
+      "Принцесса-рыцарь — невеста варвара",
+      "Himekishi wa Barbaroi no Yome",
+      "himekishi-wa-barbaroi-no-yome"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 21400,
+    "requestBase": 3210,
+    "shikimori": {
+      "id": 60028,
+      "title": "Himekishi wa Barbaroi no Yome",
+      "titleRu": "Принцесса-рыцарь — невеста варвара",
+      "score": 6.8,
+      "votes": 1138,
+      "url": "https://shikimori.one/animes/60028-himekishi-wa-barbaroi-no-yome",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8452",
+    "slug": "blich",
+    "malId": 269,
+    "aniLibriaReleaseId": 8452,
+    "source": "anilibria",
+    "title": "Bleach",
+    "titleRu": "Блич",
+    "type": "TV",
+    "year": 2004,
+    "episodes": 366,
+    "franchise": "Блич",
+    "genres": [
+      "Сёнен",
+      "Сверхъестественное",
+      "Супер сила",
+      "Экшен",
+      "Фэнтези",
+      "Комедия",
+      "Приключения"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8452/RN4oqgBiCnFwJHQCJ5JE8ZJuvNbioxQa.webp",
+    "synopsis": "Ичиго Куросаки - 15-тилетний подросток. Учится в средней школе. С 8-ми лет рос без материнской опеки. С детства видит духов умерших. Но в один непримечательный вечер к нему, не осознавая того, что он видит духов, приходит через окно Рукия Кучики. Она - шинигами, бог смерти. И конечно же она получает хорошенький пинок, ногой в спину. Вот так можно описать первую встречу Ичиго с той, кто положит начало долгой и захватывающей истории простого, на первый взгляд, подростка.",
+    "altTitles": [
+      "Блич",
+      "Bleach",
+      "отбеливатель, белизна, bleach",
+      "bleach"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 28000,
+    "requestBase": 4200,
+    "shikimori": {
+      "id": 269,
+      "title": "Bleach",
+      "titleRu": "Блич",
+      "score": 7.99,
+      "votes": 66471,
+      "url": "https://shikimori.one/animes/y269-bleach",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-5255",
+    "slug": "chyornyy-klever",
+    "malId": 34572,
+    "aniLibriaReleaseId": 5255,
+    "source": "anilibria",
+    "title": "Black Clover",
+    "titleRu": "Чёрный Клевер",
+    "type": "TV",
+    "year": 2017,
+    "episodes": 170,
+    "franchise": "Чёрный Клевер",
+    "genres": [
+      "Комедия",
+      "Сёнен",
+      "Экшен",
+      "Магия",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/5255/8uLSlG62NcQIpYF32mvJ4nPJgqiSrrHX.webp",
+    "synopsis": "В мире, где всё решает магия, однажды у порога церкви находят двух брошенных детей, Асту и Юно. И если Юно оказался одарён исключительной магической силой, то Аста был урождён единственным человеком в мире, у которого эта сила полностью отсутствует. Когда мальчикам исполнилось пятнадцать лет, для них пришло время получить гримуары, раскрывающие истинную силу магов. Аста стал обладателем Антимагического Гримуара, обладающего уникальной способностью - отменять или отражать магию. Способности Юно и Аста прекрасно дополняют друг друга, и теперь ребята готовы вместе начать нелёгкий путь к своей общей мечте: стать \"Королём магов\". И они не остановятся ни перед чем!",
+    "altTitles": [
+      "Чёрный Клевер",
+      "Black Clover",
+      "Черный клевер",
+      "black-clover"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 28000,
+    "requestBase": 4200,
+    "shikimori": {
+      "id": 34572,
+      "title": "Black Clover",
+      "titleRu": "Чёрный клевер",
+      "score": 8.14,
+      "votes": 50070,
+      "url": "https://shikimori.one/animes/z34572-black-clover",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9839",
+    "slug": "podnyatie-urovnya-v-odinochku-2-vosstante-iz-teni",
+    "malId": 58567,
+    "aniLibriaReleaseId": 9839,
+    "source": "anilibria",
+    "title": "Ore dake Level Up na Ken Season 2: Arise from the Shadow",
+    "titleRu": "Поднятие уровня в одиночку 2: Восстаньте из тени",
+    "type": "TV",
+    "year": 2025,
+    "episodes": 13,
+    "franchise": "Поднятие уровня в одиночку",
+    "genres": [
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9839/uUYGP7HtCRAiXJfugzDwU8VYkgZmdBbm.webp",
+    "synopsis": "По всему миру без конца появляются врата, из которых на улицы городов лезут страшные чудовища. Защищают же человечество так называемые охотники — люди, наделённые особыми сверхъестественными силами. И наш герой Сон Джин Ву — слабейший из всех охотников в мире. Вернее, так было раньше.\r\nБлагодаря уникальной способности прокачивать свои характеристики, он очень быстро из зелёного новичка превратился в грозного воина, способного в соло зачищать подземелья практически любой сложности. Более того, недавно он получил новый полезный навык — воскрешать убитых монстров и подчинять их себе. Так что теперь в распоряжении Сон Джин Ву целая армия, а значит и уровень можно будет поднимать уже совсем не в одиночку.",
+    "altTitles": [
+      "Поднятие уровня в одиночку 2: Восстаньте из тени",
+      "Ore dake Level Up na Ken Season 2: Arise from the Shadow",
+      "Поднятия, Solo Leveling",
+      "ore-dake-level-up-na-ken-season-2-arise-from-the-shadow"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 27400,
+    "requestBase": 4110,
+    "shikimori": {
+      "id": 58567,
+      "title": "Ore dake Level Up na Ken Season 2: Arise from the Shadow",
+      "titleRu": "Поднятие уровня в одиночку 2: Восстаньте из тени",
+      "score": 8.52,
+      "votes": 42950,
+      "url": "https://shikimori.one/animes/58567-ore-dake-level-up-na-ken-season-2-arise-from-the-shadow",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8030",
+    "slug": "voshozhdenie-geroya-schita",
+    "malId": 35790,
+    "aniLibriaReleaseId": 8030,
+    "source": "anilibria",
+    "title": "Tate no Yuusha no Nariagari",
+    "titleRu": "Восхождение героя щита",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 25,
+    "franchise": "Восхождение героя щита",
+    "genres": [
+      "Сейнен",
+      "Драма",
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8030/CkaQFMiEjV12uT1tfVkC3CvfWIzKHcqs.webp",
+    "synopsis": "Иватани Наофуми затворник. Все свои дни он обычно проводил за играми и мангой. Но внезапно, неожиданно для себя, Иватани оказывается в ином мире! Выясняется, что он стал одним из четырёх героев, обладающих легендарным оружием, которым суждено спасти мир от неминуемой гибели. Для Героя Щита, слабейшего из четвёрки, приключение окажется не таким радостным. Почти сразу Наофуми оказывается предан, обвинён в изнасиловании и оставлен один, без гроша в кармане. Не к кому податься и некуда бежать. Всё, что у него есть — его щит и жажда мести.",
+    "altTitles": [
+      "Восхождение героя щита",
+      "Tate no Yuusha no Nariagari",
+      "Герой Щита",
+      "tate-no-yuusha-no-nariagari"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 26800,
+    "requestBase": 4020,
+    "shikimori": {
+      "id": 35790,
+      "title": "Tate no Yuusha no Nariagari",
+      "titleRu": "Восхождение героя щита",
+      "score": 7.9,
+      "votes": 84689,
+      "url": "https://shikimori.one/animes/z35790-tate-no-yuusha-no-nariagari",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9600",
+    "slug": "podnyatie-urovnya-v-odinochku",
+    "malId": 52299,
+    "aniLibriaReleaseId": 9600,
+    "source": "anilibria",
+    "title": "Ore dake Level Up na Ken",
+    "titleRu": "Поднятие уровня в одиночку",
+    "type": "TV",
+    "year": 2024,
+    "episodes": 12,
+    "franchise": "Поднятие уровня в одиночку",
+    "genres": [
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9600/05RqjXuiUbRh54AQFRTwUuHoHYDaORCk.webp",
+    "synopsis": "С момента внезапного появления \"врат\" — путей в другие миры — прошло уже больше десяти лет. За это время очень важной стала профессия \"охотников\" — людей, получивших сверхъестественные способности и зарабатывающих зачисткой подземелий внутри врат.\r\nСон Джин Ву приобрёл печальную известность как \"слабейший охотник человечества\". Так что совсем не удивительно, что в одном из заказов он получает смертельное ранение. Вот только вместо проносящейся перед глазами жизни он видит таинственное окно, в котором говорится о каком-то задании. Джин Ву решает его выполнить и с удивлением обнаруживает, что его уровень повысился, хотя подобное считалось невозможным.\r\nИ так, вооружившись своей новой способностью, Джин Ву отправляется покорять вершины, оставляя позади тех, кто смотрел на него свысока.",
+    "altTitles": [
+      "Поднятие уровня в одиночку",
+      "Ore dake Level Up na Ken",
+      "Solo Leveling",
+      "ore-dake-level-up-na-ken"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 26200,
+    "requestBase": 3930,
+    "shikimori": {
+      "id": 52299,
+      "title": "Ore dake Level Up na Ken",
+      "titleRu": "Поднятие уровня в одиночку",
+      "score": 8.17,
+      "votes": 57526,
+      "url": "https://shikimori.one/animes/52299-ore-dake-level-up-na-ken",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8395",
+    "slug": "arifureta-silneyshiy-remeslennik-v-mire",
+    "malId": 36882,
+    "aniLibriaReleaseId": 8395,
+    "source": "anilibria",
+    "title": "Arifureta Shokugyou de Sekai Saikyou",
+    "titleRu": "Арифурэта: Сильнейший ремесленник в мире",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 13,
+    "franchise": "Арифурэта: Сильнейший ремесленник в мире",
+    "genres": [
+      "Психологическое",
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8395/FAzhdOTge0jBLmydJs2MMlTq3RItPMPG.webp",
+    "synopsis": "Семнадцатилетний Хаджимэ Нагумо среднестатистический отаку. Внезапно, его обычная ночная жизнь в играх и сонная повседневность в школе обрываются, когда вместе с остальными учениками их переносят в мир фэнтези! К ним отнеслись, как к героям, и взложили задачу: «Спасти человечество от вымирания». Если подумать, чего ещё желать отаку? Но все мечты Хаджимэ обрываются, когда в сравнении с остальными, получившими способности, не уступающие божественным, ему досталась лишь одна абилка трансмутации — «Синергист». Терпящий издевательства от одноклассников, вскоре он впадает в отчаяние. Сможет ли Хаджимэ выжить и обрести славу в этом опасном мире монстров и демонов с уровнем силы простого ремесленника?",
+    "altTitles": [
+      "Арифурэта: Сильнейший ремесленник в мире",
+      "Arifureta Shokugyou de Sekai Saikyou",
+      "arifureta"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 25000,
+    "requestBase": 3750,
+    "shikimori": {
+      "id": 36882,
+      "title": "Arifureta Shokugyou de Sekai Saikyou",
+      "titleRu": "Арифурэта: Сильнейший ремесленник в мире",
+      "score": 6.72,
+      "votes": 36137,
+      "url": "https://shikimori.one/animes/36882-arifureta-shokugyou-de-sekai-saikyou",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-7439",
+    "slug": "mastera-mecha-onlayn-alisizatsiya",
+    "malId": 36474,
+    "aniLibriaReleaseId": 7439,
+    "source": "anilibria",
+    "title": "Sword Art Online: Alicization",
+    "titleRu": "Мастера Меча Онлайн: Алисизация",
+    "type": "TV",
+    "year": 2018,
+    "episodes": 36,
+    "franchise": "Мастера Меча Онлайн: Алисизация",
+    "genres": [
+      "Романтика",
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/7439/FCKKPuvpPvfMsa0wOtgJGtHPDOj0V0Eo.webp",
+    "synopsis": "Underworld - мир, ранее недоступный человеческому пониманию. Мир, со своими законами - \"Индексом Запретов\". За его соблюдением следит \"Церковь Аксиомы\" и рыцари единства, стать которыми можно только выиграв турнир. За нарушения законов следует неминуемое и жестокое наказание. Этот мир населяют NPС, но их поведение делает их невероятно живыми.\r\n Что же это за мир и чего от него ждать? Ища ответы на эти и многие другие вопросы, Кирито встречает беззаботного паренька, ежедневно борющегося костяным топором с огромным древом зла. Эта встреча напоминает Кирито о чём-то важном, о том, что он когда-то давно забыл... В его памяти всплывает одно единственное имя - Алиса. А для того, чтобы выжить, ему придётся молниеносно оценивать ситуацию и использовать знания, полученные в SAO, на максимум. Ведь неизвестно что будет, если ты умрёшь в этом - новом мире.",
+    "altTitles": [
+      "Мастера Меча Онлайн: Алисизация",
+      "Sword Art Online: Alicization",
+      "Война в Андерворлде, War of Underworld",
+      "sword-art-online-alicization"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 23200,
+    "requestBase": 3480,
+    "shikimori": {
+      "id": 36474,
+      "title": "Sword Art Online: Alicization",
+      "titleRu": "Мастера Меча Онлайн: Алисизация",
+      "score": 7.58,
+      "votes": 47016,
+      "url": "https://shikimori.one/animes/z36474-sword-art-online-alicization",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8324",
+    "slug": "vnuk-mudretsa",
+    "malId": 36407,
+    "aniLibriaReleaseId": 8324,
+    "source": "anilibria",
+    "title": "Kenja no Mago",
+    "titleRu": "Внук мудреца",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 12,
+    "franchise": "Внук мудреца",
+    "genres": [
+      "Комедия",
+      "Экшен",
+      "Магия",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8324/FJtbjJAS1Lh1BHzu5dbGgwliOOdV4Xt2.webp",
+    "synopsis": "Парень, который внезапно погиб в результате несчастного случая, переродился в другом мире ребёнком. Там его нашёл «мудрец» Мэрлин Уолфорд и назвал парнишку Шином. Мэрлин растил ребёнка как своего собственного внука и обучал, благодаря чему Шин обрёл великую силу. Когда же ему исполнилось пятнадцать, Мэрлин воскликнул: «Я забыл обучить его здравому смыслу!»\r\nТак и начинается история о необычной потусторонней жизни внука мудреца!",
+    "altTitles": [
+      "Внук мудреца",
+      "Kenja no Mago",
+      "kenja-no-mago"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 22600,
+    "requestBase": 3390,
+    "shikimori": {
+      "id": 36407,
+      "title": "Kenja no Mago",
+      "titleRu": "Внук мудреца",
+      "score": 6.61,
+      "votes": 31520,
+      "url": "https://shikimori.one/animes/36407-kenja-no-mago",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-5692",
+    "slug": "milyy-vo-frankse",
+    "malId": 35849,
+    "aniLibriaReleaseId": 5692,
+    "source": "anilibria",
+    "title": "Darling in the FranXX",
+    "titleRu": "Милый во Франксе",
+    "type": "TV",
+    "year": 2018,
+    "episodes": 24,
+    "franchise": "Любимый во Франкcе",
+    "genres": [
+      "Меха",
+      "Драма",
+      "Романтика",
+      "Фантастика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/5692/LWh7CVL4xvP0aRkASuzz1cpdf0NPvtqq.webp",
+    "synopsis": "В далёком будущем на опустошенной земле человечество возвело город- крепость «Плантация». В нём находится Мистелтейнн — приют, где детей содержат словно в птичьей клетке и учат пилотировать боевых роботов Франкс. Они не знают ни внешнего мира, ни бескрайних просторов неба, а их жизни — лишь череда сражений с ревущими драконами. Среди этих детей был вундеркинд Хиро с кодовым именем 016. Но однажды он совершает ошибку и становится никому не нужным. В один из своих унылых дней он встречает таинственную рогатую девушку по прозвищу 02, и эта судьбоносная встреча навсегда меняет жизни обитателей Мистелтейнна.",
+    "altTitles": [
+      "Любимый во Франкcе",
+      "Darling in the FranXX",
+      "Милый во Франкcе",
+      "darling-in-the-franxx",
+      "Милый во Франксе"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 22000,
+    "requestBase": 3300,
+    "shikimori": {
+      "id": 35849,
+      "title": "Darling in the FranXX",
+      "titleRu": "Милый во Франксе",
+      "score": 7.2,
+      "votes": 95159,
+      "url": "https://shikimori.one/animes/35849-darling-in-the-franxx",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9265",
+    "slug": "voshozhdenie-v-teni",
+    "malId": 48316,
+    "aniLibriaReleaseId": 9265,
+    "source": "anilibria",
+    "title": "Kage no Jitsuryokusha ni Naritakute!",
+    "titleRu": "Восхождение в тени!",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 20,
+    "franchise": "Восхождение в тени!",
+    "genres": [
+      "Комедия",
+      "Экшен",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9265/zC7SBPAmTcrdbcgDF6f5qpxXaOCFFe2N.webp",
+    "synopsis": "Сид Кагено всегда хотел быть героем. Но не спасителем, известным на весь мир, а незримой тенью, действующей из-за кулис. Ради достижения своей мечты Сид усердно учился и тренировался, никому не показывая своих способностей. Но как бы он ни старался, против ружей и танков ему не выстоять. Единственный способ одолеть армию в одиночку — овладеть магией! \r\nВ поисках магии он опробовал всё что только мог и нашел единственное средство: грузовик. \r\nПереродившись в другом мире, Сид исполнит свою мечту стать Теневым Владыкой!",
+    "altTitles": [
+      "Восхождение в тени!",
+      "Kage no Jitsuryokusha ni Naritakute!",
+      "Тень",
+      "kage-no-jitsuryokusha-ni-naritakute"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 21400,
+    "requestBase": 3210,
+    "shikimori": {
+      "id": 48316,
+      "title": "Kage no Jitsuryokusha ni Naritakute!",
+      "titleRu": "Восхождение в тени!",
+      "score": 8.22,
+      "votes": 45546,
+      "url": "https://shikimori.one/animes/48316-kage-no-jitsuryokusha-ni-naritakute",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-4857",
+    "slug": "mastera-mecha-onlayn",
+    "malId": 11757,
+    "aniLibriaReleaseId": 4857,
+    "source": "anilibria",
+    "title": "Sword Art Online",
+    "titleRu": "Мастера Меча Онлайн",
+    "type": "TV",
+    "year": 2012,
+    "episodes": 25,
+    "franchise": "Мастера меча онлайн",
+    "genres": [
+      "Сейнен",
+      "Драма",
+      "Романтика",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/4857/biSY4vl62jIOZA6uc7uIPplU50ku4Z2h.webp",
+    "synopsis": "В 2022 году человечество совершило технологический прорыв. Мечты о полном погружении в игру наконец стали реальными. Многопользовательская игра Sword Art Online погружает игрока в красочный мир, полный существ и красот. Однако у этого мира есть и другая сторона.\r\nТысячи игроков в одночасье оказываются запертыми в игре. Выход только один - пройти игру. И еще один маленький нюанс: возможности возродиться больше нет. Умираешь в игре - умираешь в реале.",
+    "altTitles": [
+      "Мастера меча онлайн",
+      "Sword Art Online",
+      "sword-art-online-i",
+      "Мастера Меча Онлайн"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 20800,
+    "requestBase": 3120,
+    "shikimori": {
+      "id": 11757,
+      "title": "Sword Art Online",
+      "titleRu": "Мастера Меча Онлайн",
+      "score": 7.22,
+      "votes": 127816,
+      "url": "https://shikimori.one/animes/z11757-sword-art-online",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8398",
+    "slug": "doktor-stoun",
+    "malId": 38691,
+    "aniLibriaReleaseId": 8398,
+    "source": "anilibria",
+    "title": "Dr. Stone",
+    "titleRu": "Доктор Стоун",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 24,
+    "franchise": "Доктор Стоун",
+    "genres": [
+      "Сёнен",
+      "Фантастика",
+      "Приключения"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8398/n8V1fWVA6IDEGUxqfDtQEbJalrackkye.webp",
+    "synopsis": "Вас ожидает фантастическое приключение, двух друзей которые пытаются возродить человечество после того, как несколько столетий назад все люди на земле превратились в камень. Кто же стоит за таинственным происшествием? Удастся ли Тайджу Оки и его другу Ишигами Сэнку докопаться до сути?",
+    "altTitles": [
+      "Доктор Стоун",
+      "Dr. Stone",
+      "dr-stone"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 20200,
+    "requestBase": 3030,
+    "shikimori": {
+      "id": 38691,
+      "title": "Dr. Stone",
+      "titleRu": "Доктор Стоун",
+      "score": 8.26,
+      "votes": 76481,
+      "url": "https://shikimori.one/animes/z38691-dr-stone",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9841",
+    "slug": "monolog-farmatsevta-2",
+    "malId": 58514,
+    "aniLibriaReleaseId": 9841,
+    "source": "anilibria",
+    "title": "Kusuriya no Hitorigoto 2nd Season",
+    "titleRu": "Монолог фармацевта 2",
+    "type": "TV",
+    "year": 2025,
+    "episodes": 24,
+    "franchise": "Монолог фармацевта",
+    "genres": [
+      "Драма",
+      "Исторический"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9841/NC51K0f0O5rgFwvZG09ptJMNypTIcuN9.webp",
+    "synopsis": "Ещё недавно она была простой служанкой, а теперь стала одной из приближённый самого императора!\r\nЭксцентричная девушка по имени Маомао, благодаря своему стойкому характеру и глубоким познаниям в фармацевтике, продолжает строить себе успешную карьеру в императорском дворце.\r\nТеперь перед ней стоит следующая задача: ей надо помогать беременной супруге императора Гёкуё, а именно обеспечить её здоровье и безопасность. И если с первым всё будет более-менее просто, то со вторым могут возникнуть проблемы. Вообще, беременность императрицы должна быть делом строжайшей секретности, но это ведь императорский дворец. Здесь интриги и подлые удары в спину происходят чуть ли не чаще, чем чаепития и официальные приёмы. Так что просто нашей находчивой героине точно не будет.",
+    "altTitles": [
+      "Монолог фармацевта 2",
+      "Kusuriya no Hitorigoto 2nd Season",
+      "kusuriya-no-hitorigoto-2nd-season"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 19600,
+    "requestBase": 2940,
+    "shikimori": {
+      "id": 58514,
+      "title": "Kusuriya no Hitorigoto 2nd Season",
+      "titleRu": "Монолог фармацевта 2",
+      "score": 8.91,
+      "votes": 28032,
+      "url": "https://shikimori.one/animes/58514-kusuriya-no-hitorigoto-2nd-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9555",
+    "slug": "monolog-farmatsevta",
+    "malId": 54492,
+    "aniLibriaReleaseId": 9555,
+    "source": "anilibria",
+    "title": "Kusuriya no Hitorigoto",
+    "titleRu": "Монолог фармацевта",
+    "type": "TV",
+    "year": 2023,
+    "episodes": 24,
+    "franchise": "Монолог фармацевта",
+    "genres": [
+      "Сейнен",
+      "Драма",
+      "Мистика",
+      "Исторический"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9555/EgkcPBAg9L0mO4sjsE4pVqoGbT30gfBz.webp",
+    "synopsis": "Главная героиня истории — юная Маомао — служит при императорском дворце и старается лишний раз не привлекать к себе внимание, ведь на этом месте она оказалась не по своей воле. Вот только её пытливый ум и сложившиеся обстоятельства не позволяют ей долго продолжать такую жизнь.\r\nНеведомая смертельная болезнь наследников императорской семьи вынуждают её тайно вмешаться и применить свои исключительные фармацевтические знания, полученные в лавке отца-аптекаря. И, похоже, это только начало., ведь теперь перед девушкой открывается целая череда медицинских загадок, решить которые под силу только ей.",
+    "altTitles": [
+      "Монолог фармацевта",
+      "Kusuriya no Hitorigoto",
+      "kusuriya-no-hitorigoto"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 19000,
+    "requestBase": 2850,
+    "shikimori": {
+      "id": 54492,
+      "title": "Kusuriya no Hitorigoto",
+      "titleRu": "Монолог фармацевта",
+      "score": 8.85,
+      "votes": 50860,
+      "url": "https://shikimori.one/animes/54492-kusuriya-no-hitorigoto",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-7462",
+    "slug": "etot-glupyy-svin-ne-ponimaet-mechtu-devochki-zayki",
+    "malId": 37450,
+    "aniLibriaReleaseId": 7462,
+    "source": "anilibria",
+    "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+    "titleRu": "Этот глупый свин не понимает мечту девочки-зайки",
+    "type": "TV",
+    "year": 2018,
+    "episodes": 13,
+    "franchise": "Этот глупый свин не понимает мечту девочки-зайки",
+    "genres": [
+      "Комедия",
+      "Школа",
+      "Драма",
+      "Романтика",
+      "Сверхъестественное"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/7462/5ZBApdSSNlyG97HG8HbwU604OikgrRqW.webp",
+    "synopsis": "Говорят, есть один загадочный феномен. Он называется «синдром половой зрелости». К примеру, старшеклассник Са́кута Азусага́ва однажды увидел рядом с собой девушку с заячьими ушками и хвостиком. Её звали Ма́й Са́кураджима. Знаменитая актриса, взявшая отпуск. А учится в той же школе, что и Са́кута. По какой-то причине никто её не замечает. Са́кута решает раскрыть эту тайну, общаясь с Ма́й и узнавая о её тайных чувствах. Также Са́кута встречает ещё нескольких девушек с «синдромом половой зрелости»",
+    "altTitles": [
+      "Этот глупый свин не понимает мечту девочки-зайки",
+      "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 18400,
+    "requestBase": 2760,
+    "shikimori": {
+      "id": 37450,
+      "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "titleRu": "Этот глупый свин не понимает мечту девочки-зайки",
+      "score": 8.23,
+      "votes": 93592,
+      "url": "https://shikimori.one/animes/z37450-seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9615",
+    "slug": "nezhelanno-bessmertnyy-avantyurist",
+    "malId": 51648,
+    "aniLibriaReleaseId": 9615,
+    "source": "anilibria",
+    "title": "Nozomanu Fushi no Boukensha",
+    "titleRu": "Нежеланно бессмертный авантюрист",
+    "type": "TV",
+    "year": 2024,
+    "episodes": 12,
+    "franchise": "Нежеланно бессмертный авантюрист",
+    "genres": [
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9615/Au43eRv2xoG6Z2W6gTClaYoLtFSFcd2w.webp",
+    "synopsis": "В течение последних десяти лет Рент Файна каждый день охотился на монстров, но, к сожалению, выходило это у него так себе. Его хватало лишь на убийство всякой мелочи по типу слаймов и гоблинов, и это приносило ему сущие гроши. И вот однажды, когда парень в очередной раз проходил по комнатам лабиринта, он волей судьбы наткнулся на ранее неизведанный проход. Пройдя через него, наш герой встретил легендарного дракона, который тут же оборвал его жизнь. Но вместо того, чтобы обрести вечный покой, Рент приходит в сознание и обнаруживает, что его тело теперь состоит из одних только костей. Получив столь неожиданный второй шанс, он, движимый желанием вновь обрести человеческий облик, начинает свои новые похождения.",
+    "altTitles": [
+      "Нежеланно бессмертный авантюрист",
+      "Nozomanu Fushi no Boukensha",
+      "nozomanu-fushi-no-boukensha"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 17200,
+    "requestBase": 2580,
+    "shikimori": {
+      "id": 51648,
+      "title": "Nozomanu Fushi no Boukensha",
+      "titleRu": "Нежеланно бессмертный авантюрист",
+      "score": 7.44,
+      "votes": 18424,
+      "url": "https://shikimori.one/animes/51648-nozomanu-fushi-no-boukensha",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9015",
+    "slug": "lunnoe-puteshestvie-privedyot-k-novomu-miru",
+    "malId": 43523,
+    "aniLibriaReleaseId": 9015,
+    "source": "anilibria",
+    "title": "Tsuki ga Michibiku Isekai Douchuu",
+    "titleRu": "Лунное путешествие приведёт к новому миру",
+    "type": "TV",
+    "year": 2021,
+    "episodes": 12,
+    "franchise": "Лунное путешествие в другой мир",
+    "genres": [
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9015/yQ1POHetqjeDIhb8QQ1B4C90P3GiDRHv.webp",
+    "synopsis": "Макото Мизуми — обычный старшеклассник, но однажды он был призван в другой мир как герой.\r\nОднако богиня этого мира, едва увидев парнишку, заявила, что у него уродливое лицо, а посему лишила Макото геройского титула и отправила в глушь на краю света. \r\nВ диких дебрях Макото поджидают разнообразные существа: драконы, пауки, орки, дворфы и много кто ещё!\r\nУдастся ли ему выжить? Сможет ли он изменить мир к лучшему вопреки людям, богам и прочим недоброжелателям?",
+    "altTitles": [
+      "Лунное путешествие в другой мир",
+      "Tsuki ga Michibiku Isekai Douchuu",
+      "Лунное путешествие приведёт к новому миру",
+      "tsuki-ga-michibiku-isekai-douchuu"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 16600,
+    "requestBase": 2490,
+    "shikimori": {
+      "id": 43523,
+      "title": "Tsuki ga Michibiku Isekai Douchuu",
+      "titleRu": "Лунное путешествие приведёт к новому миру",
+      "score": 7.71,
+      "votes": 25793,
+      "url": "https://shikimori.one/animes/43523-tsuki-ga-michibiku-isekai-douchuu",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8659",
+    "slug": "nepriznannyy-shkoloy-vladyka-demonov-silneyshiy-vladyka-demonov-v-istorii-postupaet-v-akademiyu-",
+    "malId": 40496,
+    "aniLibriaReleaseId": 8659,
+    "source": "anilibria",
+    "title": "Maou Gakuin no Futekigousha",
+    "titleRu": "Непризнанный школой владыка демонов! Сильнейший владыка демонов в истории поступает в академию, переродившись своим потомком",
+    "type": "TV",
+    "year": 2020,
+    "episodes": 13,
+    "franchise": "Непризнанный школой владыка демонов!",
+    "genres": [
+      "Комедия",
+      "Школа",
+      "Романтика",
+      "Магия",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8659/UpHsRYcocVNpoq7JqoD5NLrSO5NasR9q.webp",
+    "synopsis": "Тиран Анос, Король Демонов, одолел человечество, духов и богов. Но даже владыка демонов порой устаёт от вечных сражений! Надеясь на более мирную жизнь, Анос решает переродиться. Когда он просыпается спустя две тысячи лет, он обнаруживает, что на земле стало слишком мирно: его потомки выросли слабыми, а магия была в серьёзном упадке. Намереваясь вернуть себе своё законное место, он поступает в Академию Короля Демонов, где обнаруживает, что его магические силы просто зашкаливают. Буквально. И поскольку его силу невозможно определить учителя и другие ученики начинают считать Аноса неудачником. С поддержкой ученицы по имени Миша, с которой он хорошо сдружился, этот неудачник (Король Демонов), начинает своё возвышение в демонической иерархии!",
+    "altTitles": [
+      "Непризнанный школой владыка демонов!",
+      "Maou Gakuin no Futekigousha",
+      "maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e",
+      "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou",
+      "Непризнанный школой владыка демонов! Сильнейший владыка демонов в истории поступает в академию, переродившись своим потомком"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 16000,
+    "requestBase": 2400,
+    "shikimori": {
+      "id": 40496,
+      "title": "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou",
+      "titleRu": "Непризнанный школой владыка демонов! Сильнейший владыка демонов в истории поступает в академию, переродившись своим потомком",
+      "score": 7.31,
+      "votes": 36119,
+      "url": "https://shikimori.one/animes/40496-maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e-kayou",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9663",
+    "slug": "kaydzyu-nomer-vosem",
+    "malId": 52588,
+    "aniLibriaReleaseId": 9663,
+    "source": "anilibria",
+    "title": "Kaijuu 8-gou",
+    "titleRu": "Кайдзю номер восемь",
+    "type": "TV",
+    "year": 2024,
+    "episodes": 12,
+    "franchise": "Кайдзю номер восемь",
+    "genres": [
+      "Экшен",
+      "Фантастика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9663/x4z1rlLVX8eO8x7Ibe7xIRNYOHp9unxz.webp",
+    "synopsis": "Япония уже долгие годы страдает от нескончаемых нападений страшных тварей — кайдзю.\r\n Главный герой истории, тридцатидвухлетний Кафка Хибино, работает в специальной бригаде по очистке городов от останков этих чудовищ. С детства он мечтал вступить в боевой отряд, чтобы сражаться с монстрами, но раз за разом получал отказ. В отличие от его подруги детства Мины Аширо, которая уже стала капитаном и теперь возглавляет третий взвод оборонительных сил.\r\n Но ещё не всё потеряно. Возраст для набора в боевые отряды повысили до тридцати трёх, и Кафка решается попытать удачу ещё раз. Но судьба, как известно дама коварная: в результате случайного стечения обстоятельств к нему в рот залезает мелкий летающий кайдзю и превращает его в мощный гибрид человека и монстра.\r\n Теперь Кафке предстоит защищать людей от вселяющих ужас тварей, самому будучи одной из них.",
+    "altTitles": [
+      "Кайдзю номер восемь",
+      "Kaijuu 8-gou",
+      "Кайдзю 8 , Кайдзю номер 8",
+      "kaijuu-8-gou"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 15400,
+    "requestBase": 2310,
+    "shikimori": {
+      "id": 52588,
+      "title": "Kaijuu 8-gou",
+      "titleRu": "Кайдзю номер восемь",
+      "score": 8.21,
+      "votes": 36390,
+      "url": "https://shikimori.one/animes/52588-kaijuu-8-gou",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9122",
+    "slug": "eta-farforovaya-kukla-vlyubilas",
+    "malId": 48736,
+    "aniLibriaReleaseId": 9122,
+    "source": "anilibria",
+    "title": "Sono Bisque Doll wa Koi wo Suru",
+    "titleRu": "Эта фарфоровая кукла влюбилась",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 12,
+    "franchise": "Эта фарфоровая кукла влюбилась",
+    "genres": [
+      "Сёнен",
+      "Школа",
+      "Повседневность",
+      "Романтика",
+      "Этти"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9122/y5nUoqVxiUoJcuLZKwcWqhffuvvJMRvL.webp",
+    "synopsis": "Главный герой Вакана Годжо всегда восхищался своим дедушкой и во всем старался походить на него. Годжо даже перенял любовь к традиционным японским куклам и мечтал однажды стать таким же искусным мастером, как его дед. Однако, как бы Вакана ни старался, а освоить самое сложное и важное — создание кукольных голов — ему никак не удавалось. Зато парень умело обращался со швейной машинкой. Он с лёгкостью создавал оригинальные и изящные наряды. Именно эта его способность и сближает его с одноклассницей Марин Китагавой. Как оказалось, у девушки не менее странное хобби, чем у Годжо. Она увлекается косплеем персонажей из эроге-игр и нуждается в отличном портном. Судьба легко свела этих двоих вместе, но какие сюрпризы она для них заготовила — узнаем в сериале этой зимой!",
+    "altTitles": [
+      "Эта фарфоровая кукла влюбилась",
+      "Sono Bisque Doll wa Koi wo Suru",
+      "sono-bisque-doll-wa-koi-wo-suru"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 14800,
+    "requestBase": 2220,
+    "shikimori": {
+      "id": 48736,
+      "title": "Sono Bisque Doll wa Koi wo Suru",
+      "titleRu": "Эта фарфоровая кукла влюбилась",
+      "score": 8.13,
+      "votes": 66258,
+      "url": "https://shikimori.one/animes/48736-sono-bisque-doll-wa-koi-wo-suru",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8424",
+    "slug": "saga-o-vinlande",
+    "malId": 37521,
+    "aniLibriaReleaseId": 8424,
+    "source": "anilibria",
+    "title": "Vinland Saga",
+    "titleRu": "Сага о Винланде",
+    "type": "TV",
+    "year": 2019,
+    "episodes": 24,
+    "franchise": "Сага о Винланде",
+    "genres": [
+      "Сейнен",
+      "Драма",
+      "Экшен",
+      "Исторический",
+      "Приключения"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8424/Pt0yaatoRpp2adNWT8CZgYkWmzyLo1kQ.webp",
+    "synopsis": "Время господства викингов. Людей, которые известны своими варварскими обычаями и жестокими убийствами. Торфинн - сын одного из величайших викингов. Вот только вырос мальчик без отца, ведь тот погиб на поле боя. Желая отомстить, Торфинн поклялся убить виновного. Однако юноше ещё только предстоит овладеть искусством битвы.",
+    "altTitles": [
+      "Сага о Винланде",
+      "Vinland Saga",
+      "vinland-saga"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 14200,
+    "requestBase": 2130,
+    "shikimori": {
+      "id": 37521,
+      "title": "Vinland Saga",
+      "titleRu": "Сага о Винланде",
+      "score": 8.78,
+      "votes": 74960,
+      "url": "https://shikimori.one/animes/37521-vinland-saga",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9470",
+    "slug": "magicheskaya-bitva-2",
+    "malId": 51009,
+    "aniLibriaReleaseId": 9470,
+    "source": "anilibria",
+    "title": "JUJUTSU KAISEN Season 2",
+    "titleRu": "Магическая битва 2",
+    "type": "TV",
+    "year": 2023,
+    "episodes": 23,
+    "franchise": "Магическая битва",
+    "genres": [
+      "Сёнен",
+      "Школа",
+      "Экшен",
+      "Демоны",
+      "Сверхъестественное"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9470/7eU0f4bdWzlf2CCM3nDxRQW4qtdgI3m5.webp",
+    "synopsis": "2006 год. Юджи Итадори только-только исполнилось четыре, а шестнадцатилетний Сатору Годжо на пару с Сугуру Гэто уже стали самыми сильными.\r\nПреподаватель Токийского колледжа магии поручает им двоим крайне важную миссию: в целости и сохранности доставить к мастеру Тэнгэну старшеклассницу по имени Рико Аманай. Девочка была избрана идеальным сосудом силы, и пришло время мастеру слиться с её физической оболочкой. Однако недоброжелатели не дремлют, и, чтобы помешать этому, обращаются к человеку по прозвищу Убийца магов.\r\nКто же на самом деле этот Убийца? Получится ли у юных магов выполнить свою миссию? Обо всём этом мы узнаем во втором сезоне \"Магической битвы\"!",
+    "altTitles": [
+      "Магическая битва 2",
+      "JUJUTSU KAISEN Season 2",
+      "jujutsu-kaisen-season-2"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 13000,
+    "requestBase": 1950,
+    "shikimori": {
+      "id": 51009,
+      "title": "Jujutsu Kaisen 2nd Season",
+      "titleRu": "Магическая битва 2",
+      "score": 8.7,
+      "votes": 59031,
+      "url": "https://shikimori.one/animes/51009-jujutsu-kaisen-2nd-season",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8862",
+    "slug": "horimiya",
+    "malId": 42897,
+    "aniLibriaReleaseId": 8862,
+    "source": "anilibria",
+    "title": "Horimiya",
+    "titleRu": "Хоримия",
+    "type": "TV",
+    "year": 2021,
+    "episodes": 13,
+    "franchise": "Хоримия",
+    "genres": [
+      "Комедия",
+      "Сёнен",
+      "Школа",
+      "Повседневность",
+      "Романтика"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8862/fsLvkoiTIq7GJsBGvMR1HYWtQY4jXdzj.webp",
+    "synopsis": "В школе Кёко Хори знали, как умную, привлекательную и популярную девушку. Её одноклассника, скучного, мрачного Изуми Миямуру, напротив, описывают как неудачника и отаку. Но когда на пороге Хори неожиданно появляется Миямура, весь татуировках и пирсинге, эти два столь непохожих друг на друга подростка понимают, что у каждой истории есть несколько трактовок... а у каждой личности - много сторон!",
+    "altTitles": [
+      "Хоримия",
+      "Horimiya",
+      "horimiya"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 12400,
+    "requestBase": 1860,
+    "shikimori": {
+      "id": 42897,
+      "title": "Horimiya",
+      "titleRu": "Хоримия",
+      "score": 8.18,
+      "votes": 64175,
+      "url": "https://shikimori.one/animes/42897-horimiya",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9411",
+    "slug": "ya-poluchil-chiterskie-sposobnosti-v-drugom-mire-i-stal-ekstraordinarnym-v-realnom-mire-istoriya",
+    "malId": 52830,
+    "aniLibriaReleaseId": 9411,
+    "source": "anilibria",
+    "title": "Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta",
+    "titleRu": "Я получил читерские способности в другом мире и стал экстраординарным в реальном мире: История о том, как повышение уровня изменило мою жизнь",
+    "type": "TV",
+    "year": 2023,
+    "episodes": 13,
+    "franchise": "Я получил читерские способности в другом мире и стал экстраординарным в реальном мире: История о том, как повышение уровня изменило мою жизнь",
+    "genres": [
+      "Школа",
+      "Экшен",
+      "Приключения"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9411/ytGFFPg5naZMX01cG6lHQhHBfzeAudCu.webp",
+    "synopsis": "Жизнь Юи Тэнджо не заладилась с самого детства: в школе его травили сверстники, а семья считала обузой. Лишь дедушка, который говорил ему никогда не сдаваться и улыбаться несмотря ни на что, любил мальчика. Но вот дедуля покидает этот мир, и парень остаётся один на один с суровой реальностью.\r\nВ наследство от дедушки Юе достаётся его старый дом, и родители решают воспользоваться этим и сбагрить парня туда. Уже там наш герой натыкается на странную кладовую, где находит не менее странную дверь. Недолго думая, он открывает её и делает шаг в неизвестность...\r\nПо ту сторону он обнаруживает другой мир, наполненный магией, монстрами и бесчисленным количеством артефактов. А самое интересное, что теперь наш герой может не только свободно посещать этот мир, но и забирать оттуда с собой на Землю всё что угодно.\r\nВскоре жизнь между двумя мирами изменит судьбу героя навсегда...",
+    "altTitles": [
+      "Я получил читерские способности в другом мире и стал экстраординарным в реальном мире: История о том, как повышение уровня изменило мою жизнь",
+      "Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta",
+      "Читерский навык из другого мира сделал меня непобедимым в моём",
+      "isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo-kaeta"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 11800,
+    "requestBase": 1770,
+    "shikimori": {
+      "id": 52830,
+      "title": "Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta",
+      "titleRu": "Я получил читерские способности в другом мире и стал экстраординарным в реальном мире: История о том, как повышение уровня изменило мою жизнь",
+      "score": 6.33,
+      "votes": 15529,
+      "url": "https://shikimori.one/animes/52830-isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo-kaeta",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-7440",
+    "slug": "ubiytsa-goblinov",
+    "malId": 37349,
+    "aniLibriaReleaseId": 7440,
+    "source": "anilibria",
+    "title": "Goblin Slayer",
+    "titleRu": "Убийца Гоблинов",
+    "type": "TV",
+    "year": 2018,
+    "episodes": 12,
+    "franchise": "Убийца Гоблинов",
+    "genres": [
+      "Экшен",
+      "Приключения",
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/7440/oByTTMgbtEXo8F6tyUSZjxrdmeEe1Nd7.webp",
+    "synopsis": "Молодая жрица решилась на свою первую авантюру, собрав подле себя группу единомышленников. Однако, их начинаниям не суждено было сбыться. Когда костлявая смерть уже протянула к ним свою тощую руку, на выручку пришёл Убийца Гоблинов. Это человек, посвятивший всю свою жизнь истреблению злосчастных тварей. Никто не в силах остановить его от исполнения долга всей жизни. Слухи о подвигах Убийцы Гоблинов не заставили себя ждать. Отныне невозможно предсказать, кто повстречается на его пути.",
+    "altTitles": [
+      "Убийца Гоблинов",
+      "Goblin Slayer",
+      "goblin-slayer"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 11200,
+    "requestBase": 1680,
+    "shikimori": {
+      "id": 37349,
+      "title": "Goblin Slayer",
+      "titleRu": "Убийца гоблинов",
+      "score": 7.42,
+      "votes": 60058,
+      "url": "https://shikimori.one/animes/37349-goblin-slayer",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9906",
+    "slug": "genialnyy-tselitel-kotoryy-istselyal-v-odno-mgnovenie-no-byl-izgnan-kak-bespoleznyy-teper-naslaz",
+    "malId": 58359,
+    "aniLibriaReleaseId": 9906,
+    "source": "anilibria",
+    "title": "Isshun de Chiryou shiteita noni Yakutatazu to Tsuihou sareta Tensai Chiyushi, Yami Healer toshite Tanoshiku Ikiru",
+    "titleRu": "Гениальный целитель, который исцелял в одно мгновение, но был изгнан как бесполезный, теперь наслаждается жизнью в качестве тёмного целителя",
+    "type": "TV",
+    "year": 2025,
+    "episodes": 12,
+    "franchise": "Гениальный целитель, который исцелял в одно мгновение, но был изгнан как бесполезный, теперь наслаждается жизнью в качестве тёмного целителя",
+    "genres": [
+      "Фэнтези"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9906/fzHvFdZYsZRMVJ7zAi6D4lUzGDIUXNgm.webp",
+    "synopsis": "Прошлая жизнь Зеноса была совсем не сахар. И он был несказанно рад, когда его, нищего оборванца из трущоб, подобрали авантюристы. Но сколько бы он ни тренировался, сколько ни терпел издёвок с их стороны, от исключения из группы за свою бесполезность его это не уберегло.\r\nОказавшись опять на улице, Зенос решает найти применение своим новым навыкам и открыть подпольную клинику. Вскоре слухи о невероятном целителе из трущоб доходят как до местных главарей банд, так и до королевского двора... Остаётся лишь надеяться, что у него останется время и на своих пациентов.",
+    "altTitles": [
+      "Гениальный целитель, который исцелял в одно мгновение, но был изгнан как бесполезный, теперь наслаждается жизнью в качестве тёмного целителя",
+      "Isshun de Chiryou shiteita noni Yakutatazu to Tsuihou sareta Tensai Chiyushi, Yami Healer toshite Tanoshiku Ikiru",
+      "isshun-de-chiryou-shiteita-noni-yakutatazu-to-tsuihou-sareta-tensai-chiyushi-yami-healer-toshite-tanoshiku-ikiru"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 10600,
+    "requestBase": 1590,
+    "shikimori": {
+      "id": 58359,
+      "title": "Isshun de Chiryou shiteita noni Yakutatazu to Tsuihou sareta Tensai Chiyushi, Yami Healer toshite Tanoshiku Ikiru",
+      "titleRu": "Гениальный целитель, который исцелял в одно мгновение, но был изгнан как бесполезный, теперь наслаждается жизнью в качестве тёмного целителя",
+      "score": 6.82,
+      "votes": 9132,
+      "url": "https://shikimori.one/animes/58359-isshun-de-chiryou-shiteita-noni-yakutatazu-to-tsuihou-sareta-tensai-chiyushi-yami-healer-toshite-tanoshiku-ikiru",
+      "confidence": 24,
+      "matchedBy": "auto"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9964",
+    "slug": "eta-farforovaya-kukla-vlyubilas-2",
+    "malId": 53065,
+    "aniLibriaReleaseId": 9964,
+    "source": "anilibria",
+    "title": "Sono Bisque Doll wa Koi wo Suru Season 2",
+    "titleRu": "Эта фарфоровая кукла влюбилась 2",
+    "type": "TV",
+    "year": 2025,
+    "episodes": 12,
+    "franchise": "Эта фарфоровая кукла влюбилась",
+    "genres": [
+      "Сейнен",
+      "Романтика",
+      "Школа",
+      "Этти"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9964/rtbBiNO7oRWaHWq5BhC7e6bqEiqGFS4G.webp",
+    "synopsis": "В новом сезоне Вакана и Марин продолжат свою совместную работу над костюмами. Их будут ждать ещё больше интересных проектов, на которых они попытаются закрепить свой успех, а их отношениям предстоит пройти несколько испытаний на прочность. В конце концов, это ведь Япония, так что работа у косплееров всегда найдётся.\r\nНовые вызовы, необычные костюмы, захватывающие фотосессии — что ещё нужно парочке талантливых подростков, которые действительно любят своё дело? Ну, разве что ещё немножко любви...",
+    "altTitles": [
+      "Эта фарфоровая кукла влюбилась 2",
+      "Sono Bisque Doll wa Koi wo Suru Season 2",
+      "sono-bisque-doll-wa-koi-wo-suru-season-2"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 10000,
+    "requestBase": 1500,
+    "shikimori": {
+      "id": 53065,
+      "title": "Sono Bisque Doll wa Koi wo Suru Season 2",
+      "titleRu": "Эта фарфоровая кукла влюбилась 2",
+      "score": 8.18,
+      "votes": 19314,
+      "url": "https://shikimori.one/animes/53065-sono-bisque-doll-wa-koi-wo-suru-season-2",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-413",
+    "slug": "naruto-uragannye-hroniki",
+    "malId": 1735,
+    "aniLibriaReleaseId": 413,
+    "source": "anilibria",
+    "title": "Naruto: Shippuuden",
+    "titleRu": "Наруто Ураганные хроники",
+    "type": "TV",
+    "year": 2007,
+    "episodes": 450,
+    "franchise": "Наруто",
+    "genres": [
+      "Приключения",
+      "Сёнен",
+      "Боевые искусства"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/413/MH0zJJK7hdw7lzx1JRVb1Z3bEWuLdCDm.webp",
+    "synopsis": "Приключения самого известного в мире шиноби продолжаются! Наруто идёт к своей мечте - стать хокаге, преодолевая трудности и попадая в передряги. Его друг, а порой и противник, Саске также не стоит на месте и становится всё сильней, идя к своей целе отомстить брату Итачи. Чем же закончится эта история о дружбе, мечте и мести?\r\n 373 — 393 Четвёртая Мировая Война Шиноби — Обито Учиха\r\n 394 — 413 Прошлое Наруто (экзамен на чуунина)\r\n 414 — 431 Бесконечный Цукуёми: Активация\r\n 432 — 450 Повесть ниндзя Джирайи - \"Сказание о герое Наруто\"\r\n 451 — 458 Истинная история Итачи: свет и тьма\r\n 459 — 479 Ооцуцуки Кагуя + История мудреца шести путей\r\n 480 — 500 После арки Кагуи, мирное время и все дела",
+    "altTitles": [
+      "Наруто Ураганные хроники",
+      "Naruto: Shippuuden",
+      "naruto-shippuuden-naruto-uragannye-khroniki"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 9400,
+    "requestBase": 1410,
+    "shikimori": {
+      "id": 1735,
+      "title": "Naruto: Shippuuden",
+      "titleRu": "Наруто: Ураганные хроники",
+      "score": 8.29,
+      "votes": 93396,
+      "url": "https://shikimori.one/animes/z1735-naruto-shippuuden",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-2495",
+    "slug": "boruto-film",
+    "malId": 28755,
+    "aniLibriaReleaseId": 2495,
+    "source": "anilibria",
+    "title": "Boruto: Naruto the Movie",
+    "titleRu": "Боруто (Фильм)",
+    "type": "MOVIE",
+    "year": 2015,
+    "episodes": null,
+    "franchise": "Наруто",
+    "genres": [
+      "Боевые искусства",
+      "Комедия",
+      "Сёнен",
+      "Экшен"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/2495/MT5VtyvKYHzEbpUJn2OqJI4FJsReoGR0.webp",
+    "synopsis": "Боруто Узумаки — сын Наруто Узумаки, героя Скрытого листа и 7 Хокагэ. Главный герой сея истории весьма одарен, но ненавидит работу Наруто и поэтому считает его неважным отцом. Боруто считает своего отца героем, и в его сердце возникает желание превзойти героический путь отца, и лучшей идеей для этого становится намерение стать учеником человека, который знал его отца с ранних лет и являлся одновременно соперником и лучшим другом. Но что думает об этом сам Саскэ Учиха? В то время, как команда Боруто обзаведется своим сэнсэем, Боруто будет называть учителем Саскэ. Итак, наступает новая эпоха для жизни нового поколения синоби.",
+    "altTitles": [
+      "Боруто (Фильм)",
+      "Boruto: Naruto the Movie",
+      "boruto-naruto-the-movie"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 8800,
+    "requestBase": 1320,
+    "shikimori": {
+      "id": 28755,
+      "title": "Boruto: Naruto the Movie",
+      "titleRu": "Боруто",
+      "score": 7.37,
+      "votes": 24744,
+      "url": "https://shikimori.one/animes/z28755-boruto-naruto-the-movie",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-3996",
+    "slug": "boruto-novoe-pokolenie-naruto",
+    "malId": 34566,
+    "aniLibriaReleaseId": 3996,
+    "source": "anilibria",
+    "title": "Boruto: Naruto Next Generations",
+    "titleRu": "Боруто: Новое поколение Наруто",
+    "type": "TV",
+    "year": 2017,
+    "episodes": null,
+    "franchise": "Наруто",
+    "genres": [
+      "Боевые искусства",
+      "Экшен",
+      "Приключения",
+      "Сёнен",
+      "Супер сила"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/3996/ZJHHMeMP0624ZTpWmc0j52brIzIY3wFE.webp",
+    "synopsis": "Коноха, она же «деревня скрытого листа» — это деревня ниндзя, в которой воспитываются настоящие воины, сильные духом и верные своему делу. Маленький мальчик по имени Наруто, будучи изгоем, мечтал добиться звания «хокаге», главы деревни. И преуспел! Пройдя через тяжкие испытания, став героем войны, несколько раз защитив мир от угрозы уничтожения, Наруто, наконец, получил свою пыльную работёнку и высокий статус. Но эта история не о нём. Зло всегда возвращается, появляются новые враги, а значит миру нужны и новые герои. Эта история о Боруто, сыне Наруто, о том, кем он станет и о том, что готовит миру шиноби будущее.",
+    "altTitles": [
+      "Боруто: Новое поколение Наруто",
+      "Boruto: Naruto Next Generations",
+      "boruto-naruto-next-generations"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 8200,
+    "requestBase": 1230,
+    "shikimori": {
+      "id": 34566,
+      "title": "Boruto: Naruto Next Generations",
+      "titleRu": "Боруто: Новое поколение Наруто",
+      "score": 5.97,
+      "votes": 27478,
+      "url": "https://shikimori.one/animes/z34566-boruto-naruto-next-generations",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-8642",
+    "slug": "hori-i-miyamura",
+    "malId": 14753,
+    "aniLibriaReleaseId": 8642,
+    "source": "anilibria",
+    "title": "Hori-san to Miyamura-kun",
+    "titleRu": "Хори и Миямура",
+    "type": "OVA",
+    "year": 2012,
+    "episodes": 6,
+    "franchise": "Хоримия",
+    "genres": [
+      "Комедия",
+      "Романтика",
+      "Школа"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/8642/KlDg793DbxHIqVtFt9Wcla4FEq6j3NWe.webp",
+    "synopsis": "Может показаться, что Хори — обыкновенная девушка-подросток, но после школы она становится совсем другим человеком. Пока ее родители работают, главная героиня заменяет своему младшему брату родителей. Из-за ухода за ним, готовки, домашних дел у нее просто не остается времени на жизнь обычной старшеклассницы. В один прекрасный день она знакомится с парнем, который также не показывает настоящего себя в школе — парня в очках, тихоню Миямуру. За пределами школы парень ведет себя весьма дружелюбно, носит пирсинги, украшен множеством тату и не очень хорош в учебе. У главных героев оказывается очень много общего.",
+    "altTitles": [
+      "Хори и Миямура",
+      "Hori-san to Miyamura-kun",
+      "Хоримия",
+      "hori-san-to-miyamura-kun"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 7600,
+    "requestBase": 1140,
+    "shikimori": {
+      "id": 14753,
+      "title": "Hori-san to Miyamura-kun",
+      "titleRu": "Хори-сан и Миямура-кун",
+      "score": 7.43,
+      "votes": 4852,
+      "url": "https://shikimori.one/animes/14753-hori-san-to-miyamura-kun",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "anilibria-9480",
+    "slug": "horimiya-kusochek",
+    "malId": 54856,
+    "aniLibriaReleaseId": 9480,
+    "source": "anilibria",
+    "title": "Horimiya -piece-",
+    "titleRu": "Хоримия: Кусочек",
+    "type": "TV",
+    "year": 2023,
+    "episodes": 13,
+    "franchise": "Хоримия",
+    "genres": [
+      "Комедия",
+      "Романтика",
+      "Школа",
+      "Повседневность",
+      "Сёнен"
+    ],
+    "image": "https://anilibria.top/storage/releases/posters/9480/yvCdP22QF2ZuI84EEjfXXp5B23C8pRAr.webp",
+    "synopsis": "У каждого есть сторона, которую не хочется показывать другим. И не всегда то, каким человек кажется со стороны, отражает его истинную сущность. Популярная, но холодная красавица может вдруг оказаться заботливой и внимательной сестрой, а нелюдимый хулиган с татуировками и пирсингом — добрым и отзывчивым парнем. Познакомившись поближе, наши герои Хори и Миямура узнали друг о друге много нового и неожиданного, однако их история рассказана не полностью. Открываются новые страницы — кусочки чувств и мыслей героев, о которых мы не могли и подумать!",
+    "altTitles": [
+      "Хоримия: Кусочек",
+      "Horimiya -piece-",
+      "horimiya-piece"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 7000,
+    "requestBase": 1050,
+    "shikimori": {
+      "id": 54856,
+      "title": "Horimiya: Piece",
+      "titleRu": "Хоримия: Кусочек",
+      "score": 8.12,
+      "votes": 16464,
+      "url": "https://shikimori.one/animes/54856-horimiya-piece",
+      "confidence": 99,
+      "matchedBy": "manual"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-59978",
+    "slug": "provozhayuschaya-v-posledniy-put-friren-2",
+    "malId": 59978,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Sousou no Frieren 2nd Season",
+    "titleRu": "Провожающая в последний путь Фрирен 2",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 10,
+    "franchise": "Фрирен",
+    "genres": [],
+    "image": "/assets/frieren-2.webp",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Sousou no Frieren 2nd Season",
+      "Провожающая в последний путь Фрирен 2"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 59978,
+      "title": "Sousou no Frieren 2nd Season",
+      "titleRu": "Провожающая в последний путь Фрирен 2",
+      "score": 8.87,
+      "votes": 18471,
+      "url": "https://shikimori.one/animes/59978-sousou-no-frieren-2nd-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-56885",
+    "slug": "provozhayuschaya-v-posledniy-put-friren-magiya",
+    "malId": 56885,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Sousou no Frieren: ●● no Mahou",
+    "titleRu": "Провожающая в последний путь Фрирен: Магия ●●",
+    "type": "ONA",
+    "year": 2023,
+    "episodes": 24,
+    "franchise": "Фрирен",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/56885.jpg?1718913269",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Sousou no Frieren: ●● no Mahou",
+      "Провожающая в последний путь Фрирен: Магия ●●"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 56885,
+      "title": "Sousou no Frieren: ●● no Mahou",
+      "titleRu": "Провожающая в последний путь Фрирен: Магия ●●",
+      "score": 7.37,
+      "votes": 1167,
+      "url": "https://shikimori.one/animes/56885-sousou-no-frieren-no-mahou",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-56805",
+    "slug": "geroy",
+    "malId": 56805,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Yuusha",
+    "titleRu": "Герой",
+    "type": "MUSIC",
+    "year": 2023,
+    "episodes": 1,
+    "franchise": "Фрирен",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/56805.jpg?1712951814",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Yuusha",
+      "Герой"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 56805,
+      "title": "Yuusha",
+      "titleRu": "Герой",
+      "score": 7.89,
+      "votes": 1264,
+      "url": "https://shikimori.one/animes/56805-yuusha",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-58313",
+    "slug": "solnechnyy",
+    "malId": 58313,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Haru (2024)",
+    "titleRu": "Солнечный",
+    "type": "MUSIC",
+    "year": 2024,
+    "episodes": 1,
+    "franchise": "Фрирен",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/58313.jpg?1717702311",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Haru (2024)",
+      "Солнечный"
+    ],
+    "trailer": "",
+    "status": "released",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 58313,
+      "title": "Haru (2024)",
+      "titleRu": "Солнечный",
+      "score": 7.17,
+      "votes": 615,
+      "url": "https://shikimori.one/animes/58313-haru-2024",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-50250",
+    "slug": "tikava",
+    "malId": 50250,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Chiikawa",
+    "titleRu": "Тикава",
+    "type": "TV",
+    "year": 2022,
+    "episodes": 253,
+    "franchise": "Chiikawa",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/50250.jpg?1718941610",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Chiikawa",
+      "Тикава"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 50250,
+      "title": "Chiikawa",
+      "titleRu": "Тикава",
+      "score": 8.6,
+      "votes": 326,
+      "url": "https://shikimori.one/animes/50250-chiikawa",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-62076",
+    "slug": "istoriya-o-perekure-za-supermarketom",
+    "malId": 62076,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Super no Ura de Yani Suu Futari",
+    "titleRu": "История о перекуре за супермаркетом",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 9,
+    "franchise": "Super no Ura de Yani Suu Futari",
+    "genres": [],
+    "image": "/assets/fallback-poster.svg",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Super no Ura de Yani Suu Futari",
+      "История о перекуре за супермаркетом"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 62076,
+      "title": "Super no Ura de Yani Suu Futari",
+      "titleRu": "История о перекуре за супермаркетом",
+      "score": 8.54,
+      "votes": 2449,
+      "url": "https://shikimori.one/animes/62076-super-no-ura-de-yani-suu-futari",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-60310",
+    "slug": "dobro-pozhalovat-v-ad-iruma-4",
+    "malId": 60310,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Mairimashita! Iruma-kun 4th Season",
+    "titleRu": "Добро пожаловать в ад, Ирума! 4",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 24,
+    "franchise": "Mairimashita! Iruma-kun 4th Season",
+    "genres": [],
+    "image": "/assets/fallback-poster.svg",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Mairimashita! Iruma-kun 4th Season",
+      "Добро пожаловать в ад, Ирума! 4"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 60310,
+      "title": "Mairimashita! Iruma-kun 4th Season",
+      "titleRu": "Добро пожаловать в ад, Ирума! 4",
+      "score": 8.14,
+      "votes": 368,
+      "url": "https://shikimori.one/animes/60310-mairimashita-iruma-kun-4th-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  },
+  {
+    "id": "mal-58877",
+    "slug": "put-asa-akt-ii-2",
+    "malId": 58877,
+    "aniLibriaReleaseId": null,
+    "source": "shikimori",
+    "title": "Diamond no Ace: Act II Second Season",
+    "titleRu": "Путь аса: Акт II 2",
+    "type": "TV",
+    "year": 2026,
+    "episodes": 13,
+    "franchise": "Diamond no Ace",
+    "genres": [],
+    "image": "https://shikimori.one/system/animes/preview/58877.jpg?1716048481",
+    "synopsis": "Русское описание загружается при открытии карточки.",
+    "altTitles": [
+      "Diamond no Ace: Act II Second Season",
+      "Путь аса: Акт II 2"
+    ],
+    "trailer": "",
+    "status": "ongoing",
+    "popularityBase": 0,
+    "requestBase": 0,
+    "shikimori": {
+      "id": 58877,
+      "title": "Diamond no Ace: Act II Second Season",
+      "titleRu": "Путь аса: Акт II 2",
+      "score": 8.12,
+      "votes": 79,
+      "url": "https://shikimori.one/animes/58877-diamond-no-ace-act-ii-second-season",
+      "confidence": 99,
+      "matchedBy": "malId"
+    },
+    "characters": []
+  }
+]

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Taytlo">
+  <defs>
+    <linearGradient id="bg" x1="8" x2="56" y1="7" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121a27"/>
+      <stop offset=".55" stop-color="#0a0d14"/>
+      <stop offset="1" stop-color="#151b25"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="15" x2="50" y1="17" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42e8b4"/>
+      <stop offset="1" stop-color="#6cb7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <path d="M14 18c0-3.3 2.7-6 6-6h24c3.3 0 6 2.7 6 6v28c0 3.3-2.7 6-6 6H20c-3.3 0-6-2.7-6-6V18Z" fill="#ffffff" opacity=".06"/>
+  <path d="M25 22v20l17-10-17-10Z" fill="url(#mint)"/>
+  <path d="M16 48 48 16" stroke="#ffbf5c" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#f7fbff">TL</text>
+</svg>

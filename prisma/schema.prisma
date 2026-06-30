@@ -1,0 +1,204 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  MODERATOR
+  ADMIN
+}
+
+enum WatchStatus {
+  WATCHING
+  COMPLETED
+  DROPPED
+  PLANNED
+}
+
+enum ExternalProvider {
+  ANILIBRIA
+  SHIKIMORI
+  MYANIMELIST
+  YOUTUBE
+}
+
+model User {
+  id           String          @id @default(cuid())
+  email        String          @unique
+  name         String?
+  passwordHash String?
+  passwordSalt String?
+  role         UserRole        @default(USER)
+  sessions     Session[]
+  library      UserLibrary?
+  favorites    Favorite[]
+  progress     WatchProgress[]
+  watchlist    WatchListItem[]
+  comments     Comment[]
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model UserLibrary {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  favorites     Json     @default("[]")
+  watchStatuses Json     @default("{}")
+  progress      Json     @default("{}")
+  history       Json     @default("[]")
+  comments      Json     @default("{}")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Anime {
+  id                  String            @id @default(cuid())
+  slug                String            @unique
+  title               String
+  titleRu             String
+  type                String
+  year                Int?
+  episodes            Int?
+  synopsis            String?
+  posterUrl           String?
+  franchise           String?
+  genres              String[]
+  status              String            @default("unknown")
+  shikimoriScore      Float?
+  shikimoriVotes      Int?
+  popularityBase      Int               @default(0)
+  externalIds         AnimeExternalId[]
+  favorites           Favorite[]
+  progress            WatchProgress[]
+  watchlist           WatchListItem[]
+  comments            Comment[]
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  @@index([titleRu])
+  @@index([franchise])
+  @@index([shikimoriScore])
+}
+
+model AnimeExternalId {
+  id          String           @id @default(cuid())
+  animeId     String
+  provider    ExternalProvider
+  externalId  String
+  url         String?
+  anime       Anime            @relation(fields: [animeId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, externalId])
+  @@index([animeId])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  animeId   String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  anime     Anime    @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, animeId])
+}
+
+model WatchListItem {
+  id        String      @id @default(cuid())
+  userId    String
+  animeId   String
+  status    WatchStatus @default(PLANNED)
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  anime     Anime       @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@unique([userId, animeId])
+}
+
+model WatchProgress {
+  id             String   @id @default(cuid())
+  userId         String
+  animeId        String
+  episodeNumber  Int
+  positionSec    Int      @default(0)
+  durationSec    Int?
+  provider       String?
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  anime          Anime    @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([userId, animeId, episodeNumber])
+  @@index([userId, updatedAt])
+}
+
+model Comment {
+  id             String   @id @default(cuid())
+  userId         String
+  animeId        String
+  episodeNumber  Int?
+  body           String
+  isHidden       Boolean  @default(false)
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  anime          Anime    @relation(fields: [animeId], references: [id], onDelete: Cascade)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([animeId, episodeNumber, createdAt])
+}
+
+model RatingCache {
+  id          String   @id @default(cuid())
+  provider    String
+  externalId  String
+  score       Float?
+  votes       Int?
+  payload     Json?
+  checkedAt   DateTime @default(now())
+
+  @@unique([provider, externalId])
+  @@index([checkedAt])
+}
+
+model ScheduleItem {
+  id             String   @id @default(cuid())
+  animeSlug      String
+  titleRu        String
+  episodeNumber  Int?
+  airAt          DateTime
+  source         String
+  url            String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([airAt])
+  @@index([animeSlug])
+}
+
+model AdminAuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  action    String
+  entity    String?
+  payload   Json?
+  createdAt DateTime @default(now())
+}
