@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import AnimatedList from "@/components/AnimatedList";
 import type { AniLibriaEpisode, AniLibriaEpisodesResult } from "@/lib/types";
 
 type MiniAnime = {
@@ -286,6 +287,23 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
     window.dispatchEvent(new Event("taytlo-library-change"));
   }
 
+  function selectEpisode(episode: AniLibriaEpisode) {
+    if (episode.hlsUrl) {
+      setSelected(episode);
+      return;
+    }
+
+    const fallbackUrl = episode.fallbackUrl || data.releaseUrl;
+    if (fallbackUrl) {
+      window.open(fallbackUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    setSelected(episode);
+  }
+
+  const selectedEpisodeIndex = selected ? data.episodes.findIndex((episode) => episode.id === selected.id) : -1;
+
   return (
     <section className="episode-shell" id="episodes">
       <div className="section-title">
@@ -303,28 +321,25 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
               <p className="episode-summary">
                 {data.releaseName || anime.titleRu} · доступно серий: {data.episodes.length}
               </p>
-              <div className="episode-list">
-                {data.episodes.map((episode) => (
-                  <article className={selected?.id === episode.id ? "episode-row is-active" : "episode-row"} key={episode.id}>
-                    <button type="button" className="episode-number" onClick={() => setSelected(episode)}>
-                      {episode.number}
-                    </button>
-                    <button type="button" className="episode-copy" onClick={() => setSelected(episode)}>
+              <AnimatedList
+                items={data.episodes}
+                getKey={(episode) => episode.id}
+                selectedIndex={selectedEpisodeIndex}
+                onItemSelect={(episode) => selectEpisode(episode)}
+                className="episode-list"
+                itemClassName={(episode, _index, isSelected) => `episode-row${isSelected ? " is-active" : ""}${episode.hlsUrl ? "" : " is-external"}`}
+                ariaLabel={`Серии ${data.releaseName || anime.titleRu}`}
+                renderItem={(episode) => (
+                  <>
+                    <span className="episode-number">{episode.number}</span>
+                    <span className="episode-copy">
                       <strong>{episode.title ? `«${episode.title}»` : `Серия ${episode.number}`}</strong>
                       <span>{durationLabel(episode.duration)}</span>
-                    </button>
-                    {episode.hlsUrl ? (
-                      <button type="button" className="watch-now" onClick={() => setSelected(episode)}>
-                        Смотреть
-                      </button>
-                    ) : (
-                      <a className="watch-now" href={episode.fallbackUrl || data.releaseUrl} target="_blank" rel="noreferrer">
-                        AniLibria
-                      </a>
-                    )}
-                  </article>
-                ))}
-              </div>
+                    </span>
+                    <span className="watch-now">{episode.hlsUrl ? "Смотреть" : "AniLibria"}</span>
+                  </>
+                )}
+              />
             </>
           ) : null}
         </div>
