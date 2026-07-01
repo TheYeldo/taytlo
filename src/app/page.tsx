@@ -7,6 +7,7 @@ import { HomeDiscovery } from "@/components/HomeDiscovery";
 import { HomeWatchHub } from "@/components/HomeWatchHub";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionTitle } from "@/components/SectionTitle";
+import { SafeImage } from "@/components/SafeImage";
 import SplitText from "@/components/SplitText";
 import { getCatalog, getCatalogStats, getFranchises, getGenres, queryCatalog } from "@/lib/catalog";
 import { getUpcomingSchedule } from "@/lib/schedule";
@@ -89,7 +90,7 @@ export default function HomePage({ searchParams }: HomeProps) {
           <div className="hero-poster-stack">
             {spotlight.map((anime, index) => (
               <Link href={`/anime/${anime.slug}`} className="hero-poster-card" key={anime.id} style={{ "--shift": `${index * 16}px` } as CSSProperties & Record<"--shift", string>}>
-                <img src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} />
+                <SafeImage src={anime.image} alt={anime.titleRu} />
                 <span>
                   <strong>{anime.titleRu}</strong>
                   <small>{anime.shikimori?.score ? `SH ${anime.shikimori.score.toFixed(2)}` : anime.year || "Taytlo"}</small>

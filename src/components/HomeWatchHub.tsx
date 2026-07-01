@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { SafeImage } from "./SafeImage";
 import type { Anime } from "@/lib/types";
 
 type HubAnime = Pick<Anime, "id" | "slug" | "titleRu" | "image" | "shikimori" | "genres">;
@@ -105,7 +106,7 @@ export function HomeWatchHub({ catalog }: { catalog: HubAnime[] }) {
       <div className="watch-hub-grid">
         {cards.map((card) => (
           <Link href={`/anime/${card.anime.slug}#episodes`} className="watch-hub-next-card" key={card.key}>
-            <img src={card.anime.image || "/assets/fallback-poster.svg"} alt={card.anime.titleRu} />
+            <SafeImage src={card.anime.image} alt={card.anime.titleRu} />
             <span>
               <small>{card.eyebrow}</small>
               <strong>{card.anime.titleRu}</strong>

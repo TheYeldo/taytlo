@@ -1,4 +1,5 @@
 import type { Anime } from "@/lib/types";
+import { SafeImage } from "./SafeImage";
 
 type Collection = {
   title: string;
@@ -24,7 +25,7 @@ function CollectionShelf({ collection }: { collection: Collection }) {
         {collection.items.map((anime, index) => (
           <a href={`/anime/${anime.slug}`} className="collection-card" key={`${collection.title}-${anime.id}`}>
             <span className="collection-rank">{index + 1}</span>
-            <img src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} loading="lazy" />
+            <SafeImage src={anime.image} alt={anime.titleRu} loading="lazy" />
             <span className="collection-copy">
               <strong>{anime.titleRu}</strong>
               <small>{collection.metric(anime, index)}</small>

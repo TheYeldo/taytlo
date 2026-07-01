@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { SafeImage } from "./SafeImage";
 import type { Anime } from "@/lib/types";
 
 type ProfileAnime = Pick<Anime, "id" | "slug" | "titleRu" | "image" | "shikimori">;
@@ -215,7 +216,7 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
         <div className="profile-favorites">
           {favorites.slice(0, 10).map((anime) => (
             <Link href={`/anime/${anime.slug}`} className="profile-favorite" key={anime.id}>
-              <img src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} />
+              <SafeImage src={anime.image} alt={anime.titleRu} />
               <strong>{anime.titleRu}</strong>
             </Link>
           ))}

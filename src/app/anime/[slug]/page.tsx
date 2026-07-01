@@ -6,6 +6,7 @@ import { EpisodePlayer } from "@/components/EpisodePlayer";
 import { FranchiseTimeline } from "@/components/FranchiseTimeline";
 import { NextEpisodeCountdown } from "@/components/NextEpisodeCountdown";
 import { RatingBadge } from "@/components/RatingBadge";
+import { SafeImage } from "@/components/SafeImage";
 import SplitText from "@/components/SplitText";
 import { UserLibraryControls } from "@/components/UserLibraryControls";
 import { getAnimeBySlug, getCatalog, getRelatedAnime } from "@/lib/catalog";
@@ -134,7 +135,7 @@ export default function AnimePage({ params }: AnimePageProps) {
       <section className="anime-detail-hero">
         <div className="detail-poster-column">
           <div className="detail-poster-frame">
-            <img className="detail-poster" src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} />
+            <SafeImage className="detail-poster" src={anime.image} alt={anime.titleRu} />
             <span>{anime.episodes ? `${anime.episodes} серий` : anime.type}</span>
           </div>
           <a className="detail-watch-cta" href="#episodes">
@@ -252,7 +253,7 @@ export default function AnimePage({ params }: AnimePageProps) {
           <div className="character-grid">
             {anime.characters.map((character) => (
               <article className="character-card" key={character.id}>
-                <img src={character.image || "/assets/fallback-poster.svg"} alt={character.name} loading="lazy" />
+                <SafeImage src={character.image} alt={character.name} loading="lazy" />
                 <strong>{character.name}</strong>
                 <span>{character.role}</span>
               </article>

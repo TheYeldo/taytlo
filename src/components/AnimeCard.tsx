@@ -1,12 +1,13 @@
 import Link from "next/link";
 import type { Anime } from "@/lib/types";
 import { RatingBadge } from "./RatingBadge";
+import { SafeImage } from "./SafeImage";
 
 export function AnimeCard({ anime }: { anime: Anime }) {
   return (
     <article className="anime-card">
       <Link className="poster-link" href={`/anime/${anime.slug}`} aria-label={anime.titleRu}>
-        <img src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} loading="lazy" />
+        <SafeImage src={anime.image} alt={anime.titleRu} loading="lazy" />
       </Link>
       <div className="card-body">
         <Link className="card-title" href={`/anime/${anime.slug}`}>

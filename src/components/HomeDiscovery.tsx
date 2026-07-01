@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Anime } from "@/lib/types";
+import { SafeImage } from "./SafeImage";
 
 type DiscoveryGroup = {
   eyebrow: string;
@@ -73,7 +74,7 @@ export function HomeDiscovery({ catalog }: { catalog: Anime[] }) {
               <div className="discovery-list">
                 {group.items.map((anime) => (
                   <Link href={`/anime/${anime.slug}`} className="discovery-item" key={`${group.title}-${anime.id}`}>
-                    <img src={anime.image || "/assets/fallback-poster.svg"} alt={anime.titleRu} loading="lazy" />
+                    <SafeImage src={anime.image} alt={anime.titleRu} loading="lazy" />
                     <span>
                       <strong>{anime.titleRu}</strong>
                       <small>{anime.shikimori?.score ? `${anime.shikimori.score.toFixed(2)} SH` : anime.year || "без оценки"}</small>
