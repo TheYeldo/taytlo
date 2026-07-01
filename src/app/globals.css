@@ -404,10 +404,15 @@ main {
 
 .card-bottom {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  align-items: center;
-  gap: 8px;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 7px;
   min-width: 0;
+}
+
+.card-bottom .rating {
+  justify-self: start;
+  max-width: 100%;
 }
 
 .rating,
@@ -449,7 +454,13 @@ main {
 .card-chip {
   min-width: 0;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: unset;
+  white-space: normal;
+  line-height: 1.2;
+  padding-block: 5px;
 }
 
 .tag-row span {
@@ -3083,7 +3094,7 @@ main {
   }
 
   .card-bottom {
-    grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 6px;
   }
 
