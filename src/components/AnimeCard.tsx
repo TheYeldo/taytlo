@@ -4,6 +4,8 @@ import { RatingBadge } from "./RatingBadge";
 import { SafeImage } from "./SafeImage";
 
 export function AnimeCard({ anime }: { anime: Anime }) {
+  const chipLabel = anime.genres[0] || anime.franchise;
+
   return (
     <article className="anime-card">
       <Link className="poster-link" href={`/anime/${anime.slug}`} aria-label={anime.titleRu}>
@@ -18,7 +20,9 @@ export function AnimeCard({ anime }: { anime: Anime }) {
         </p>
         <div className="card-bottom">
           <RatingBadge rating={anime.shikimori} />
-          <span className="card-chip">{anime.genres[0] || anime.franchise}</span>
+          <span className="card-chip" title={chipLabel}>
+            {chipLabel}
+          </span>
         </div>
       </div>
     </article>
