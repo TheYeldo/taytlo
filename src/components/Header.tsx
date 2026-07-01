@@ -9,14 +9,14 @@ export function Header() {
         <span>Taytlo</span>
       </Link>
       <nav aria-label="Главная навигация">
-        <a href="/#catalog">Каталог</a>
-        <a href="/#explore">Жанры</a>
-        <a href="/#schedule">Календарь</a>
-        <a href="/#popular">Популярное</a>
-        <a href="/profile">Профиль</a>
+        <Link href="/#catalog">Каталог</Link>
+        <Link href="/#explore">Жанры</Link>
+        <Link href="/#schedule">Календарь</Link>
+        <Link href="/#popular">Популярное</Link>
+        <Link href="/profile">Профиль</Link>
       </nav>
       <div className="header-actions">
-        <a className="header-watch-link" href="/#catalog">Смотреть</a>
+        <Link className="header-watch-link" href="/#catalog">Смотреть</Link>
         <ThemeToggle />
       </div>
     </header>
