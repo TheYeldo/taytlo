@@ -214,7 +214,7 @@ export default function AnimePage({ params }: AnimePageProps) {
         <div className="detail-stats-grid">
           <article className="detail-activity-card">
             {activity.map((row) => (
-              <div className="activity-row" key={row.label}>
+              <div className={`activity-row activity-row-${row.color}`} key={row.label}>
                 <span className={`activity-dot activity-dot-${row.color}`} />
                 <strong>{row.label}</strong>
                 <div>

@@ -9,6 +9,7 @@
   --mint: #42e8b4;
   --gold: #ffbf5c;
   --rose: #ff6f91;
+  --hot: #ff4fb3;
   --blue: #6cb7ff;
   --radius: 8px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -25,6 +26,7 @@
   --mint: #087d68;
   --gold: #a76200;
   --rose: #ba375f;
+  --hot: #c9287b;
   --blue: #1d66b2;
 }
 
@@ -813,16 +815,36 @@ main {
 }
 
 .activity-row {
+  --activity-color: var(--mint);
   display: grid;
   grid-template-columns: 12px 130px minmax(0, 1fr) 54px;
   gap: 10px;
   align-items: center;
 }
 
+.activity-row-green,
+.activity-row-mint {
+  --activity-color: var(--mint);
+}
+
+.activity-row-pink {
+  --activity-color: var(--hot);
+}
+
+.activity-row-orange {
+  --activity-color: var(--gold);
+}
+
+.activity-row-purple {
+  --activity-color: #b982ff;
+}
+
 .activity-dot {
   width: 12px;
   height: 12px;
   border-radius: 999px;
+  background: var(--activity-color);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--activity-color) 58%, transparent);
 }
 
 .activity-dot-green,
@@ -847,8 +869,12 @@ main {
   font-size: 13px;
 }
 
+.activity-row strong {
+  color: color-mix(in srgb, var(--text) 82%, var(--activity-color) 18%);
+}
+
 .activity-row small {
-  color: var(--muted);
+  color: color-mix(in srgb, var(--activity-color) 70%, var(--muted) 30%);
   text-align: right;
 }
 
@@ -860,12 +886,18 @@ main {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.activity-row i,
+.activity-row i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--activity-color), color-mix(in srgb, var(--activity-color) 52%, white 24%));
+}
+
 .rating-bars b {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--mint), var(--hot));
+  background: linear-gradient(90deg, var(--gold), var(--mint));
 }
 
 .detail-rating-card {
@@ -876,21 +908,63 @@ main {
 }
 
 .rating-orb {
+  position: relative;
+  isolation: isolate;
   display: grid;
   place-items: center;
   gap: 5px;
   min-height: 150px;
+  border: 1px solid rgba(255, 191, 92, 0.24);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 191, 92, 0.26), rgba(255, 191, 92, 0.04) 62%, transparent 64%);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 191, 92, 0.28), rgba(255, 191, 92, 0.06) 58%, transparent 61%),
+    linear-gradient(145deg, rgba(255, 191, 92, 0.08), rgba(255, 79, 179, 0.04));
+  box-shadow:
+    inset 0 0 34px rgba(255, 191, 92, 0.12),
+    0 18px 50px rgba(0, 0, 0, 0.22);
   color: var(--gold);
 }
 
+.rating-orb::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: -1;
+  border: 1px solid rgba(255, 191, 92, 0.34);
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(from -18deg, rgba(255, 191, 92, 0.42) 0 7deg, transparent 7deg 18deg),
+    radial-gradient(circle, transparent 54%, rgba(255, 191, 92, 0.16) 55% 63%, transparent 64%);
+  opacity: 0.72;
+}
+
+.rating-orb::after {
+  content: "SH";
+  position: absolute;
+  top: 18px;
+  display: grid;
+  min-width: 34px;
+  min-height: 22px;
+  place-items: center;
+  border: 1px solid rgba(255, 191, 92, 0.42);
+  border-radius: 999px;
+  background: rgba(255, 191, 92, 0.12);
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 1000;
+}
+
 .rating-orb strong {
+  position: relative;
+  z-index: 1;
   font-size: 42px;
   line-height: 1;
+  text-shadow: 0 0 18px rgba(255, 191, 92, 0.28);
 }
 
 .rating-orb span {
+  position: relative;
+  z-index: 1;
   color: var(--text);
   font-size: 13px;
   font-weight: 900;
