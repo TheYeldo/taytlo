@@ -1212,7 +1212,13 @@ main {
 .hero-copy h1 {
   max-width: 680px;
   font-size: clamp(62px, 9.5vw, 128px);
+  line-height: 1.03;
   letter-spacing: 0;
+}
+
+.hero-copy h1.split-parent {
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
 }
 
 .hero-copy p {
