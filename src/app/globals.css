@@ -453,9 +453,12 @@ main {
 
 .card-chip {
   min-width: 0;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  justify-self: start;
   justify-content: flex-start;
   overflow: hidden;
+  overflow-wrap: anywhere;
   text-align: left;
   text-overflow: unset;
   white-space: normal;
