@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { LibrarySync } from "@/components/LibrarySync";
-import { NavigationScrollManager } from "@/components/NavigationScrollManager";
 import { siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -34,7 +33,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         <LibrarySync />
-        <NavigationScrollManager />
         {children}
       </body>
     </html>
