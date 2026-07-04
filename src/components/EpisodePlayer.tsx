@@ -290,6 +290,7 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
   function selectEpisode(episode: AniLibriaEpisode) {
     if (episode.hlsUrl) {
       setSelected(episode);
+      setStatus("");
       return;
     }
 
@@ -303,6 +304,9 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
   }
 
   const selectedEpisodeIndex = selected ? data.episodes.findIndex((episode) => episode.id === selected.id) : -1;
+  const previousEpisode = selectedEpisodeIndex > 0 ? data.episodes[selectedEpisodeIndex - 1] : null;
+  const nextEpisode =
+    selectedEpisodeIndex >= 0 && selectedEpisodeIndex < data.episodes.length - 1 ? data.episodes[selectedEpisodeIndex + 1] : null;
 
   return (
     <section className="episode-shell" id="episodes">
@@ -349,6 +353,12 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
             <>
               <div className="player-heading">
                 <span>{episodeLabel(selected)}</span>
+                <button type="button" onClick={() => previousEpisode && selectEpisode(previousEpisode)} disabled={!previousEpisode}>
+                  Предыдущая
+                </button>
+                <button type="button" onClick={() => nextEpisode && selectEpisode(nextEpisode)} disabled={!nextEpisode}>
+                  Следующая
+                </button>
                 {data.releaseUrl ? (
                   <a href={data.releaseUrl} target="_blank" rel="noreferrer">
                     Открыть на AniLibria
@@ -365,7 +375,7 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
                 onPause={() => saveProgress(true)}
                 onEnded={() => {
                   saveProgress(true);
-                  setStatus("Серия завершена");
+                  setStatus(nextEpisode ? `Серия завершена. Дальше — серия ${nextEpisode.number}` : "Серия завершена");
                 }}
               />
               {status ? <p className="player-status">{status}</p> : null}

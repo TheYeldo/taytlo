@@ -2710,19 +2710,40 @@ main {
 .player-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
 }
 
 .player-heading span {
+  flex: 1 1 220px;
+  min-width: 0;
   font-weight: 900;
 }
 
-.player-heading a {
+.player-heading a,
+.player-heading button {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(66, 232, 180, 0.28);
+  border-radius: 9px;
+  padding: 0 11px;
+  background: rgba(66, 232, 180, 0.08);
   color: var(--mint);
   font-size: 12px;
   font-weight: 900;
+}
+
+.player-heading button {
+  cursor: pointer;
+}
+
+.player-heading button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 .player-panel video {
