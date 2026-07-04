@@ -12,7 +12,8 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
-    "import:static": "node scripts/import-static-catalog.mjs"
+    "import:static": "node scripts/import-static-catalog.mjs",
+    "import:shikimori": "node scripts/expand-catalog-shikimori.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
