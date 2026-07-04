@@ -2,15 +2,16 @@
 
 import Link from "next/link";
 import BubbleMenu, { type BubbleMenuItem } from "./BubbleMenu";
+import PillNav, { type PillNavItem } from "./PillNav";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navItems = [
+const navItems: PillNavItem[] = [
   { href: "/#catalog", label: "Каталог" },
   { href: "/#explore", label: "Жанры" },
   { href: "/#schedule", label: "Календарь" },
   { href: "/#popular", label: "Популярное" },
   { href: "/profile", label: "Профиль" }
-] as const;
+];
 
 const bubbleItems: BubbleMenuItem[] = [
   {
@@ -54,23 +55,30 @@ export function Header() {
   return (
     <>
       <header className="site-header">
-        <Link className="brand" href="/">
-          <span className="brand-mark">TL</span>
-          <span>Taytlo</span>
-        </Link>
-        <nav id="site-menu" aria-label="Главная навигация">
-          {navItems.map((item) => (
-            <Link href={item.href} key={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="header-actions">
-          <Link className="header-watch-link" href="/#catalog">
-            Смотреть
-          </Link>
-          <ThemeToggle />
-        </div>
+        <PillNav
+          className="desktop-header-pill-nav"
+          logo={
+            <span className="desktop-pill-brand">
+              <span className="desktop-pill-brand-mark">TL</span>
+              <strong>Taytlo</strong>
+            </span>
+          }
+          logoAlt="Taytlo"
+          items={navItems}
+          actions={
+            <>
+              <Link className="desktop-pill-watch" href="/#catalog">
+                Смотреть
+              </Link>
+              <ThemeToggle />
+            </>
+          }
+          baseColor="rgba(255, 255, 255, 0.055)"
+          pillColor="rgba(255, 255, 255, 0.055)"
+          hoveredPillTextColor="#03100d"
+          pillTextColor="var(--text)"
+          initialLoadAnimation
+        />
       </header>
 
       <BubbleMenu
