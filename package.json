@@ -13,7 +13,8 @@
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
     "import:static": "node scripts/import-static-catalog.mjs",
-    "import:shikimori": "node scripts/expand-catalog-shikimori.mjs"
+    "import:shikimori": "node scripts/expand-catalog-shikimori.mjs",
+    "link:anilibria": "node scripts/link-anilibria-releases.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",

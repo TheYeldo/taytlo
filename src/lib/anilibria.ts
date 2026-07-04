@@ -3,6 +3,10 @@ import type { AniLibriaEpisode, AniLibriaEpisodesResult, Anime } from "./types";
 
 type AniLibriaRelease = {
   id: number;
+  type?: {
+    value?: string;
+    description?: string;
+  };
   year?: number;
   alias?: string;
   external_player?: string;
@@ -37,6 +41,16 @@ function normalizeTitle(value: string | null | undefined) {
     .trim();
 }
 
+function normalizeType(value: string | null | undefined) {
+  const normalized = String(value || "").toUpperCase().replace(/[^A-Z]+/g, "_");
+  if (normalized.includes("MOVIE")) return "MOVIE";
+  if (normalized.includes("OVA")) return "OVA";
+  if (normalized.includes("ONA")) return "ONA";
+  if (normalized.includes("SPECIAL")) return "SPECIAL";
+  if (normalized.includes("TV")) return "TV";
+  return normalized;
+}
+
 function absoluteAniLibriaUrl(value: string | null | undefined) {
   const raw = String(value || "").trim();
   if (!raw) return "";
@@ -56,21 +70,67 @@ function matchScore(anime: Anime, release: AniLibriaRelease) {
   const animeNames = [anime.titleRu, anime.title, ...anime.altTitles].map(normalizeTitle).filter(Boolean);
   const releaseNames = [release.name?.main, release.name?.english, release.name?.alternative].map(normalizeTitle).filter(Boolean);
   let score = 0;
+  let hasStrongTitle = false;
+  let hasCloseYear = false;
+  let hasCloseEpisodes = false;
+  let hasTypeMatch = false;
 
   for (const animeName of animeNames) {
     for (const releaseName of releaseNames) {
-      if (animeName === releaseName) score = Math.max(score, 12);
+      if (animeName === releaseName) {
+        score = Math.max(score, 14);
+        hasStrongTitle = true;
+      }
       else if (Math.min(animeName.length, releaseName.length) >= 5 && (animeName.includes(releaseName) || releaseName.includes(animeName))) {
-        score = Math.max(score, 5);
+        score = Math.max(score, 6);
       }
     }
   }
 
   const yearDiff = Math.abs(Number(anime.year || 0) - Number(release.year || 0));
-  if (anime.year && release.year && yearDiff === 0) score += 4;
-  else if (anime.year && release.year && yearDiff === 1) score += 1;
+  if (anime.year && release.year && yearDiff === 0) {
+    score += 5;
+    hasCloseYear = true;
+  } else if (anime.year && release.year && yearDiff === 1) {
+    score += 3;
+    hasCloseYear = true;
+  } else if (anime.year && release.year && yearDiff <= 2) {
+    score += 1;
+    hasCloseYear = true;
+  } else if (anime.year && release.year && yearDiff >= 3) {
+    score -= yearDiff >= 8 ? 10 : 8;
+  }
 
-  return score;
+  const animeType = normalizeType(anime.type);
+  const releaseType = normalizeType(release.type?.value);
+  if (animeType && releaseType) {
+    if (animeType === releaseType) {
+      score += 3;
+      hasTypeMatch = true;
+    } else if ((animeType === "TV" && releaseType === "MOVIE") || (animeType === "MOVIE" && releaseType === "TV")) {
+      score -= 5;
+    }
+  }
+
+  const animeEpisodes = Number(anime.episodes || 0);
+  const releaseEpisodes = Number(release.episodes_total || 0);
+  if (animeEpisodes && releaseEpisodes) {
+    const episodeDiff = Math.abs(animeEpisodes - releaseEpisodes);
+    if (episodeDiff === 0) {
+      score += 5;
+      hasCloseEpisodes = true;
+    } else if (episodeDiff <= 1) {
+      score += 3;
+      hasCloseEpisodes = true;
+    } else if (episodeDiff <= 3) {
+      score += 1;
+    } else if (episodeDiff > Math.max(4, animeEpisodes * 0.3)) {
+      score -= 5;
+    }
+  }
+
+  const isReliable = hasStrongTitle && (hasCloseYear || hasCloseEpisodes || (!anime.year && hasTypeMatch));
+  return isReliable ? score : Math.min(score, 8);
 }
 
 async function fetchAniLibriaSearch(query: string): Promise<AniLibriaRelease[]> {
@@ -113,7 +173,7 @@ async function resolveReleaseId(anime: Anime) {
     .map((release) => ({ release, score: matchScore(anime, release) }))
     .sort((left, right) => right.score - left.score);
 
-  return ranked[0]?.score >= 9 ? ranked[0].release.id : 0;
+  return ranked[0]?.score >= 14 ? ranked[0].release.id : 0;
 }
 
 export async function getAniLibriaEpisodes(slug: string): Promise<AniLibriaEpisodesResult> {
