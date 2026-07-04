@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import BubbleMenu, { type BubbleMenuItem } from "./BubbleMenu";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
@@ -12,53 +12,92 @@ const navItems = [
   { href: "/profile", label: "Профиль" }
 ] as const;
 
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  function closeMenu() {
-    setIsMenuOpen(false);
+const bubbleItems: BubbleMenuItem[] = [
+  {
+    href: "/#catalog",
+    label: "Каталог",
+    ariaLabel: "Открыть каталог",
+    rotation: -5,
+    hoverStyles: { bgColor: "#42e8b4", textColor: "#03100d" }
+  },
+  {
+    href: "/#explore",
+    label: "Жанры",
+    ariaLabel: "Открыть жанры и франшизы",
+    rotation: 4,
+    hoverStyles: { bgColor: "#6cb7ff", textColor: "#03111f" }
+  },
+  {
+    href: "/#schedule",
+    label: "Календарь",
+    ariaLabel: "Открыть календарь серий",
+    rotation: -3,
+    hoverStyles: { bgColor: "#ffbf5c", textColor: "#160b00" }
+  },
+  {
+    href: "/#popular",
+    label: "Топ",
+    ariaLabel: "Открыть популярное",
+    rotation: 5,
+    hoverStyles: { bgColor: "#ff6aa2", textColor: "#19030b" }
+  },
+  {
+    href: "/profile",
+    label: "Профиль",
+    ariaLabel: "Открыть профиль",
+    rotation: -4,
+    hoverStyles: { bgColor: "#b89cff", textColor: "#10051f" }
   }
+];
 
+export function Header() {
   return (
-    <header className="site-header">
-      <Link className="brand" href="/" onClick={closeMenu}>
-        <span className="brand-mark">TL</span>
-        <span>Taytlo</span>
-      </Link>
-      <nav className={isMenuOpen ? "is-open" : undefined} id="site-menu" aria-label="Главная навигация">
-        {navItems.map((item) => (
-          <Link href={item.href} key={item.href} onClick={closeMenu}>
-            {item.label}
-          </Link>
-        ))}
-        <div className="mobile-menu-actions">
-          <Link className="mobile-watch-link" href="/#catalog" onClick={closeMenu}>
-            Смотреть каталог
-          </Link>
-          <div className="mobile-theme-row">
-            <span>Тема сайта</span>
-            <ThemeToggle />
-          </div>
-        </div>
-      </nav>
-      <div className="header-actions">
-        <Link className="header-watch-link" href="/#catalog" onClick={closeMenu}>
-          Смотреть
+    <>
+      <header className="site-header">
+        <Link className="brand" href="/">
+          <span className="brand-mark">TL</span>
+          <span>Taytlo</span>
         </Link>
-        <ThemeToggle />
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-controls="site-menu"
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
-          onClick={() => setIsMenuOpen((value) => !value)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </div>
-    </header>
+        <nav id="site-menu" aria-label="Главная навигация">
+          {navItems.map((item) => (
+            <Link href={item.href} key={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="header-actions">
+          <Link className="header-watch-link" href="/#catalog">
+            Смотреть
+          </Link>
+          <ThemeToggle />
+        </div>
+      </header>
+
+      <BubbleMenu
+        className="mobile-bubble-menu"
+        logo={
+          <span className="bubble-brand">
+            <span className="bubble-brand-mark">TL</span>
+            <strong>Taytlo</strong>
+          </span>
+        }
+        items={bubbleItems}
+        footer={
+          <>
+            <Link className="bubble-watch-link" href="/#catalog">
+              Смотреть каталог
+            </Link>
+            <div className="bubble-theme-row">
+              <span>Тема сайта</span>
+              <ThemeToggle />
+            </div>
+          </>
+        }
+        menuAriaLabel="Открыть мобильное меню"
+        menuBg="var(--panel)"
+        menuContentColor="var(--text)"
+        useFixedPosition
+      />
+    </>
   );
 }
