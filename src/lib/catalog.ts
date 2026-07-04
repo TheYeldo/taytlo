@@ -56,10 +56,13 @@ export function getFranchises() {
 
 export function getCatalogStats() {
   const withRating = catalog.filter((anime) => anime.shikimori?.score).length;
+  const withEpisodes = catalog.filter((anime) => anime.aniLibriaReleaseId).length;
   return {
     total: catalog.length,
     withRating,
     withoutRating: catalog.length - withRating,
+    withEpisodes,
+    withoutEpisodes: catalog.length - withEpisodes,
     genres: getGenres().length,
     franchises: getFranchises().length
   };
@@ -71,8 +74,10 @@ export function queryCatalog(query: CatalogQuery = {}): CatalogResult {
   const search = normalize(query.search);
   const genre = normalize(query.genre);
   const franchise = normalize(query.franchise);
+  const onlyWithEpisodes = query.availability === "episodes";
 
   const filtered = catalog.filter((anime) => {
+    if (onlyWithEpisodes && !anime.aniLibriaReleaseId) return false;
     if (genre && !anime.genres.some((item) => normalize(item) === genre)) return false;
     if (franchise && normalize(anime.franchise) !== franchise) return false;
     if (!search) return true;

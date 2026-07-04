@@ -36,6 +36,13 @@ export function SearchFilters({ genres, franchises, query }: Props) {
         </select>
       </label>
       <label>
+        <span>Доступность</span>
+        <select name="availability" defaultValue={query.availability || ""}>
+          <option value="">Все тайтлы</option>
+          <option value="episodes">С сериями</option>
+        </select>
+      </label>
+      <label>
         <span>Сортировка</span>
         <select name="sort" defaultValue={query.sort || "popular"}>
           <option value="popular">Популярное</option>

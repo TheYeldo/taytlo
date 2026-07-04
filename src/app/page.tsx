@@ -28,6 +28,7 @@ export default function HomePage({ searchParams }: HomeProps) {
     search: first(searchParams.search),
     genre: first(searchParams.genre),
     franchise: first(searchParams.franchise),
+    availability: first(searchParams.availability) === "episodes" ? "episodes" : undefined,
     sort: (first(searchParams.sort) as CatalogQuery["sort"]) || "popular",
     limit: Number(first(searchParams.limit) || 24),
     page: 1
@@ -95,6 +96,10 @@ export default function HomePage({ searchParams }: HomeProps) {
             <span>
               <strong>{stats.withRating}</strong>
               с оценками
+            </span>
+            <span>
+              <strong>{stats.withEpisodes}</strong>
+              с сериями
             </span>
             <span>
               <strong>{stats.franchises}</strong>

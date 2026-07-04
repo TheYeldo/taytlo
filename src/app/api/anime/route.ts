@@ -10,6 +10,7 @@ export function GET(request: Request) {
     search: params.get("search") || undefined,
     genre: params.get("genre") || undefined,
     franchise: params.get("franchise") || undefined,
+    availability: params.get("availability") === "episodes" ? "episodes" : undefined,
     sort: (params.get("sort") as CatalogQuery["sort"]) || "popular",
     page: Number(params.get("page") || 1),
     limit: Number(params.get("limit") || 24)

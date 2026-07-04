@@ -67,6 +67,7 @@ export type CatalogQuery = {
   search?: string;
   genre?: string;
   franchise?: string;
+  availability?: "episodes";
   sort?: "popular" | "rating" | "new" | "title";
   page?: number;
   limit?: number;

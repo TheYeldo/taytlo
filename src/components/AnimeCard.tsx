@@ -5,6 +5,7 @@ import { SafeImage } from "./SafeImage";
 
 export function AnimeCard({ anime }: { anime: Anime }) {
   const chipLabel = anime.genres[0] || anime.franchise;
+  const hasEpisodes = Boolean(anime.aniLibriaReleaseId);
 
   return (
     <article className="anime-card">
@@ -20,9 +21,16 @@ export function AnimeCard({ anime }: { anime: Anime }) {
         </p>
         <div className="card-bottom">
           <RatingBadge rating={anime.shikimori} />
-          <span className="card-chip" title={chipLabel}>
-            {chipLabel}
-          </span>
+          <div className="card-chip-row">
+            <span className="card-chip" title={chipLabel}>
+              {chipLabel}
+            </span>
+            {hasEpisodes ? (
+              <span className="card-chip card-chip-stream" title="Серии доступны через AniLibria">
+                Серии
+              </span>
+            ) : null}
+          </div>
         </div>
       </div>
     </article>
