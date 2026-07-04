@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
-import { getUpcomingSchedule } from "@/lib/schedule";
+import { getLiveUpcomingSchedule } from "@/lib/schedule";
 
 export const revalidate = 900;
 
-export function GET(request: Request) {
+export async function GET(request: Request) {
   const params = new URL(request.url).searchParams;
   const limit = Math.min(50, Math.max(1, Number(params.get("limit") || 12)));
+  const schedule = await getLiveUpcomingSchedule(limit);
+
   return NextResponse.json({
-    items: getUpcomingSchedule(limit),
-    updatedAt: new Date().toISOString()
+    items: schedule.items,
+    source: schedule.source,
+    updatedAt: new Date().toISOString(),
+    error: schedule.error
   });
 }

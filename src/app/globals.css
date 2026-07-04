@@ -492,6 +492,25 @@ main {
   gap: 10px;
 }
 
+.schedule-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.schedule-status span {
+  color: var(--mint);
+  text-transform: uppercase;
+}
+
+.schedule-status small {
+  text-align: right;
+}
+
 .schedule-item,
 .top-item,
 .admin-panel {

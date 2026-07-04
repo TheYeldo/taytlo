@@ -8,6 +8,7 @@ import { HomeWatchHub } from "@/components/HomeWatchHub";
 import { SearchFilters } from "@/components/SearchFilters";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SafeImage } from "@/components/SafeImage";
+import { ScheduleList } from "@/components/ScheduleList";
 import SplitText from "@/components/SplitText";
 import { getCatalog, getCatalogStats, getFranchises, getGenres, queryCatalog } from "@/lib/catalog";
 import { getUpcomingSchedule } from "@/lib/schedule";
@@ -19,18 +20,6 @@ type HomeProps = {
 
 function first(value: string | string[] | undefined) {
   return Array.isArray(value) ? value[0] : value;
-}
-
-function dateLabel(value: string | undefined) {
-  if (!value) return "Дата уточняется";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "Дата уточняется";
-  return new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }).format(date);
-}
-
-function episodeLabel(item: { episodeNumber?: number; episode?: number }) {
-  const episodeNumber = item.episodeNumber || item.episode;
-  return episodeNumber ? `Серия ${episodeNumber}` : "Номер серии уточняется";
 }
 
 export default function HomePage({ searchParams }: HomeProps) {
@@ -145,22 +134,7 @@ export default function HomePage({ searchParams }: HomeProps) {
       <section className="split-section" id="schedule">
         <div>
           <SectionTitle eyebrow="Календарь" title="Ближайшие серии" />
-          <div className="schedule-list">
-            {schedule.length ? (
-              schedule.map((item, index) => {
-                const hasEpisodeNumber = Boolean(item.episodeNumber || item.episode);
-                return (
-                  <article key={`${item.titleRu || item.title}-${index}`} className="schedule-item">
-                    <span>{dateLabel(item.airAt || item.nextEpisodeAt)}</span>
-                    <strong>{item.titleRu || item.title || "Аниме"}</strong>
-                    <small className={hasEpisodeNumber ? undefined : "is-episode-unknown"}>{episodeLabel(item)}</small>
-                  </article>
-                );
-              })
-            ) : (
-              <p className="empty">Пока нет ближайших дат</p>
-            )}
-          </div>
+          <ScheduleList initialItems={schedule} limit={6} />
         </div>
         <div id="popular">
           <SectionTitle eyebrow="Топ" title="Высокий рейтинг Shikimori" />
