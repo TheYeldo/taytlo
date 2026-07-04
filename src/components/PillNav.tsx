@@ -41,10 +41,10 @@ export default function PillNav({
   actions,
   className = "",
   ease = "power3.out",
-  baseColor = "rgba(255, 255, 255, 0.06)",
-  pillColor = "rgba(255, 255, 255, 0.06)",
-  hoveredPillTextColor = "#03100d",
-  pillTextColor = "var(--text)",
+  baseColor,
+  pillColor,
+  hoveredPillTextColor,
+  pillTextColor,
   initialLoadAnimation = true
 }: PillNavProps) {
   const pathname = usePathname();
@@ -56,12 +56,11 @@ export default function PillNav({
   const logoTweenRef = useRef<gsap.core.Tween | null>(null);
   const navItemsRef = useRef<HTMLDivElement | null>(null);
 
-  const cssVars: PillCssVars = {
-    "--desktop-pill-base": baseColor,
-    "--desktop-pill-bg": pillColor,
-    "--desktop-pill-hover-text": hoveredPillTextColor,
-    "--desktop-pill-text": pillTextColor
-  };
+  const cssVars: PillCssVars = {};
+  if (baseColor) cssVars["--desktop-pill-base"] = baseColor;
+  if (pillColor) cssVars["--desktop-pill-bg"] = pillColor;
+  if (hoveredPillTextColor) cssVars["--desktop-pill-hover-text"] = hoveredPillTextColor;
+  if (pillTextColor) cssVars["--desktop-pill-text"] = pillTextColor;
 
   useEffect(() => {
     function layout() {

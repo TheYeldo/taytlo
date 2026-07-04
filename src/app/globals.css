@@ -11,6 +11,7 @@
   --rose: #ff6f91;
   --hot: #ff4fb3;
   --blue: #6cb7ff;
+  --sky: var(--blue);
   --radius: 8px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -28,6 +29,7 @@
   --rose: #ba375f;
   --hot: #c9287b;
   --blue: #1d66b2;
+  --sky: var(--blue);
 }
 
 * {
@@ -4194,8 +4196,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--mint), var(--sky));
-  color: #03100d;
+  border-color: rgba(66, 232, 180, 0.34);
+  background: linear-gradient(135deg, rgba(66, 232, 180, 0.16), rgba(108, 183, 255, 0.12));
+  color: #effffb;
   font-size: 14px;
   font-weight: 950;
 }
@@ -4221,6 +4224,12 @@ main {
   background:
     linear-gradient(180deg, rgba(246, 250, 255, 0.86), rgba(235, 242, 249, 0.95)),
     radial-gradient(circle at 22% 10%, rgba(66, 232, 180, 0.14), transparent 34%);
+}
+
+:root[data-theme="light"] .bubble-watch-link {
+  border-color: rgba(8, 125, 104, 0.18);
+  background: linear-gradient(135deg, #0b8f77, #2375c7);
+  color: #ffffff;
 }
 
 @media (max-width: 700px) {
@@ -4273,6 +4282,15 @@ main {
 }
 
 .desktop-pill-nav-container {
+  --desktop-pill-base: rgba(14, 20, 30, 0.76);
+  --desktop-pill-bg: rgba(255, 255, 255, 0.055);
+  --desktop-pill-hover-text: #f7fffc;
+  --desktop-pill-text: var(--text);
+  --desktop-pill-hover-fill: linear-gradient(135deg, rgba(66, 232, 180, 0.28), rgba(108, 183, 255, 0.2));
+  --desktop-watch-bg: linear-gradient(135deg, rgba(66, 232, 180, 0.16), rgba(108, 183, 255, 0.12));
+  --desktop-watch-border: rgba(66, 232, 180, 0.36);
+  --desktop-watch-text: #effffb;
+  --desktop-watch-shadow: 0 10px 28px rgba(66, 232, 180, 0.12);
   width: 100%;
 }
 
@@ -4402,7 +4420,7 @@ main {
   z-index: 1;
   display: block;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--mint), var(--sky));
+  background: var(--desktop-pill-hover-fill);
   pointer-events: none;
   will-change: transform;
 }
@@ -4466,19 +4484,20 @@ main {
   justify-content: center;
   border-radius: 999px;
   padding: 0 15px;
-  background: linear-gradient(135deg, rgba(66, 232, 180, 0.96), rgba(108, 183, 255, 0.96));
-  color: #03100d;
+  border: 1px solid var(--desktop-watch-border);
+  background: var(--desktop-watch-bg);
+  color: var(--desktop-watch-text);
   font-size: 13px;
   font-weight: 950;
   line-height: 1;
-  box-shadow: 0 10px 26px rgba(66, 232, 180, 0.16);
+  box-shadow: var(--desktop-watch-shadow);
 }
 
 .site-header .desktop-pill-watch {
   height: 100%;
   border-radius: 999px;
   padding: 0 15px;
-  color: #03100d;
+  color: var(--desktop-watch-text);
   font-size: 13px;
 }
 
@@ -4498,6 +4517,18 @@ main {
 
 :root[data-theme="light"] .site-header .desktop-pill {
   background: rgba(12, 26, 42, 0.045);
+}
+
+:root[data-theme="light"] .desktop-pill-nav-container {
+  --desktop-pill-base: rgba(255, 255, 255, 0.78);
+  --desktop-pill-bg: rgba(15, 34, 55, 0.055);
+  --desktop-pill-hover-text: #062019;
+  --desktop-pill-text: #111827;
+  --desktop-pill-hover-fill: linear-gradient(135deg, rgba(8, 125, 104, 0.18), rgba(29, 102, 178, 0.14));
+  --desktop-watch-bg: linear-gradient(135deg, #0b8f77, #2375c7);
+  --desktop-watch-border: rgba(8, 125, 104, 0.2);
+  --desktop-watch-text: #ffffff;
+  --desktop-watch-shadow: 0 12px 28px rgba(29, 102, 178, 0.14);
 }
 
 @media (min-width: 701px) {

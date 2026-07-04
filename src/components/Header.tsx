@@ -73,10 +73,6 @@ export function Header() {
               <ThemeToggle />
             </>
           }
-          baseColor="rgba(255, 255, 255, 0.055)"
-          pillColor="rgba(255, 255, 255, 0.055)"
-          hoveredPillTextColor="#03100d"
-          pillTextColor="var(--text)"
           initialLoadAnimation
         />
       </header>
