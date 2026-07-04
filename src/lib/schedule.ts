@@ -1,4 +1,6 @@
+import catalogData from "../../data/catalog.json";
 import scheduleData from "../../data/schedule-cache.json";
+import type { Anime } from "./types";
 
 export type ScheduleItem = {
   id?: string;
@@ -48,6 +50,7 @@ type ShikimoriCalendarImage = NonNullable<NonNullable<ShikimoriCalendarEntry["an
 const SHIKIMORI_CALENDAR_URL = "https://shikimori.one/api/calendar";
 const SHIKIMORI_BASE_URL = "https://shikimori.one";
 const MOSCOW_TIMEZONE = "Europe/Moscow";
+const catalog = catalogData as Anime[];
 
 function asItems(): ScheduleItem[] {
   const raw = scheduleData as { items?: ScheduleItem[]; entries?: ScheduleItem[] } | ScheduleItem[];
@@ -62,6 +65,16 @@ function sortByDate(left: ScheduleItem, right: ScheduleItem) {
   return getItemTime(left) - getItemTime(right);
 }
 
+function findCatalogSlug(malId?: number) {
+  if (!malId) return undefined;
+  return catalog.find((anime) => anime.malId === malId)?.slug;
+}
+
+function withCatalogLink(item: ScheduleItem): ScheduleItem {
+  if (item.animeSlug || !item.malId) return item;
+  return { ...item, animeSlug: findCatalogSlug(item.malId) };
+}
+
 export function getUpcomingSchedule(limit = 12) {
   const now = Date.now();
   return asItems()
@@ -69,6 +82,7 @@ export function getUpcomingSchedule(limit = 12) {
       const time = getItemTime(item);
       return Number.isFinite(time) && time >= now;
     })
+    .map(withCatalogLink)
     .sort(sortByDate)
     .slice(0, limit);
 }
@@ -95,6 +109,7 @@ function toScheduleItem(entry: ShikimoriCalendarEntry): ScheduleItem | null {
   return {
     id: `mal-${malId}`,
     malId,
+    animeSlug: findCatalogSlug(malId),
     title: anime?.name || anime?.russian || "Anime",
     titleRu: anime?.russian || anime?.name || "Аниме",
     episode: entry.next_episode,

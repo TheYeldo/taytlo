@@ -30,9 +30,34 @@ function dateLabel(value: string | undefined) {
   return `${moscowDateFormatter.format(date)} МСК`;
 }
 
+function relativeLabel(value: string | undefined, now: number) {
+  if (!value) return "";
+  const time = Date.parse(value);
+  if (!Number.isFinite(time)) return "";
+
+  const diffMinutes = Math.max(0, Math.round((time - now) / 60000));
+  if (diffMinutes < 60) return `через ${diffMinutes || 1} мин.`;
+
+  const diffHours = Math.floor(diffMinutes / 60);
+  const minutes = diffMinutes % 60;
+  if (diffHours < 24) {
+    return minutes ? `через ${diffHours} ч ${minutes} мин.` : `через ${diffHours} ч`;
+  }
+
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays === 1) return "завтра";
+  if (diffDays < 7) return `через ${diffDays} дн.`;
+  return `через ${Math.ceil(diffDays / 7)} нед.`;
+}
+
 function episodeLabel(item: ScheduleItem) {
   const episodeNumber = item.episodeNumber || item.episode;
   return episodeNumber ? `Серия ${episodeNumber}` : "Номер серии уточняется";
+}
+
+function itemHref(item: ScheduleItem) {
+  if (item.animeSlug) return `/anime/${item.animeSlug}`;
+  return item.url || "";
 }
 
 export function ScheduleList({ initialItems, limit = 6 }: ScheduleListProps) {
@@ -40,6 +65,12 @@ export function ScheduleList({ initialItems, limit = 6 }: ScheduleListProps) {
   const [source, setSource] = useState(initialItems.length ? "cache" : "");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
+  const [now, setNow] = useState(Date.now());
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(Date.now()), 60000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     let isActive = true;
@@ -83,11 +114,37 @@ export function ScheduleList({ initialItems, limit = 6 }: ScheduleListProps) {
       {items.length ? (
         items.map((item, index) => {
           const hasEpisodeNumber = Boolean(item.episodeNumber || item.episode);
-          return (
-            <article key={`${item.id || item.titleRu || item.title}-${index}`} className="schedule-item">
-              <span>{dateLabel(item.airAt || item.nextEpisodeAt)}</span>
+          const href = itemHref(item);
+          const isExternal = href.startsWith("http");
+          const time = item.airAt || item.nextEpisodeAt;
+          const content = (
+            <>
+              <span>
+                {dateLabel(time)}
+                <em>{relativeLabel(time, now)}</em>
+              </span>
               <strong>{item.titleRu || item.title || "Аниме"}</strong>
               <small className={hasEpisodeNumber ? undefined : "is-episode-unknown"}>{episodeLabel(item)}</small>
+            </>
+          );
+
+          if (href) {
+            return (
+              <a
+                key={`${item.id || item.titleRu || item.title}-${index}`}
+                className="schedule-item schedule-item-link"
+                href={href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noreferrer" : undefined}
+              >
+                {content}
+              </a>
+            );
+          }
+
+          return (
+            <article key={`${item.id || item.titleRu || item.title}-${index}`} className="schedule-item">
+              {content}
             </article>
           );
         })

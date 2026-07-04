@@ -532,6 +532,23 @@ main {
   font-weight: 900;
 }
 
+.schedule-item span em {
+  margin-left: 8px;
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.schedule-item-link {
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.schedule-item-link:hover {
+  border-color: rgba(66, 232, 180, 0.42);
+  background: rgba(66, 232, 180, 0.08);
+  transform: translateY(-1px);
+}
+
 .top-item {
   grid-template-columns: 34px 1fr auto;
   align-items: center;
