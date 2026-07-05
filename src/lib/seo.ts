@@ -3,7 +3,9 @@ import type { Anime } from "./types";
 export const siteName = "Taytlo";
 
 export function siteUrl() {
-  return (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const fallbackUrl = process.env.NODE_ENV === "production" ? "https://taytlo.com" : "http://localhost:3000";
+  return (configuredUrl || fallbackUrl).replace(/\/$/, "");
 }
 
 export function cleanAnimeText(value: string | null | undefined) {
