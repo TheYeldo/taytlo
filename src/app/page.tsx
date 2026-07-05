@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { AnimeCard } from "@/components/AnimeCard";
+import { AnimeRoulette } from "@/components/AnimeRoulette";
 import { ExplorePanel } from "@/components/ExplorePanel";
 import { HomeCollections } from "@/components/HomeCollections";
 import { HomeDiscovery } from "@/components/HomeDiscovery";
@@ -110,6 +111,7 @@ export default function HomePage({ searchParams }: HomeProps) {
       </section>
 
       <HomeWatchHub catalog={catalog} />
+      <AnimeRoulette catalog={catalog} />
       <HomeDiscovery catalog={catalog} />
       <ExplorePanel genres={genreStats} franchises={franchiseStats} />
 
