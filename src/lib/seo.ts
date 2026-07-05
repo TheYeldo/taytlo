@@ -6,7 +6,7 @@ export function siteUrl() {
   return (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
 }
 
-function cleanAnimeText(value: string | null | undefined) {
+export function cleanAnimeText(value: string | null | undefined) {
   return String(value || "")
     .replace(/\[\/?[a-z]+(?:=[^\]]+)?\]/gi, "")
     .replace(/\r\n/g, "\n")
@@ -15,7 +15,7 @@ function cleanAnimeText(value: string | null | undefined) {
     .trim();
 }
 
-function hasBrokenEncoding(value: string) {
+export function hasBrokenEncoding(value: string) {
   if (!value) return false;
   if (value.includes("�")) return true;
 

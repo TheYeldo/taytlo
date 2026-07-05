@@ -4586,16 +4586,25 @@ main {
 .roulette-copy {
   display: grid;
   align-content: start;
-  gap: 14px;
-  padding: 18px;
+  gap: 16px;
+  padding: 22px 20px;
 }
 
 .roulette-copy .section-title {
   margin-bottom: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+}
+
+.roulette-copy .section-title h2 {
+  max-width: 9.5em;
 }
 
 .roulette-copy .section-note {
   margin: 0;
+  max-width: 52ch;
 }
 
 .roulette-moods {
@@ -4831,6 +4840,15 @@ main {
   .roulette-copy {
     gap: 12px;
     padding: 12px;
+  }
+
+  .roulette-copy .section-title {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .roulette-copy .section-title h2 {
+    max-width: none;
   }
 
   .roulette-moods {

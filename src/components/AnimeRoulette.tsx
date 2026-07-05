@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { cleanAnimeText, hasBrokenEncoding } from "@/lib/seo";
 import type { Anime } from "@/lib/types";
 import { SafeImage } from "./SafeImage";
 
@@ -115,8 +116,12 @@ function scoreForMood(anime: RouletteAnime, mood: MoodKey) {
   return base + (episodes <= 28 ? 700 : 0);
 }
 
-function cleanSynopsis(value: string) {
-  const text = value.replace(/\s+/g, " ").trim();
+function cleanSynopsis(value: string, title: string) {
+  const text = cleanAnimeText(value).replace(/\s+/g, " ").trim();
+  if (!text || hasBrokenEncoding(text)) {
+    return `${title}: описание пока уточняется. Можно открыть страницу тайтла, посмотреть рейтинг, жанры и доступные серии.`;
+  }
+
   return text.length > 190 ? `${text.slice(0, 187)}...` : text;
 }
 
@@ -197,7 +202,7 @@ export function AnimeRoulette({ catalog }: { catalog: RouletteAnime[] }) {
           <div className="roulette-result-copy">
             <span>{activeMood.hint}</span>
             <h3>{selected.titleRu}</h3>
-            <p>{cleanSynopsis(selected.synopsis) || "Описание скоро появится."}</p>
+            <p>{cleanSynopsis(selected.synopsis, selected.titleRu)}</p>
             <div className="roulette-meta">
               <small>{selected.type}</small>
               <small>{selected.year || "год неизвестен"}</small>
