@@ -1,83 +1,95 @@
-# Taytlo Next
+# Taytlo
 
-Это первая backend-ready версия Taytlo на Next.js. Старый рабочий сайт в `outputs/anime-site` не тронут.
+Taytlo is a Next.js anime catalog with clean title pages, Shikimori ratings, AniLibria episode availability, favorites, watch history, user lists, comments, search, genres, franchises, schedule pages, and SEO-friendly anime URLs.
 
-## Что уже есть
+## Features
 
 - Next.js App Router.
-- Человекопонятные страницы: `/anime/provozhayuschaya-v-posledniy-put-friren`.
-- API: `/api/anime`, `/api/anime/[slug]`, `/api/schedule`.
-- API серий AniLibria: `/api/anilibria/[slug]/episodes`.
-- Встроенный HLS-плеер для доступных серий AniLibria.
-- Локальные избранное, список просмотра, история, прогресс серии и комментарии под сериями.
-- Профиль `/profile`: регистрация, вход, выход и просмотр своей библиотеки.
-- Dev-backend для аккаунтов и библиотеки через `data/dev-db.json`.
-- Переключатель тёмной/светлой темы, новый favicon, поиск по жанрам/франшизам, топ запросов, обновления, популярное и порядок просмотра франшизы.
-- SEO: metadata, `sitemap.xml`, `robots.txt`, JSON-LD на страницах аниме.
-- Импорт текущего каталога, постеров, Shikimori-рейтингов и календаря.
-- Prisma-схема под PostgreSQL: пользователи, избранное, история просмотра, комментарии, кэш рейтингов, расписание.
-- Закрытая основа админки: `/admin?token=...`.
+- Human-readable anime pages, for example `/anime/provozhayuschaya-v-posledniy-put-friren`.
+- Anime catalog API and title detail API.
+- AniLibria episode API integration for legal public release data.
+- Built-in HLS player for available AniLibria episodes.
+- Favorites, watch history, watch progress, user lists and episode comments.
+- Profile page with registration, login and personal library.
+- Dark/light theme, responsive navigation, mobile-first catalog layout.
+- Search by anime title, genre and franchise.
+- Shikimori ratings with cached catalog data.
+- Episode schedule and upcoming releases.
+- SEO metadata, `sitemap.xml`, `robots.txt` and JSON-LD on anime pages.
+- PostgreSQL-ready Prisma schema for production storage.
 
-## Как запустить локально
+## Local Development
 
 ```bat
 cd outputs\taytlo-next
 start-dev.cmd
 ```
 
-После запуска открой:
+Then open:
 
 ```text
 http://localhost:3000
 ```
 
-## Как пересобрать данные и production build
+## Production Build
 
 ```bat
 cd outputs\taytlo-next
 build-next.cmd
 ```
 
-## Админка
+Or run directly:
 
-Создай `.env.local` по примеру `.env.example` и укажи длинный `ADMIN_TOKEN`.
-
-```env
-ADMIN_TOKEN="very-long-secret-token"
-NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+```bat
+pnpm run build
 ```
 
-Пока это защитный слой для разработки. Для настоящего релиза лучше добавить логин, роли и хранение пользователей в PostgreSQL.
+## Data Storage
 
-## Аккаунты
+By default, local development can use a simple dev storage file for accounts and user activity. For production, use PostgreSQL through Prisma.
 
-В разработке аккаунты сохраняются в `data/dev-db.json`. Файл не нужно коммитить: он игнорируется в `.gitignore`.
-
-Сейчас это удобно для проверки регистрации, избранного, списков, прогресса просмотра и комментариев. Перед реальным хостингом этот слой нужно заменить на PostgreSQL через Prisma.
-
-## PostgreSQL / Prisma
-
-По умолчанию сайт использует dev-хранилище `data/dev-db.json`, чтобы локально ничего не настраивать.
-
-Для продакшена включи Prisma:
+Example production environment:
 
 ```env
 TAYTLO_STORE="prisma"
 DATABASE_URL="postgresql://user:password@host:5432/taytlo?schema=public"
+NEXT_PUBLIC_SITE_URL="https://taytlo.com"
 ```
 
-Затем выполни:
+Then prepare Prisma:
 
 ```bat
 pnpm db:generate
 pnpm db:push
 ```
 
-После этого auth API, профиль, избранное, списки, история, прогресс и комментарии будут сохраняться в PostgreSQL.
+## Deployment
 
-## Следующий этап
+The project is ready for Vercel. Push changes to the GitHub repository connected to Vercel, and Vercel will build and deploy the latest version automatically.
 
-1. Поднять реальную PostgreSQL-базу на хостинге.
-2. Включить `TAYTLO_STORE="prisma"` и выполнить `pnpm db:push`.
-3. Добавить OAuth/почтовую верификацию или нормальный password reset.
-4. Сделать полноценную админку для обновления каталога, постеров и SEO.
+Recommended Vercel settings:
+
+- Framework: Next.js
+- Build command: `pnpm run build`
+- Install command: `pnpm install`
+- Production branch: `main`
+
+## SEO
+
+The site exposes:
+
+- `/sitemap.xml`
+- `/robots.txt`
+- Open Graph metadata
+- anime page metadata
+- JSON-LD structured data
+
+After deploying to a real domain, add the domain to Google Search Console and submit:
+
+```text
+https://taytlo.com/sitemap.xml
+```
+
+## Notes
+
+Private maintenance notes should not be stored in this public README.
