@@ -33,27 +33,30 @@ type MoodOption = {
   matches: (anime: RouletteAnime) => boolean;
 };
 
+const actionGenres = ["Экшен", "Боевые искусства", "Спорт", "Супер сила", "Ниндзя"];
+const heavyGenres = ["Экшен", "Сёнен", "Сёнэн", "Супер сила", "Боевые искусства", "Ниндзя", "Военное", "Ужасы", "Психология", "Психологическое"];
+
 const moods: MoodOption[] = [
   {
     key: "episodes",
     label: "Сразу смотреть",
-    note: "Есть серии",
-    hint: "Тайтлы с привязанными сериями AniLibria.",
-    matches: (anime) => Boolean(anime.aniLibriaReleaseId)
+    note: "Серии уже есть",
+    hint: "Тайтлы с сериями AniLibria и нормальной длиной для старта.",
+    matches: (anime) => Boolean(anime.aniLibriaReleaseId && isEntryFriendly(anime, 64))
   },
   {
     key: "action",
     label: "Драйв",
-    note: "Экшен и приключения",
-    hint: "Когда хочется темпа, боёв и большой истории.",
-    matches: (anime) => hasGenre(anime, ["Экшен", "Сёнен", "Сёнэн", "Приключения", "Боевые искусства"])
+    note: "Экшен до 36 серий",
+    hint: "Темп, бои и азарт без входа на сотни серий.",
+    matches: (anime) => hasGenre(anime, actionGenres) && isEntryFriendly(anime, 36)
   },
   {
     key: "romance",
     label: "Лёгкий вечер",
-    note: "Романтика",
+    note: "Спокойные тайтлы",
     hint: "Для спокойного просмотра без тяжёлого входа.",
-    matches: (anime) => hasGenre(anime, ["Романтика", "Комедия", "Школа", "Повседневность"])
+    matches: (anime) => isCalmPick(anime) && isEntryFriendly(anime, 26)
   },
   {
     key: "short",
@@ -66,8 +69,8 @@ const moods: MoodOption[] = [
     key: "rating",
     label: "Надёжный выбор",
     note: "Высокий SH",
-    hint: "Тайтлы с сильной оценкой Shikimori.",
-    matches: (anime) => Boolean(anime.shikimori?.score && anime.shikimori.score >= 8)
+    hint: "Высокие оценки Shikimori без слишком длинного входа.",
+    matches: (anime) => Boolean(anime.shikimori?.score && anime.shikimori.score >= 8.25 && isEntryFriendly(anime, 64))
   }
 ];
 
@@ -76,8 +79,40 @@ function hasGenre(anime: RouletteAnime, genres: string[]) {
   return anime.genres.some((genre) => wanted.has(genre));
 }
 
-function rank(anime: RouletteAnime) {
-  return (anime.shikimori?.score || 0) * 1200 + anime.popularityBase + anime.requestBase + (anime.aniLibriaReleaseId ? 900 : 0);
+function isEntryFriendly(anime: RouletteAnime, maxEpisodes: number) {
+  return Boolean(anime.episodes && anime.episodes > 0 && anime.episodes <= maxEpisodes);
+}
+
+function isCalmPick(anime: RouletteAnime) {
+  const hasRomance = hasGenre(anime, ["Романтика"]);
+  const hasSlice = hasGenre(anime, ["Повседневность"]) || (hasGenre(anime, ["Школа"]) && hasGenre(anime, ["Комедия"]));
+  return (hasRomance || hasSlice) && !hasGenre(anime, heavyGenres);
+}
+
+function scoreForMood(anime: RouletteAnime, mood: MoodKey) {
+  const score = anime.shikimori?.score || 0;
+  const episodes = anime.episodes || 80;
+  const lengthPenalty = Math.max(0, episodes - 24) * 80;
+  const availabilityBonus = anime.aniLibriaReleaseId ? 900 : 0;
+  const base = score * 4200 + anime.popularityBase * 0.18 + anime.requestBase * 0.55 + availabilityBonus - lengthPenalty;
+
+  if (mood === "rating") {
+    return score * 9000 + anime.popularityBase * 0.08 + anime.requestBase * 0.25 - Math.max(0, episodes - 36) * 120;
+  }
+
+  if (mood === "short") {
+    return base + (episodes <= 1 ? 900 : 0) + (14 - episodes) * 140;
+  }
+
+  if (mood === "action") {
+    return base + (episodes <= 26 ? 1200 : 0) + (anime.aniLibriaReleaseId ? 600 : 0);
+  }
+
+  if (mood === "romance") {
+    return base + (hasGenre(anime, ["Романтика"]) ? 1400 : 0) + (episodes <= 13 ? 500 : 0);
+  }
+
+  return base + (episodes <= 28 ? 700 : 0);
 }
 
 function cleanSynopsis(value: string) {
@@ -89,13 +124,14 @@ export function AnimeRoulette({ catalog }: { catalog: RouletteAnime[] }) {
   const [selectedMood, setSelectedMood] = useState<MoodKey>("episodes");
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const ranked = useMemo(() => [...catalog].sort((left, right) => rank(right) - rank(left)), [catalog]);
   const activeMood = moods.find((mood) => mood.key === selectedMood) || moods[0];
   const candidates = useMemo(() => {
-    const matches = ranked.filter(activeMood.matches);
-    return matches.length ? matches : ranked;
-  }, [activeMood, ranked]);
-  const selected = candidates[selectedIndex % Math.max(candidates.length, 1)];
+    const matches = catalog.filter(activeMood.matches);
+    const source = matches.length ? matches : catalog.filter((anime) => isEntryFriendly(anime, 64));
+    return source.sort((left, right) => scoreForMood(right, activeMood.key) - scoreForMood(left, activeMood.key));
+  }, [activeMood, catalog]);
+  const pickPool = candidates.slice(0, Math.min(candidates.length, 18));
+  const selected = pickPool[selectedIndex % Math.max(pickPool.length, 1)];
 
   if (!selected) return null;
 
@@ -105,15 +141,15 @@ export function AnimeRoulette({ catalog }: { catalog: RouletteAnime[] }) {
   }
 
   function pickAnother() {
-    if (candidates.length <= 1) {
+    if (pickPool.length <= 1) {
       setSelectedIndex(0);
       return;
     }
 
     setSelectedIndex((current) => {
-      const currentIndex = current % candidates.length;
-      const next = Math.floor(Math.random() * candidates.length);
-      return next === currentIndex ? (next + 1) % candidates.length : next;
+      const currentIndex = current % pickPool.length;
+      const next = Math.floor(Math.random() * pickPool.length);
+      return next === currentIndex ? (next + 1) % pickPool.length : next;
     });
   }
 
@@ -126,7 +162,7 @@ export function AnimeRoulette({ catalog }: { catalog: RouletteAnime[] }) {
             <h2>Не знаешь, что включить?</h2>
           </div>
           <p className="section-note">
-            Выбери настроение, а Taytlo подкинет тайтл из каталога. Можно сразу открыть страницу аниме или крутить дальше, пока не зацепит.
+            Выбери настроение, а Taytlo подкинет тайтл из подходящей подборки. Длинные франшизы не лезут туда, где хочется быстро включить и смотреть.
           </p>
 
           <div className="roulette-moods" role="group" aria-label="Настроения для подбора аниме">
@@ -141,6 +177,11 @@ export function AnimeRoulette({ catalog }: { catalog: RouletteAnime[] }) {
                 <span>{mood.note}</span>
               </button>
             ))}
+          </div>
+
+          <div className="roulette-context">
+            <strong>{activeMood.note}</strong>
+            <span>{pickPool.length} вариантов в быстрой подборке</span>
           </div>
 
           <div className="roulette-actions">

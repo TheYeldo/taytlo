@@ -4628,6 +4628,10 @@ main {
   background: linear-gradient(135deg, rgba(66, 232, 180, 0.14), rgba(108, 183, 255, 0.08));
 }
 
+.roulette-moods button.is-active strong {
+  color: var(--mint);
+}
+
 .roulette-moods strong,
 .roulette-moods span {
   display: block;
@@ -4647,6 +4651,37 @@ main {
   color: var(--muted);
   font-size: 11.5px;
   line-height: 1.25;
+}
+
+.roulette-context {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(108, 183, 255, 0.18);
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: rgba(108, 183, 255, 0.055);
+}
+
+.roulette-context strong,
+.roulette-context span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.roulette-context strong {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.roulette-context span {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .roulette-actions {
@@ -4687,6 +4722,9 @@ main {
   min-height: 280px;
   overflow: hidden;
   padding: 14px;
+  background:
+    linear-gradient(135deg, rgba(17, 22, 32, 0.88), rgba(17, 22, 32, 0.72)),
+    radial-gradient(circle at 100% 0%, rgba(108, 183, 255, 0.1), transparent 34%);
 }
 
 .roulette-result img {
@@ -4759,6 +4797,16 @@ main {
   background: linear-gradient(135deg, rgba(8, 125, 104, 0.12), rgba(29, 102, 178, 0.08));
 }
 
+:root[data-theme="light"] .roulette-context {
+  background: rgba(29, 102, 178, 0.055);
+}
+
+:root[data-theme="light"] .roulette-result {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72)),
+    radial-gradient(circle at 100% 0%, rgba(29, 102, 178, 0.1), transparent 34%);
+}
+
 :root[data-theme="light"] .roulette-actions button {
   background: #0b8f77;
   color: #ffffff;
@@ -4795,12 +4843,33 @@ main {
     padding: 9px;
   }
 
+  .roulette-moods button:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   .roulette-moods strong {
     font-size: 12px;
   }
 
   .roulette-moods span {
     font-size: 10.5px;
+  }
+
+  .roulette-context {
+    display: grid;
+    min-height: 0;
+    gap: 3px;
+    padding: 8px;
+  }
+
+  .roulette-context strong,
+  .roulette-context span {
+    white-space: normal;
+  }
+
+  .roulette-context strong,
+  .roulette-context span {
+    font-size: 11px;
   }
 
   .roulette-actions {
