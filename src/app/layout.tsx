@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { LibrarySync } from "@/components/LibrarySync";
+import { YandexMetrika } from "@/components/YandexMetrika";
 import { siteName, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -34,6 +36,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <LibrarySync />
         {children}
+        <Suspense fallback={null}>
+          <YandexMetrika />
+        </Suspense>
       </body>
     </html>
   );
