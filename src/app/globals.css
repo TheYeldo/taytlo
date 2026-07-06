@@ -434,7 +434,7 @@ main {
   display: inline-flex;
   min-height: 28px;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   border: 1px solid rgba(255, 191, 92, 0.34);
   border-radius: 7px;
   padding: 0 9px;
@@ -444,6 +444,10 @@ main {
   font-weight: 900;
 }
 
+.rating {
+  white-space: nowrap;
+}
+
 .rating-muted {
   border-color: var(--line);
   color: var(--muted);
@@ -451,7 +455,15 @@ main {
 }
 
 .rating small {
-  margin-left: 2px;
+  margin-left: 4px;
+  padding-left: 5px;
+  border-left: 1px solid rgba(255, 191, 92, 0.28);
+}
+
+.rating-source {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 1000;
 }
 
 .card-chip,
@@ -470,18 +482,19 @@ main {
   max-width: 100%;
   justify-self: start;
   justify-content: flex-start;
-  overflow: hidden;
-  overflow-wrap: anywhere;
+  overflow: visible;
+  overflow-wrap: normal;
+  word-break: keep-all;
   text-align: left;
   text-overflow: unset;
   white-space: normal;
-  line-height: 1.2;
-  padding-block: 5px;
+  line-height: 1.25;
+  padding: 5px 8px;
 }
 
 .card-chip-stream {
   border-color: rgba(66, 232, 180, 0.32);
-  color: var(--accent);
+  color: var(--mint);
   background: rgba(66, 232, 180, 0.1);
   white-space: nowrap;
 }

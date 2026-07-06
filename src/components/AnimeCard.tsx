@@ -3,6 +3,21 @@ import type { Anime } from "@/lib/types";
 import { RatingBadge } from "./RatingBadge";
 import { SafeImage } from "./SafeImage";
 
+function episodeMeta(anime: Anime) {
+  if (anime.episodes && anime.episodes > 0) return `${anime.episodes} серий`;
+
+  const type = anime.type.toLocaleLowerCase("ru");
+  if (type.includes("movie") || type.includes("фильм")) return "фильм";
+  if (type.includes("special") || type.includes("спец")) return "спецвыпуск";
+  if (type.includes("ova") || type.includes("ona")) return anime.type;
+
+  return "серии уточняются";
+}
+
+function yearMeta(anime: Anime) {
+  return anime.year ? String(anime.year) : "год уточняется";
+}
+
 export function AnimeCard({ anime }: { anime: Anime }) {
   const chipLabel = anime.genres[0] || anime.franchise;
   const hasEpisodes = Boolean(anime.aniLibriaReleaseId);
@@ -17,7 +32,7 @@ export function AnimeCard({ anime }: { anime: Anime }) {
           {anime.titleRu}
         </Link>
         <p className="card-meta">
-          {anime.type} · {anime.year || "год неизвестен"} · {anime.episodes || "?"} серий
+          {anime.type} · {yearMeta(anime)} · {episodeMeta(anime)}
         </p>
         <div className="card-bottom">
           <RatingBadge rating={anime.shikimori} />

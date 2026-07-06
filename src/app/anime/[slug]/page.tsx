@@ -10,7 +10,7 @@ import { SafeImage } from "@/components/SafeImage";
 import SplitText from "@/components/SplitText";
 import { UserLibraryControls } from "@/components/UserLibraryControls";
 import { getAnimeBySlug, getCatalog, getRelatedAnime } from "@/lib/catalog";
-import { animeDescription, animeJsonLd, animeSynopsis, siteName } from "@/lib/seo";
+import { animeDescription, animeJsonLd, animeSynopsis, siteName, siteUrl } from "@/lib/seo";
 import { getUpcomingSchedule } from "@/lib/schedule";
 import type { Anime } from "@/lib/types";
 
@@ -34,15 +34,37 @@ function formatDate(value: string) {
   }).format(new Date(time));
 }
 
+function episodeCountLabel(anime: Anime) {
+  if (anime.episodes && anime.episodes > 0) return `${anime.episodes} серий`;
+
+  const type = anime.type.toLocaleLowerCase("ru");
+  if (type.includes("movie") || type.includes("фильм")) return "полнометражный фильм";
+  if (type.includes("special") || type.includes("спец")) return "спецвыпуск";
+  if (type.includes("ova") || type.includes("ona")) return anime.type;
+
+  return "серии уточняются";
+}
+
+function releaseLabel(anime: Anime) {
+  return anime.aniLibriaReleaseId ? "серии доступны через AniLibria" : "серии проверяются по легальным источникам";
+}
+
+function nextEpisodeLabel(nextEpisode: ReturnType<typeof findNextEpisode>) {
+  if (!(nextEpisode?.airAt || nextEpisode?.nextEpisodeAt)) return "актуального анонса нет";
+  const episode = nextEpisode.episodeNumber || nextEpisode.episode;
+  const date = formatDate(nextEpisode.airAt || nextEpisode.nextEpisodeAt || "");
+  return episode ? `${episode} серия · ${date}` : `дата выхода · ${date}`;
+}
+
 function makeInfoRows(anime: Anime, nextEpisode: ReturnType<typeof findNextEpisode>) {
   return [
     ["Тип", anime.type || "Аниме"],
     ["Год", anime.year ? String(anime.year) : "Неизвестно"],
-    ["Серии", anime.episodes ? `${anime.episodes} серий` : "Серии уточняются"],
+    ["Серии", episodeCountLabel(anime)],
     ["Статус", anime.status || "Неизвестно"],
     ["Франшиза", anime.franchise || "Отдельный тайтл"],
     ["Жанры", anime.genres.join(", ") || "Жанры уточняются"],
-    ["Озвучка/релиз", anime.aniLibriaReleaseId ? "AniLibria" : "По доступным источникам"],
+    ["Озвучка/релиз", releaseLabel(anime)],
     [
       "Shikimori",
       anime.shikimori?.score
@@ -51,9 +73,7 @@ function makeInfoRows(anime: Anime, nextEpisode: ReturnType<typeof findNextEpiso
     ],
     [
       "Следующая серия",
-      nextEpisode?.airAt || nextEpisode?.nextEpisodeAt
-        ? `${nextEpisode.episodeNumber || nextEpisode.episode || "?"} серия · ${formatDate(nextEpisode.airAt || nextEpisode.nextEpisodeAt || "")}`
-        : "Актуального анонса нет"
+      nextEpisodeLabel(nextEpisode)
     ]
   ];
 }
@@ -100,14 +120,28 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: AnimePageProps): Metadata {
   const anime = getAnimeBySlug(params.slug);
   if (!anime) return {};
+  const url = `${siteUrl()}/anime/${anime.slug}`;
+  const description = animeDescription(anime);
+  const image = anime.image.startsWith("http") ? anime.image : `${siteUrl()}${anime.image}`;
 
   return {
     title: `${anime.titleRu} смотреть онлайн, рейтинг и серии`,
-    description: animeDescription(anime),
+    description,
+    alternates: {
+      canonical: url
+    },
     openGraph: {
       title: `${anime.titleRu} | ${siteName}`,
-      description: animeDescription(anime),
-      images: [anime.image]
+      description,
+      url,
+      siteName,
+      images: [{ url: image, alt: anime.titleRu }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${anime.titleRu} | ${siteName}`,
+      description,
+      images: [image]
     }
   };
 }
@@ -127,6 +161,7 @@ export default function AnimePage({ params }: AnimePageProps) {
   const activity = activityBars(anime);
   const ratingDistribution = ratingBars(anime);
   const nextEpisodeAt = nextEpisode?.airAt || nextEpisode?.nextEpisodeAt || "";
+  const hasAniLibriaEpisodes = Boolean(anime.aniLibriaReleaseId);
 
   return (
     <main className="anime-detail-page">
@@ -136,10 +171,10 @@ export default function AnimePage({ params }: AnimePageProps) {
         <div className="detail-poster-column">
           <div className="detail-poster-frame">
             <SafeImage className="detail-poster" src={anime.image} alt={anime.titleRu} />
-            <span>{anime.episodes ? `${anime.episodes} серий` : anime.type}</span>
+            <span>{episodeCountLabel(anime)}</span>
           </div>
           <a className="detail-watch-cta" href="#episodes">
-            Смотреть онлайн
+            {hasAniLibriaEpisodes ? "Смотреть серии" : "Проверить серии"}
           </a>
           {anime.aniLibriaReleaseId ? (
             <a className="detail-source-cta" href={`https://anilibria.top/release/id${anime.aniLibriaReleaseId}.html`} target="_blank" rel="noreferrer">
@@ -175,7 +210,7 @@ export default function AnimePage({ params }: AnimePageProps) {
             </span>
             <span>
               <strong>{anime.shikimori?.votes ? formatNumber(anime.shikimori.votes) : "SH"}</strong>
-              оценок
+              оценок Shikimori
             </span>
           </div>
 
