@@ -430,7 +430,8 @@ main {
 
 .rating,
 .card-chip,
-.tag-row span {
+.tag-row span,
+.tag-row a {
   display: inline-flex;
   min-height: 28px;
   align-items: center;
@@ -467,7 +468,8 @@ main {
 }
 
 .card-chip,
-.tag-row span {
+.tag-row span,
+.tag-row a {
   border-color: rgba(108, 183, 255, 0.26);
   color: var(--blue);
   background: rgba(108, 183, 255, 0.08);
@@ -499,7 +501,8 @@ main {
   white-space: nowrap;
 }
 
-.tag-row span {
+.tag-row span,
+.tag-row a {
   max-width: 100%;
 }
 
@@ -646,6 +649,30 @@ main {
   position: sticky;
   top: 92px;
   align-self: start;
+}
+
+.detail-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.detail-breadcrumbs a {
+  color: var(--mint);
+  transition: color 160ms ease;
+}
+
+.detail-breadcrumbs a:hover,
+.detail-breadcrumbs a:focus-visible {
+  color: var(--blue);
+}
+
+.detail-breadcrumbs span {
+  color: color-mix(in srgb, var(--muted) 58%, transparent);
 }
 
 .detail-poster-frame {

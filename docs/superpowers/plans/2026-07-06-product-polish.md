@@ -47,3 +47,13 @@
 - [ ] Typecheck passes.
 - [ ] Production build passes.
 - [ ] Review `git diff --check`.
+
+### Task 5: Detail Navigation SEO
+
+**Files:**
+- Modify: `src/app/anime/[slug]/page.tsx`
+- Modify: `src/app/globals.css`
+
+- [ ] Add visible breadcrumbs from Taytlo to catalog to franchise.
+- [ ] Make anime genre tags link back to filtered catalog pages.
+- [ ] Add `BreadcrumbList` structured data alongside existing anime JSON-LD.

@@ -56,6 +56,33 @@ function nextEpisodeLabel(nextEpisode: ReturnType<typeof findNextEpisode>) {
   return episode ? `${episode} серия · ${date}` : `дата выхода · ${date}`;
 }
 
+function breadcrumbJsonLd(anime: Anime) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: siteName,
+        item: siteUrl()
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Каталог аниме",
+        item: `${siteUrl()}/#catalog`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: anime.titleRu,
+        item: `${siteUrl()}/anime/${anime.slug}`
+      }
+    ]
+  };
+}
+
 function makeInfoRows(anime: Anime, nextEpisode: ReturnType<typeof findNextEpisode>) {
   return [
     ["Тип", anime.type || "Аниме"],
@@ -162,10 +189,11 @@ export default function AnimePage({ params }: AnimePageProps) {
   const ratingDistribution = ratingBars(anime);
   const nextEpisodeAt = nextEpisode?.airAt || nextEpisode?.nextEpisodeAt || "";
   const hasAniLibriaEpisodes = Boolean(anime.aniLibriaReleaseId);
+  const structuredData = [jsonLd, breadcrumbJsonLd(anime)];
 
   return (
     <main className="anime-detail-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
 
       <section className="anime-detail-hero">
         <div className="detail-poster-column">
@@ -184,9 +212,17 @@ export default function AnimePage({ params }: AnimePageProps) {
         </div>
 
         <div className="detail-info-column">
-          <Link className="back-link" href="/">
-            ← В каталог
-          </Link>
+          <nav className="detail-breadcrumbs" aria-label="Навигация по странице">
+            <Link href="/">Taytlo</Link>
+            <span>/</span>
+            <Link href="/#catalog">Каталог</Link>
+            {anime.franchise ? (
+              <>
+                <span>/</span>
+                <Link href={`/?franchise=${encodeURIComponent(anime.franchise)}#catalog`}>{anime.franchise}</Link>
+              </>
+            ) : null}
+          </nav>
           <div className="detail-title-row">
             <RatingBadge rating={anime.shikimori} />
             <div>
@@ -225,7 +261,9 @@ export default function AnimePage({ params }: AnimePageProps) {
 
           <div className="tag-row detail-tags">
             {anime.genres.map((genre) => (
-              <span key={genre}>{genre}</span>
+              <Link key={genre} href={`/?genre=${encodeURIComponent(genre)}#catalog`}>
+                {genre}
+              </Link>
             ))}
           </div>
         </div>
