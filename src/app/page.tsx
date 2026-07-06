@@ -127,7 +127,9 @@ export default function HomePage({ searchParams }: HomeProps) {
             </div>
             {result.hasMore ? (
               <div className="load-more">
-                <Link href={`/?${loadMoreParams.toString()}#catalog`}>Показать ещё</Link>
+                <Link href={`/?${loadMoreParams.toString()}`} scroll={false}>
+                  Показать ещё
+                </Link>
               </div>
             ) : null}
           </>

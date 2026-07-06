@@ -1,3 +1,8 @@
+"use client";
+
+import type { Route } from "next";
+import { useRouter } from "next/navigation";
+import type { FormEvent } from "react";
 import type { CatalogQuery } from "@/lib/types";
 
 type Props = {
@@ -7,8 +12,25 @@ type Props = {
 };
 
 export function SearchFilters({ genres, franchises, query }: Props) {
+  const router = useRouter();
+
+  function submitFilters(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const params = new URLSearchParams();
+    for (const [key, value] of formData.entries()) {
+      const text = String(value).trim();
+      if (!text) continue;
+      params.set(key, key === "limit" ? "24" : text);
+    }
+
+    const href = `/${params.toString() ? `?${params.toString()}` : ""}` as Route;
+    router.push(href, { scroll: false });
+  }
+
   return (
-    <form className="filters" action="/" method="get">
+    <form className="filters" action="/" method="get" onSubmit={submitFilters}>
       <label className="filters-search">
         <span>Поиск</span>
         <input name="search" defaultValue={query.search || ""} placeholder="Наруто, Фрирен, Блю Лок" />
