@@ -5,6 +5,7 @@ import { randomBytes } from "node:crypto";
 import { activeStoreName, getCurrentUser } from "./account-store";
 import { getAnimeBySlug } from "./catalog";
 import { getPrisma } from "./prisma";
+import { ensureAnimeRowBySlug } from "./prisma-anime";
 
 export type PublicEpisodeComment = {
   id: string;
@@ -50,47 +51,6 @@ async function readDevComments(): Promise<DevCommentsDb> {
 async function writeDevComments(db: DevCommentsDb) {
   await fs.mkdir(path.dirname(devCommentsPath), { recursive: true });
   await fs.writeFile(devCommentsPath, `${JSON.stringify(db, null, 2)}\n`, "utf8");
-}
-
-async function ensureAnimeRow(slug: string) {
-  const anime = getAnimeBySlug(slug);
-  if (!anime) return null;
-
-  const prisma = getPrisma();
-  return prisma.anime.upsert({
-    where: { slug: anime.slug },
-    update: {
-      title: anime.title,
-      titleRu: anime.titleRu,
-      type: anime.type,
-      year: anime.year,
-      episodes: anime.episodes,
-      synopsis: anime.synopsis,
-      posterUrl: anime.image,
-      franchise: anime.franchise,
-      genres: anime.genres,
-      status: anime.status,
-      shikimoriScore: anime.shikimori?.score,
-      shikimoriVotes: anime.shikimori?.votes,
-      popularityBase: anime.popularityBase + anime.requestBase
-    },
-    create: {
-      slug: anime.slug,
-      title: anime.title,
-      titleRu: anime.titleRu,
-      type: anime.type,
-      year: anime.year,
-      episodes: anime.episodes,
-      synopsis: anime.synopsis,
-      posterUrl: anime.image,
-      franchise: anime.franchise,
-      genres: anime.genres,
-      status: anime.status,
-      shikimoriScore: anime.shikimori?.score,
-      shikimoriVotes: anime.shikimori?.votes,
-      popularityBase: anime.popularityBase + anime.requestBase
-    }
-  });
 }
 
 export async function getEpisodeComments(input: { slug: string; episodeNumber?: unknown }) {
@@ -151,7 +111,7 @@ export async function addEpisodeComment(input: { slug: string; episodeNumber?: u
   const episodeNumber = cleanEpisodeNumber(input.episodeNumber);
 
   if (usePrismaStore()) {
-    const animeRow = await ensureAnimeRow(anime.slug);
+    const animeRow = await ensureAnimeRowBySlug(anime.slug);
     if (!animeRow) return { status: "not-found" as const };
 
     const prisma = getPrisma();

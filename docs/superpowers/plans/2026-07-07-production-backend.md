@@ -58,3 +58,17 @@
 - [ ] Prisma client generation passes.
 - [ ] TypeScript passes.
 - [ ] Production build passes.
+
+### Task 6: Normalized User Activity Tables
+
+**Files:**
+- Create: `src/lib/prisma-anime.ts`
+- Modify: `src/lib/prisma-store.ts`
+- Modify: `src/lib/user-comments.ts`
+- Modify: `src/lib/backend-health.ts`
+- Modify: `src/app/admin/page.tsx`
+
+- [ ] Add a shared helper that upserts catalog anime into the Prisma `Anime` table.
+- [ ] Keep `UserLibrary` JSON for compatibility while also syncing `Favorite`, `WatchListItem`, and `WatchProgress`.
+- [ ] Reuse the shared anime helper for episode comments.
+- [ ] Expose normalized table counts in backend health and admin UI.

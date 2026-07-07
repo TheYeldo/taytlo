@@ -134,6 +134,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             комментариев
           </span>
           <span>
+            <strong>{databaseCounts?.favorites ?? 0}</strong>
+            избранных
+          </span>
+          <span>
             <strong>{databaseCounts?.progress ?? 0}</strong>
             прогресс
           </span>

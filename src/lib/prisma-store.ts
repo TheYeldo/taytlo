@@ -1,6 +1,8 @@
 import "server-only";
 import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import type { WatchStatus } from "@prisma/client";
 import { getPrisma } from "./prisma";
+import { ensureAnimeRowByCatalogId } from "./prisma-anime";
 import { getSessionToken } from "./session-cookie";
 import {
   cleanRecord,
@@ -65,6 +67,99 @@ function normalizeLibrary(row: {
     comments: jsonObject(row.comments) as Record<string, string[]>,
     updatedAt: row.updatedAt.toISOString()
   };
+}
+
+function normalizeWatchStatus(value: string): WatchStatus | null {
+  const normalized = value.toLocaleLowerCase("ru");
+  if (normalized === "watching") return "WATCHING";
+  if (normalized === "completed") return "COMPLETED";
+  if (normalized === "dropped") return "DROPPED";
+  if (normalized === "planned") return "PLANNED";
+  return null;
+}
+
+async function syncFavorites(userId: string, favorites: string[]) {
+  const prisma = getPrisma();
+  await prisma.favorite.deleteMany({ where: { userId } });
+
+  for (const catalogId of favorites) {
+    const anime = await ensureAnimeRowByCatalogId(catalogId);
+    if (!anime) continue;
+    await prisma.favorite.upsert({
+      where: {
+        userId_animeId: {
+          userId,
+          animeId: anime.id
+        }
+      },
+      update: {},
+      create: {
+        userId,
+        animeId: anime.id
+      }
+    });
+  }
+}
+
+async function syncWatchStatuses(userId: string, watchStatuses: Record<string, string>) {
+  const prisma = getPrisma();
+  await prisma.watchListItem.deleteMany({ where: { userId } });
+
+  for (const [catalogId, rawStatus] of Object.entries(watchStatuses)) {
+    const status = normalizeWatchStatus(rawStatus);
+    if (!status) continue;
+    const anime = await ensureAnimeRowByCatalogId(catalogId);
+    if (!anime) continue;
+    await prisma.watchListItem.upsert({
+      where: {
+        userId_animeId: {
+          userId,
+          animeId: anime.id
+        }
+      },
+      update: { status },
+      create: {
+        userId,
+        animeId: anime.id,
+        status
+      }
+    });
+  }
+}
+
+async function syncProgress(userId: string, progress: Record<string, ProgressEntry>) {
+  const prisma = getPrisma();
+
+  for (const [catalogId, entry] of Object.entries(progress)) {
+    const anime = await ensureAnimeRowByCatalogId(catalogId);
+    if (!anime) continue;
+    await prisma.watchProgress.upsert({
+      where: {
+        userId_animeId_episodeNumber: {
+          userId,
+          animeId: anime.id,
+          episodeNumber: entry.episodeNumber
+        }
+      },
+      update: {
+        positionSec: Math.max(0, Math.floor(entry.seconds || 0)),
+        provider: "taytlo"
+      },
+      create: {
+        userId,
+        animeId: anime.id,
+        episodeNumber: entry.episodeNumber,
+        positionSec: Math.max(0, Math.floor(entry.seconds || 0)),
+        provider: "taytlo"
+      }
+    });
+  }
+}
+
+async function syncNormalizedLibrary(userId: string, next: UserLibrary, input: Partial<UserLibrary>) {
+  if (input.favorites !== undefined) await syncFavorites(userId, next.favorites);
+  if (input.watchStatuses !== undefined) await syncWatchStatuses(userId, next.watchStatuses);
+  if (input.progress !== undefined) await syncProgress(userId, next.progress);
 }
 
 async function cleanExpiredSessions() {
@@ -212,6 +307,8 @@ export async function saveCurrentLibrary(input: Partial<UserLibrary>) {
       comments: next.comments
     }
   });
+
+  await syncNormalizedLibrary(user.id, next, input);
 
   return { user, library: normalizeLibrary(library) };
 }
