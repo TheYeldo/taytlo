@@ -2,6 +2,8 @@ import { isAdminTokenValid } from "@/lib/admin";
 import { getBackendHealth } from "@/lib/backend-health";
 import { getCatalogStats } from "@/lib/catalog";
 import { getUpcomingSchedule } from "@/lib/schedule";
+import { listAdminEpisodeComments } from "@/lib/user-comments";
+import AdminCommentModeration from "@/components/AdminCommentModeration";
 
 export const dynamic = "force-dynamic";
 
@@ -43,7 +45,7 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
 
   const stats = getCatalogStats();
   const schedule = getUpcomingSchedule(50);
-  const health = await getBackendHealth();
+  const [health, recentComments] = await Promise.all([getBackendHealth(), listAdminEpisodeComments(12)]);
   const storeName = health.store;
   const databaseCounts = health.database.counts;
   const ratingCoverage = stats.total ? stats.withRating / stats.total : 0;
@@ -134,6 +136,10 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
             комментариев
           </span>
           <span>
+            <strong>{databaseCounts?.hiddenComments ?? 0}</strong>
+            скрыто
+          </span>
+          <span>
             <strong>{databaseCounts?.favorites ?? 0}</strong>
             избранных
           </span>
@@ -180,6 +186,14 @@ export default async function AdminPage({ searchParams }: AdminPageProps) {
           Для продакшена нужен `DATABASE_URL` от Neon/Postgres и `TAYTLO_STORE=prisma` в Vercel. Тогда аккаунты,
           история, комментарии и списки будут храниться на сервере, а не в локальном JSON.
         </p>
+      </section>
+
+      <section className="admin-panel">
+        <div className="section-title">
+          <span>Комментарии</span>
+          <h2>Модерация обсуждений</h2>
+        </div>
+        <AdminCommentModeration initialComments={recentComments} token={searchParams.token} />
       </section>
     </main>
   );

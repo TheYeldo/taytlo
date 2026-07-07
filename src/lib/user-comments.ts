@@ -16,8 +16,18 @@ export type PublicEpisodeComment = {
   createdAt: string;
 };
 
+export type AdminEpisodeComment = PublicEpisodeComment & {
+  animeTitleRu: string;
+  isHidden: boolean;
+  userEmail?: string | null;
+};
+
+type DevEpisodeComment = PublicEpisodeComment & {
+  isHidden?: boolean;
+};
+
 type DevCommentsDb = {
-  comments: PublicEpisodeComment[];
+  comments: DevEpisodeComment[];
 };
 
 const devCommentsPath = path.join(process.cwd(), "data", "dev-comments.json");
@@ -94,8 +104,138 @@ export async function getEpisodeComments(input: { slug: string; episodeNumber?: 
 
   const db = await readDevComments();
   return db.comments
-    .filter((comment) => comment.animeSlug === input.slug && comment.episodeNumber === episodeNumber)
-    .slice(-100);
+    .filter((comment) => comment.animeSlug === input.slug && comment.episodeNumber === episodeNumber && !comment.isHidden)
+    .slice(-100)
+    .map((comment) => ({
+      id: comment.id,
+      animeSlug: comment.animeSlug,
+      episodeNumber: comment.episodeNumber,
+      authorName: comment.authorName,
+      body: comment.body,
+      createdAt: comment.createdAt
+    }));
+}
+
+export async function listAdminEpisodeComments(limit = 30): Promise<AdminEpisodeComment[]> {
+  const parsedLimit = Number.isFinite(limit) ? Math.floor(limit) : 30;
+  const take = Math.max(1, Math.min(parsedLimit, 100));
+
+  if (usePrismaStore()) {
+    const prisma = getPrisma();
+    const comments = await prisma.comment.findMany({
+      include: {
+        anime: {
+          select: {
+            slug: true,
+            titleRu: true,
+            title: true
+          }
+        },
+        user: {
+          select: {
+            name: true,
+            email: true
+          }
+        }
+      },
+      orderBy: { createdAt: "desc" },
+      take
+    });
+
+    return comments.map((comment) => ({
+      id: comment.id,
+      animeSlug: comment.anime.slug,
+      animeTitleRu: comment.anime.titleRu || comment.anime.title,
+      episodeNumber: comment.episodeNumber,
+      authorName: comment.user.name || comment.user.email.split("@")[0] || "Taytlo user",
+      userEmail: comment.user.email,
+      body: comment.body,
+      isHidden: comment.isHidden,
+      createdAt: comment.createdAt.toISOString()
+    }));
+  }
+
+  const db = await readDevComments();
+  return db.comments
+    .slice(-take)
+    .reverse()
+    .map((comment) => {
+      const anime = getAnimeBySlug(comment.animeSlug);
+      return {
+        id: comment.id,
+        animeSlug: comment.animeSlug,
+        animeTitleRu: anime?.titleRu || anime?.title || comment.animeSlug,
+        episodeNumber: comment.episodeNumber,
+        authorName: comment.authorName,
+        body: comment.body,
+        isHidden: Boolean(comment.isHidden),
+        createdAt: comment.createdAt
+      };
+    });
+}
+
+export async function setEpisodeCommentHidden(input: { id: string; isHidden: boolean }) {
+  if (usePrismaStore()) {
+    const prisma = getPrisma();
+    const comment = await prisma.comment
+      .update({
+        where: { id: input.id },
+        data: { isHidden: input.isHidden },
+        include: {
+          anime: {
+            select: {
+              slug: true,
+              titleRu: true,
+              title: true
+            }
+          },
+          user: {
+            select: {
+              name: true,
+              email: true
+            }
+          }
+        }
+      })
+      .catch(() => null);
+
+    if (!comment) return null;
+
+    return {
+      id: comment.id,
+      animeSlug: comment.anime.slug,
+      animeTitleRu: comment.anime.titleRu || comment.anime.title,
+      episodeNumber: comment.episodeNumber,
+      authorName: comment.user.name || comment.user.email.split("@")[0] || "Taytlo user",
+      userEmail: comment.user.email,
+      body: comment.body,
+      isHidden: comment.isHidden,
+      createdAt: comment.createdAt.toISOString()
+    } satisfies AdminEpisodeComment;
+  }
+
+  const db = await readDevComments();
+  const index = db.comments.findIndex((comment) => comment.id === input.id);
+  if (index < 0) return null;
+
+  db.comments[index] = {
+    ...db.comments[index],
+    isHidden: input.isHidden
+  };
+  await writeDevComments(db);
+
+  const comment = db.comments[index];
+  const anime = getAnimeBySlug(comment.animeSlug);
+  return {
+    id: comment.id,
+    animeSlug: comment.animeSlug,
+    animeTitleRu: anime?.titleRu || anime?.title || comment.animeSlug,
+    episodeNumber: comment.episodeNumber,
+    authorName: comment.authorName,
+    body: comment.body,
+    isHidden: Boolean(comment.isHidden),
+    createdAt: comment.createdAt
+  } satisfies AdminEpisodeComment;
 }
 
 export async function addEpisodeComment(input: { slug: string; episodeNumber?: unknown; body: unknown }) {

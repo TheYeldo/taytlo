@@ -1954,6 +1954,84 @@ main {
   color: var(--muted);
 }
 
+.admin-comment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-comment {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.45fr) minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.admin-comment.is-hidden {
+  opacity: 0.68;
+}
+
+.admin-comment-meta,
+.admin-comment-body,
+.admin-comment-actions {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.admin-comment-meta span {
+  width: fit-content;
+  border: 1px solid rgba(66, 232, 180, 0.28);
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--mint);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.admin-comment.is-hidden .admin-comment-meta span {
+  border-color: rgba(255, 184, 77, 0.28);
+  color: var(--gold);
+}
+
+.admin-comment-meta b,
+.admin-comment-body a {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.admin-comment-meta small,
+.admin-comment-body span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-comment-body p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.admin-comment-actions button {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: rgba(66, 232, 180, 0.1);
+  color: var(--text);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.admin-comment-actions button:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
 .watch-hub-next,
 .library-controls,
 .episode-shell {
@@ -3372,6 +3450,16 @@ main {
 
   .admin-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-comment {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .admin-comment-actions button {
+    width: 100%;
   }
 
   .watch-hub-grid {

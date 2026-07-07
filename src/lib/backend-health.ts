@@ -17,6 +17,7 @@ type BackendDatabaseHealth = {
     anime: number;
     favorites: number;
     comments: number;
+    hiddenComments: number;
     progress: number;
     watchlist: number;
   } | null;
@@ -45,13 +46,14 @@ export async function getBackendHealth() {
     try {
       const prisma = getPrisma();
       await prisma.$queryRaw`SELECT 1`;
-      const [users, sessions, libraries, anime, favorites, comments, progress, watchlist] = await Promise.all([
+      const [users, sessions, libraries, anime, favorites, comments, hiddenComments, progress, watchlist] = await Promise.all([
         prisma.user.count(),
         prisma.session.count(),
         prisma.userLibrary.count(),
         prisma.anime.count(),
         prisma.favorite.count(),
         prisma.comment.count({ where: { isHidden: false } }),
+        prisma.comment.count({ where: { isHidden: true } }),
         prisma.watchProgress.count(),
         prisma.watchListItem.count()
       ]);
@@ -65,6 +67,7 @@ export async function getBackendHealth() {
         anime,
         favorites,
         comments,
+        hiddenComments,
         progress,
         watchlist
       };
