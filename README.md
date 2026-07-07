@@ -59,9 +59,19 @@ NEXT_PUBLIC_SITE_URL="https://taytlo.com"
 Then prepare Prisma:
 
 ```bat
-pnpm db:generate
-pnpm db:push
+pnpm run db:deploy
+pnpm run db:seed
 ```
+
+`db:deploy` applies committed Prisma migrations. `db:seed` syncs `data/catalog.json` into PostgreSQL so admin health checks, comments and user activity can reference anime rows immediately.
+
+For a fresh production database, the combined command is:
+
+```bat
+pnpm run backend:prepare
+```
+
+Admin health is available through the protected admin area and `/api/admin/health`. Keep the admin token in environment variables only.
 
 ## Deployment
 
@@ -73,6 +83,15 @@ Recommended Vercel settings:
 - Build command: `pnpm run build`
 - Install command: `pnpm install`
 - Production branch: `main`
+
+After creating a production PostgreSQL database, add these environment variables in Vercel:
+
+```text
+TAYTLO_STORE=prisma
+DATABASE_URL=<your production postgres url>
+NEXT_PUBLIC_SITE_URL=https://taytlo.com
+ADMIN_TOKEN=<long private token>
+```
 
 ## SEO
 

@@ -1,5 +1,5 @@
 import { isAdminTokenValid } from "@/lib/admin";
-import { activeStoreName } from "@/lib/account-store";
+import { getBackendHealth } from "@/lib/backend-health";
 import { getCatalogStats } from "@/lib/catalog";
 import { getUpcomingSchedule } from "@/lib/schedule";
 
@@ -26,7 +26,7 @@ function formatDate(value: string) {
   }).format(date);
 }
 
-export default function AdminPage({ searchParams }: AdminPageProps) {
+export default async function AdminPage({ searchParams }: AdminPageProps) {
   const allowed = isAdminTokenValid(searchParams.token);
 
   if (!allowed) {
@@ -43,11 +43,22 @@ export default function AdminPage({ searchParams }: AdminPageProps) {
 
   const stats = getCatalogStats();
   const schedule = getUpcomingSchedule(50);
-  const storeName = activeStoreName();
+  const health = await getBackendHealth();
+  const storeName = health.store;
+  const databaseCounts = health.database.counts;
   const ratingCoverage = stats.total ? stats.withRating / stats.total : 0;
   const checks = [
     { label: "ADMIN_TOKEN", ok: Boolean(process.env.ADMIN_TOKEN), note: "админка закрыта токеном" },
-    { label: "Хранилище", ok: storeName === "prisma", note: storeName === "prisma" ? "подключена база данных" : "локальный dev JSON" },
+    {
+      label: "Хранилище",
+      ok: storeName === "prisma" && health.database.ok,
+      note: storeName === "prisma" ? (health.database.ok ? "PostgreSQL подключен" : "PostgreSQL не отвечает") : "локальный dev JSON"
+    },
+    {
+      label: "DATABASE_URL",
+      ok: health.database.configured,
+      note: health.database.configured ? "переменная окружения задана" : "добавь DATABASE_URL в Vercel"
+    },
     { label: "Shikimori", ok: stats.withRating > 0, note: `${stats.withRating} тайтлов с рейтингом` },
     { label: "Календарь", ok: schedule.length > 0, note: `${schedule.length} будущих серий` },
     { label: "SITE_URL", ok: Boolean(process.env.NEXT_PUBLIC_SITE_URL), note: process.env.NEXT_PUBLIC_SITE_URL || "не задан" }
@@ -94,6 +105,48 @@ export default function AdminPage({ searchParams }: AdminPageProps) {
             </p>
           ))}
         </div>
+      </section>
+
+      <section className="admin-panel">
+        <div className="section-title">
+          <span>Backend</span>
+          <h2>PostgreSQL и данные</h2>
+        </div>
+        <div className="admin-grid">
+          <span>
+            <strong>{health.database.ok ? "OK" : "!"}</strong>
+            база
+          </span>
+          <span>
+            <strong>{health.database.latencyMs ?? "—"}</strong>
+            ms
+          </span>
+          <span>
+            <strong>{databaseCounts?.users ?? 0}</strong>
+            пользователей
+          </span>
+          <span>
+            <strong>{databaseCounts?.anime ?? 0}</strong>
+            тайтлов в БД
+          </span>
+          <span>
+            <strong>{databaseCounts?.comments ?? 0}</strong>
+            комментариев
+          </span>
+          <span>
+            <strong>{databaseCounts?.progress ?? 0}</strong>
+            прогресс
+          </span>
+          <span>
+            <strong>{databaseCounts?.watchlist ?? 0}</strong>
+            списки
+          </span>
+          <span>
+            <strong>{storeName}</strong>
+            store
+          </span>
+        </div>
+        {health.database.error ? <p className="empty">Ошибка базы: {health.database.error}</p> : null}
       </section>
 
       <section className="admin-panel">

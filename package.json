@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
@@ -11,7 +12,10 @@
     "typecheck": "tsc --noEmit",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
     "db:push": "prisma db push",
+    "db:seed": "node scripts/sync-catalog-prisma.mjs",
+    "backend:prepare": "prisma migrate deploy && node scripts/sync-catalog-prisma.mjs",
     "import:static": "node scripts/import-static-catalog.mjs",
     "import:shikimori": "node scripts/expand-catalog-shikimori.mjs",
     "link:anilibria": "node scripts/link-anilibria-releases.mjs"
