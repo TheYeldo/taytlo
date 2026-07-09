@@ -5,7 +5,18 @@ import { clearSessionCookie } from "@/lib/session-cookie";
 export const dynamic = "force-dynamic";
 
 export async function POST() {
-  await logoutCurrentSession();
-  clearSessionCookie();
-  return NextResponse.json({ ok: true });
+  try {
+    await logoutCurrentSession();
+    clearSessionCookie();
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    clearSessionCookie();
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Не удалось удалить серверную сессию"
+      },
+      { status: 200 }
+    );
+  }
 }

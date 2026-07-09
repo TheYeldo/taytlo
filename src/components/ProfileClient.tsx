@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { SafeImage } from "./SafeImage";
+import { logoutErrorMessage } from "@/lib/auth-client";
 import type { Anime } from "@/lib/types";
 
 type ProfileAnime = Pick<Anime, "id" | "slug" | "titleRu" | "image" | "shikimori">;
@@ -51,6 +52,7 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
   const [user, setUser] = useState<User | null>(null);
   const [library, setLibrary] = useState<Library>(emptyLibrary());
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [message, setMessage] = useState("");
 
   const byId = useMemo(() => new Map(catalog.map((anime) => [anime.id, anime])), [catalog]);
@@ -107,10 +109,28 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
   }
 
   async function logout() {
-    await fetch("/api/auth/logout", { method: "POST" });
-    setUser(null);
-    setLibrary(emptyLibrary());
-    window.dispatchEvent(new Event("taytlo-auth-change"));
+    if (isLoggingOut) return;
+    setIsLoggingOut(true);
+    setMessage("");
+    try {
+      const response = await fetch("/api/auth/logout", {
+        method: "POST",
+        cache: "no-store",
+        credentials: "same-origin"
+      });
+      const payload = await response.json().catch(() => ({}));
+      const nextMessage = logoutErrorMessage(response.ok, typeof payload.error === "string" ? payload.error : undefined);
+      if (nextMessage) {
+        setMessage(nextMessage);
+        return;
+      }
+      setUser(null);
+      setLibrary(emptyLibrary());
+      window.dispatchEvent(new Event("taytlo-auth-change"));
+      await refresh();
+    } finally {
+      setIsLoggingOut(false);
+    }
   }
 
   async function syncNow() {
@@ -157,8 +177,11 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
           <button type="button" onClick={syncNow}>
             Синхронизировать
           </button>
-          <button type="button" className="ghost-button" onClick={logout}>
-            Выйти
+          <button type="button" className="ghost-button" onClick={logout} disabled={isLoggingOut} aria-live="polite">
+            <span hidden={!isLoggingOut}>Выходим...</span>
+            <span hidden={isLoggingOut}>
+              Выйти
+            </span>
           </button>
         </div>
       </div>
