@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
-import { registerUser } from "@/lib/account-store";
+import { AccountStoreUnavailableError, registerUser } from "@/lib/account-store";
 import { setSessionCookie } from "@/lib/session-cookie";
+
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
@@ -13,6 +15,10 @@ export async function POST(request: Request) {
     setSessionCookie(result.token);
     return NextResponse.json({ user: result.user });
   } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : "Не удалось зарегистрироваться" }, { status: 400 });
+    const status = error instanceof AccountStoreUnavailableError ? 503 : 400;
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "Не удалось зарегистрироваться" },
+      { status }
+    );
   }
 }

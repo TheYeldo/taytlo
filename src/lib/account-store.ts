@@ -1,12 +1,25 @@
 import "server-only";
 import type { AccountStore } from "./account-types";
 import * as devStore from "./dev-store";
+import { resolveStoreMode } from "./store-mode";
 
-const prismaEnabled = process.env.TAYTLO_STORE === "prisma" || Boolean(process.env.DATABASE_URL && process.env.NODE_ENV === "production");
+const storeMode = resolveStoreMode({
+  nodeEnv: process.env.NODE_ENV,
+  requestedStore: process.env.TAYTLO_STORE,
+  databaseUrl: process.env.DATABASE_URL
+});
+
+export class AccountStoreUnavailableError extends Error {
+  constructor() {
+    super("Аккаунты временно недоступны: база данных сайта ещё не подключена");
+    this.name = "AccountStoreUnavailableError";
+  }
+}
 
 async function loadStore(): Promise<AccountStore> {
-  if (!prismaEnabled) return devStore;
-  return import("./prisma-store");
+  if (storeMode === "dev-json") return devStore;
+  if (storeMode === "prisma") return import("./prisma-store");
+  throw new AccountStoreUnavailableError();
 }
 
 export async function registerUser(input: { email: string; name: string; password: string }) {
@@ -34,5 +47,5 @@ export async function saveCurrentLibrary(input: Parameters<AccountStore["saveCur
 }
 
 export function activeStoreName() {
-  return prismaEnabled ? "prisma" : "dev-json";
+  return storeMode;
 }

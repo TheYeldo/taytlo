@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getCurrentLibrary, saveCurrentLibrary } from "@/lib/account-store";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const result = await getCurrentLibrary();
   if (!result) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

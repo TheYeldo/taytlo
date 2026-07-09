@@ -79,7 +79,7 @@ export async function getBackendHealth() {
   }
 
   return {
-    ok: store !== "prisma" || database.ok,
+    ok: store === "dev-json" || (store === "prisma" && database.ok),
     store,
     stats,
     upcomingEpisodes: upcoming.length,

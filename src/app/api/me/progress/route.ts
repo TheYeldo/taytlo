@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getCurrentLibrary, saveCurrentLibrary } from "@/lib/account-store";
 import type { HistoryEntry, ProgressEntry } from "@/lib/account-types";
 
+export const dynamic = "force-dynamic";
+
 function numberFrom(value: unknown) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : 0;
