@@ -249,7 +249,12 @@ export async function logoutCurrentSession() {
   const prisma = getPrisma();
   const token = getSessionToken();
   if (!token) return;
-  await prisma.session.deleteMany({ where: { token } });
+  const session = await prisma.session.findUnique({
+    where: { token },
+    select: { userId: true }
+  });
+  if (!session) return;
+  await prisma.session.deleteMany({ where: { userId: session.userId } });
 }
 
 export async function getCurrentLibrary() {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { SafeImage } from "./SafeImage";
-import { logoutErrorMessage } from "@/lib/auth-client";
+import { isLogoutResponseSuccessful, logoutErrorMessage } from "@/lib/auth-client";
 import type { Anime } from "@/lib/types";
 
 type ProfileAnime = Pick<Anime, "id" | "slug" | "titleRu" | "image" | "shikimori">;
@@ -119,7 +119,10 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
         credentials: "same-origin"
       });
       const payload = await response.json().catch(() => ({}));
-      const nextMessage = logoutErrorMessage(response.ok, typeof payload.error === "string" ? payload.error : undefined);
+      const nextMessage = logoutErrorMessage(
+        isLogoutResponseSuccessful(response.ok, payload.ok),
+        typeof payload.error === "string" ? payload.error : undefined
+      );
       if (nextMessage) {
         setMessage(nextMessage);
         return;
@@ -127,7 +130,7 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
       setUser(null);
       setLibrary(emptyLibrary());
       window.dispatchEvent(new Event("taytlo-auth-change"));
-      await refresh();
+      window.location.assign("/profile");
     } finally {
       setIsLoggingOut(false);
     }

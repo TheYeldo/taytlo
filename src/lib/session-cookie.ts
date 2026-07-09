@@ -17,11 +17,16 @@ export function setSessionCookie(token: string) {
 }
 
 export function clearSessionCookie() {
-  cookies().set(sessionCookieName, "", {
+  const baseOptions = {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
     path: "/",
     maxAge: 0
-  });
+  } as const;
+  const store = cookies();
+
+  store.set(sessionCookieName, "", baseOptions);
+  store.set(sessionCookieName, "", { ...baseOptions, domain: "taytlo.com" });
+  store.set(sessionCookieName, "", { ...baseOptions, domain: ".taytlo.com" });
 }

@@ -142,7 +142,9 @@ export async function logoutCurrentSession() {
   const token = getSessionToken();
   if (!token) return;
   const db = await readDb();
-  db.sessions = db.sessions.filter((session) => session.token !== token);
+  const current = db.sessions.find((session) => session.token === token);
+  if (!current) return;
+  db.sessions = db.sessions.filter((session) => session.userId !== current.userId);
   await writeDb(db);
 }
 

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { logoutErrorMessage } from "../src/lib/auth-client.ts";
+import { isLogoutResponseSuccessful, logoutErrorMessage } from "../src/lib/auth-client.ts";
 
 test("logoutErrorMessage returns empty text for successful logout", () => {
   assert.equal(logoutErrorMessage(true, undefined), "");
@@ -12,4 +12,12 @@ test("logoutErrorMessage prefers API error text when logout fails", () => {
 
 test("logoutErrorMessage has a readable fallback when logout fails without payload", () => {
   assert.equal(logoutErrorMessage(false, undefined), "Не удалось выйти из аккаунта. Попробуйте обновить страницу.");
+});
+
+test("isLogoutResponseSuccessful treats API ok:false as failed logout", () => {
+  assert.equal(isLogoutResponseSuccessful(true, false), false);
+});
+
+test("isLogoutResponseSuccessful accepts successful HTTP response without explicit API flag", () => {
+  assert.equal(isLogoutResponseSuccessful(true, undefined), true);
 });
