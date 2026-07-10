@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { isLogoutMarkerActive, logoutMarkerKey } from "@/lib/auth-client";
 
 type Library = {
   favorites: string[];
@@ -92,6 +93,11 @@ export function LibrarySync() {
   useEffect(() => {
     async function bootstrap() {
       try {
+        if (isLogoutMarkerActive(window.localStorage.getItem(logoutMarkerKey))) {
+          loggedInRef.current = false;
+          syncingRef.current = false;
+          return;
+        }
         const response = await fetch("/api/auth/me", { cache: "no-store" });
         if (!response.ok) {
           loggedInRef.current = false;
@@ -121,13 +127,22 @@ export function LibrarySync() {
       }, 700);
     }
 
+    function markLoggedOut() {
+      loggedInRef.current = false;
+      syncingRef.current = false;
+      if (timerRef.current) window.clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+
     bootstrap();
     window.addEventListener("taytlo-library-change", scheduleSave);
     window.addEventListener("taytlo-auth-change", bootstrap);
+    window.addEventListener("taytlo-logout", markLoggedOut);
     return () => {
       if (timerRef.current) window.clearTimeout(timerRef.current);
       window.removeEventListener("taytlo-library-change", scheduleSave);
       window.removeEventListener("taytlo-auth-change", bootstrap);
+      window.removeEventListener("taytlo-logout", markLoggedOut);
     };
   }, []);
 

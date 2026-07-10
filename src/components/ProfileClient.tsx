@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { SafeImage } from "./SafeImage";
-import { isLogoutResponseSuccessful, logoutErrorMessage } from "@/lib/auth-client";
+import { isLogoutMarkerActive, isLogoutResponseSuccessful, logoutErrorMessage, logoutMarkerKey } from "@/lib/auth-client";
 import type { Anime } from "@/lib/types";
 
 type ProfileAnime = Pick<Anime, "id" | "slug" | "titleRu" | "image" | "shikimori">;
@@ -64,6 +64,11 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
   async function refresh() {
     setIsLoading(true);
     try {
+      if (isLogoutMarkerActive(window.localStorage.getItem(logoutMarkerKey))) {
+        setUser(null);
+        setLibrary(emptyLibrary());
+        return;
+      }
       const response = await fetch("/api/auth/me", { cache: "no-store" });
       if (!response.ok) {
         setUser(null);
@@ -104,6 +109,7 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
       setMessage(payload.error || "Не удалось выполнить действие");
       return;
     }
+    window.localStorage.removeItem(logoutMarkerKey);
     window.dispatchEvent(new Event("taytlo-auth-change"));
     await refresh();
   }
@@ -112,6 +118,9 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
     if (isLoggingOut) return;
     setIsLoggingOut(true);
     setMessage("");
+    window.localStorage.setItem(logoutMarkerKey, String(Date.now()));
+    setUser(null);
+    setLibrary(emptyLibrary());
     try {
       const response = await fetch("/api/auth/logout", {
         method: "POST",
@@ -127,9 +136,7 @@ export function ProfileClient({ catalog }: { catalog: ProfileAnime[] }) {
         setMessage(nextMessage);
         return;
       }
-      setUser(null);
-      setLibrary(emptyLibrary());
-      window.dispatchEvent(new Event("taytlo-auth-change"));
+      window.dispatchEvent(new Event("taytlo-logout"));
       window.location.assign("/profile");
     } finally {
       setIsLoggingOut(false);
