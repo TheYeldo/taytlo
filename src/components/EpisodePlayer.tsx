@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import AnimatedList from "@/components/AnimatedList";
+import { getEpisodeNavigation } from "@/lib/episode-navigation";
 import type { AniLibriaEpisode, AniLibriaEpisodesResult } from "@/lib/types";
 
 type MiniAnime = {
@@ -303,10 +304,10 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
     setSelected(episode);
   }
 
-  const selectedEpisodeIndex = selected ? data.episodes.findIndex((episode) => episode.id === selected.id) : -1;
-  const previousEpisode = selectedEpisodeIndex > 0 ? data.episodes[selectedEpisodeIndex - 1] : null;
-  const nextEpisode =
-    selectedEpisodeIndex >= 0 && selectedEpisodeIndex < data.episodes.length - 1 ? data.episodes[selectedEpisodeIndex + 1] : null;
+  const episodeNavigation = getEpisodeNavigation(data.episodes, selected?.id);
+  const selectedEpisodeIndex = episodeNavigation.index;
+  const previousEpisode = episodeNavigation.previous;
+  const nextEpisode = episodeNavigation.next;
 
   return (
     <section className="episode-shell" id="episodes">
@@ -364,6 +365,28 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
                     Открыть на AniLibria
                   </a>
                 ) : null}
+              </div>
+              <div className="mobile-episode-switcher" aria-label="Переключение серий">
+                <button type="button" onClick={() => previousEpisode && selectEpisode(previousEpisode)} disabled={!previousEpisode}>
+                  Назад
+                </button>
+                <select
+                  value={String(selected.id)}
+                  onChange={(event) => {
+                    const episode = data.episodes.find((item) => String(item.id) === event.target.value);
+                    if (episode) selectEpisode(episode);
+                  }}
+                  aria-label="Выбрать серию"
+                >
+                  {data.episodes.map((episode) => (
+                    <option key={episode.id} value={String(episode.id)}>
+                      {episode.title ? `${episode.number}. ${episode.title}` : `Серия ${episode.number}`}
+                    </option>
+                  ))}
+                </select>
+                <button type="button" onClick={() => nextEpisode && selectEpisode(nextEpisode)} disabled={!nextEpisode}>
+                  Вперёд
+                </button>
               </div>
               <video
                 ref={videoRef}
