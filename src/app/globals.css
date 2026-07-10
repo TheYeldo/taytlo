@@ -3567,6 +3567,14 @@ main {
   .mobile-episode-switcher select {
     width: 100%;
     padding: 0 8px;
+    color-scheme: light;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-episode-switcher select option {
+    background: #ffffff;
+    color: #111827;
+    font-weight: 800;
   }
 
   .episode-row {
