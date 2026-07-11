@@ -2635,10 +2635,11 @@ main {
 
 .alternative-sources {
   display: grid;
-  gap: 10px;
+  gap: 14px;
+  margin-top: 12px;
   border: 1px solid rgba(66, 232, 180, 0.22);
-  border-radius: 14px;
-  padding: 12px;
+  border-radius: 18px;
+  padding: 16px;
   background: rgba(66, 232, 180, 0.055);
 }
 
@@ -2650,29 +2651,31 @@ main {
 }
 
 .alternative-sources > strong {
-  font-size: 18px;
-  line-height: 1.15;
+  max-width: 28rem;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .alternative-sources > p {
   margin: 0;
+  max-width: 34rem;
   color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
 
 .alternative-source-list {
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .alternative-source-card {
   display: grid;
-  gap: 5px;
+  gap: 7px;
   min-width: 0;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 14px;
+  padding: 13px;
   background: rgba(255, 255, 255, 0.045);
 }
 
@@ -2696,9 +2699,10 @@ main {
 
 .alternative-source-card em {
   justify-self: start;
+  margin-top: 2px;
   border: 1px solid rgba(66, 232, 180, 0.28);
   border-radius: 999px;
-  padding: 5px 8px;
+  padding: 6px 10px;
   color: var(--mint);
   background: rgba(66, 232, 180, 0.09);
   font-size: 11px;
@@ -3579,6 +3583,36 @@ main {
 
   .episode-list .animated-list-gradient {
     display: none;
+  }
+
+  .alternative-sources {
+    gap: 12px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .alternative-sources > strong {
+    font-size: 18px;
+  }
+
+  .alternative-sources > p {
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .alternative-source-card {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .alternative-source-card strong {
+    font-size: 12.5px;
+    line-height: 1.35;
+  }
+
+  .alternative-source-card small {
+    font-size: 11px;
+    line-height: 1.45;
   }
 
   .player-heading {
