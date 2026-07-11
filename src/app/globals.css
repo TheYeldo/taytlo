@@ -1022,72 +1022,79 @@ main {
 
 .detail-rating-card {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 138px minmax(0, 1fr);
   align-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
 .rating-orb {
   position: relative;
   isolation: isolate;
   display: grid;
+  width: 138px;
+  min-height: 138px;
   place-items: center;
-  gap: 5px;
-  min-height: 150px;
-  border: 1px solid rgba(255, 191, 92, 0.24);
+  align-content: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 191, 92, 0.28);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 50% 50%, rgba(255, 191, 92, 0.28), rgba(255, 191, 92, 0.06) 58%, transparent 61%),
-    linear-gradient(145deg, rgba(255, 191, 92, 0.08), rgba(255, 79, 179, 0.04));
+    radial-gradient(circle at 50% 36%, rgba(255, 191, 92, 0.22), transparent 45%),
+    linear-gradient(145deg, rgba(255, 191, 92, 0.12), rgba(66, 232, 180, 0.06)),
+    rgba(12, 17, 26, 0.86);
   box-shadow:
-    inset 0 0 34px rgba(255, 191, 92, 0.12),
-    0 18px 50px rgba(0, 0, 0, 0.22);
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -24px 55px rgba(0, 0, 0, 0.18),
+    0 18px 48px rgba(0, 0, 0, 0.24);
   color: var(--gold);
+  overflow: hidden;
 }
 
 .rating-orb::before {
   content: "";
   position: absolute;
-  inset: 16px;
+  inset: 9px;
   z-index: -1;
-  border: 1px solid rgba(255, 191, 92, 0.34);
   border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    repeating-conic-gradient(from -18deg, rgba(255, 191, 92, 0.42) 0 7deg, transparent 7deg 18deg),
-    radial-gradient(circle, transparent 54%, rgba(255, 191, 92, 0.16) 55% 63%, transparent 64%);
-  opacity: 0.72;
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.16), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 58%);
+  opacity: 0.95;
 }
 
 .rating-orb::after {
   content: "SH";
   position: absolute;
-  top: 18px;
+  top: 17px;
   display: grid;
-  min-width: 34px;
-  min-height: 22px;
+  min-width: 38px;
+  min-height: 24px;
   place-items: center;
-  border: 1px solid rgba(255, 191, 92, 0.42);
+  border: 1px solid rgba(255, 191, 92, 0.32);
   border-radius: 999px;
-  background: rgba(255, 191, 92, 0.12);
+  background: rgba(255, 191, 92, 0.14);
   color: var(--gold);
   font-size: 10px;
   font-weight: 1000;
+  letter-spacing: 0;
 }
 
 .rating-orb strong {
   position: relative;
   z-index: 1;
-  font-size: 42px;
+  margin-top: 12px;
+  font-size: 40px;
   line-height: 1;
-  text-shadow: 0 0 18px rgba(255, 191, 92, 0.28);
+  text-shadow: 0 0 22px rgba(255, 191, 92, 0.22);
 }
 
 .rating-orb span {
   position: relative;
   z-index: 1;
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 900;
+  color: color-mix(in srgb, var(--text) 74%, var(--gold) 26%);
+  font-size: 12px;
+  font-weight: 1000;
 }
 
 .rating-bars {
@@ -3508,13 +3515,21 @@ main {
   }
 
   .rating-orb {
-    min-height: 108px;
-    width: 108px;
+    min-height: 112px;
+    width: 112px;
     margin: 0 auto;
   }
 
   .rating-orb strong {
+    margin-top: 10px;
     font-size: 32px;
+  }
+
+  .rating-orb::after {
+    top: 13px;
+    min-width: 34px;
+    min-height: 21px;
+    font-size: 9px;
   }
 
   .character-grid {
