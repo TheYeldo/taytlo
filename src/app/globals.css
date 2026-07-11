@@ -4134,9 +4134,10 @@ main {
   }
 
   .collection-card {
-    flex: 0 0 min(78vw, 280px);
-    grid-template-columns: 24px 58px minmax(0, 1fr);
+    flex: 0 0 min(82vw, 300px);
+    grid-template-columns: 58px minmax(0, 1fr);
     min-height: 82px;
+    gap: 10px;
     border-radius: 14px;
     padding: 8px;
     scroll-snap-align: start;
@@ -4156,7 +4157,13 @@ main {
 
   .collection-copy strong {
     font-size: 13px;
+    line-height: 1.2;
     -webkit-line-clamp: 2;
+  }
+
+  .collection-copy small {
+    font-size: 11px;
+    line-height: 1.25;
   }
 
   .split-section {
