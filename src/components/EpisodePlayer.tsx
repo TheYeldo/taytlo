@@ -308,6 +308,7 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
   const selectedEpisodeIndex = episodeNavigation.index;
   const previousEpisode = episodeNavigation.previous;
   const nextEpisode = episodeNavigation.next;
+  const alternativeSources = data.alternativeSources || [];
 
   return (
     <section className="episode-shell" id="episodes">
@@ -321,6 +322,23 @@ export function EpisodePlayer({ anime }: { anime: MiniAnime }) {
           {isLoading ? <p className="empty">Загрузка серий...</p> : null}
           {!isLoading && data.state === "error" ? <p className="empty">Не удалось загрузить серии</p> : null}
           {!isLoading && data.state === "empty" ? <p className="empty">Серии пока недоступны</p> : null}
+          {!isLoading && !data.episodes.length && alternativeSources.length ? (
+            <div className="alternative-sources">
+              <span>Другие озвучки и источники</span>
+              <strong>Проверить легальные варианты</strong>
+              <p>Если AniLibria не дала серии, можно открыть поиск по площадкам, где иногда есть дубляж, субтитры или официальные загрузки.</p>
+              <div className="alternative-source-list">
+                {alternativeSources.map((source) => (
+                  <a href={source.url} target="_blank" rel="noreferrer" className="alternative-source-card" key={source.id}>
+                    <span>{source.title}</span>
+                    <strong>{source.voice}</strong>
+                    <small>{source.note}</small>
+                    <em>{source.label}</em>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
           {!isLoading && data.episodes.length ? (
             <>
               <p className="episode-summary">

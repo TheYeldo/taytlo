@@ -50,6 +50,15 @@ export type AniLibriaEpisode = {
   duration: number | null;
 };
 
+export type LegalWatchSource = {
+  id: string;
+  title: string;
+  label: string;
+  voice: string;
+  url: string;
+  note: string;
+};
+
 export type AniLibriaEpisodesResult = {
   state: "ready" | "empty" | "error";
   releaseId?: number;
@@ -60,6 +69,7 @@ export type AniLibriaEpisodesResult = {
   expectedEpisodes?: number;
   isOngoing?: boolean;
   episodes: AniLibriaEpisode[];
+  alternativeSources?: LegalWatchSource[];
   message?: string;
 };
 

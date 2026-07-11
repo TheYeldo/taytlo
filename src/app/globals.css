@@ -2633,6 +2633,79 @@ main {
   margin: 0 0 10px;
 }
 
+.alternative-sources {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(66, 232, 180, 0.22);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(66, 232, 180, 0.055);
+}
+
+.alternative-sources > span {
+  color: var(--mint);
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.alternative-sources > strong {
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.alternative-sources > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.alternative-source-list {
+  display: grid;
+  gap: 8px;
+}
+
+.alternative-source-card {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.alternative-source-card span {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.alternative-source-card strong {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.alternative-source-card small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.alternative-source-card em {
+  justify-self: start;
+  border: 1px solid rgba(66, 232, 180, 0.28);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: var(--mint);
+  background: rgba(66, 232, 180, 0.09);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .episode-list {
   display: grid;
   max-height: 540px;

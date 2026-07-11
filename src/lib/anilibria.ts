@@ -1,5 +1,6 @@
 import { getAnimeBySlug } from "./catalog";
 import type { AniLibriaEpisode, AniLibriaEpisodesResult, Anime } from "./types";
+import { getLegalWatchSources } from "./watch-sources";
 
 type AniLibriaRelease = {
   id: number;
@@ -182,10 +183,12 @@ export async function getAniLibriaEpisodes(slug: string): Promise<AniLibriaEpiso
     return { state: "empty", episodes: [], message: "Тайтл не найден" };
   }
 
+  const alternativeSources = getLegalWatchSources(anime);
+
   try {
     const releaseId = await resolveReleaseId(anime);
     if (!releaseId) {
-      return { state: "empty", episodes: [], message: "Серии пока недоступны" };
+      return { state: "empty", episodes: [], alternativeSources, message: "Серии пока недоступны" };
     }
 
     const release = await fetchRelease(releaseId);
@@ -215,12 +218,14 @@ export async function getAniLibriaEpisodes(slug: string): Promise<AniLibriaEpiso
       expectedEpisodes: Number(release.episodes_total || anime.episodes || 0) || undefined,
       isOngoing: Boolean(release.is_ongoing),
       episodes,
+      alternativeSources: episodes.length ? [] : alternativeSources,
       message: episodes.length ? undefined : "Серии пока недоступны"
     };
   } catch (error) {
     return {
       state: "error",
       episodes: [],
+      alternativeSources,
       message: error instanceof Error ? error.message : "Не удалось загрузить серии"
     };
   }
