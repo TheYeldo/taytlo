@@ -18,6 +18,7 @@ function parseArgs() {
   return {
     limit: Math.max(1, Number(args.get("limit") || 260)),
     delay: Math.max(150, Number(args.get("delay") || 260)),
+    minScore: Math.max(1, Number(args.get("min-score") || 14)),
     force: args.has("force")
   };
 }
@@ -152,8 +153,9 @@ async function searchReleases(query) {
   return Array.isArray(payload) ? payload : payload.data || [];
 }
 
-async function resolveRelease(anime, delay) {
+async function resolveRelease(anime, delay, minScore) {
   const byId = new Map();
+  const confidentScore = Math.max(18, minScore + 4);
 
   for (const term of queryTerms(anime)) {
     const releases = await searchReleases(term);
@@ -163,7 +165,7 @@ async function resolveRelease(anime, delay) {
     const currentBest = [...byId.values()]
       .map((release) => matchRelease(anime, release))
       .sort((left, right) => right.score - left.score)[0];
-    if (currentBest?.score >= 18) break;
+    if (currentBest?.score >= confidentScore) break;
     await sleep(delay);
   }
 
@@ -172,7 +174,7 @@ async function resolveRelease(anime, delay) {
     .sort((left, right) => right.score - left.score);
 
   const best = ranked[0];
-  return best?.score >= 14 ? best : null;
+  return best?.isReliable && best.score >= minScore ? best : null;
 }
 
 async function main() {
@@ -185,7 +187,7 @@ async function main() {
 
   for (const anime of targets) {
     try {
-      const match = await resolveRelease(anime, options.delay);
+      const match = await resolveRelease(anime, options.delay, options.minScore);
       if (match) {
         anime.aniLibriaReleaseId = match.release.id;
         linked.push({
@@ -207,6 +209,7 @@ async function main() {
 
   fs.writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
   console.log(`Checked: ${targets.length}`);
+  console.log(`Min score: ${options.minScore}`);
   console.log(`Linked: ${linked.length}`);
   console.log(`Skipped: ${skipped.length}`);
   console.log(`Errors: ${errors.length}`);
