@@ -185,6 +185,7 @@ main {
 .hero-actions a,
 .detail-actions a,
 .load-more a,
+.load-more button,
 .filters button,
 .not-found a {
   display: inline-flex;
@@ -201,10 +202,12 @@ main {
 
 .hero-actions a:first-child,
 .filters button,
-.load-more a {
+.load-more a,
+.load-more button {
   border-color: rgba(66, 232, 180, 0.42);
   background: linear-gradient(135deg, rgba(66, 232, 180, 0.95), rgba(108, 183, 255, 0.82));
   color: #06100d;
+  cursor: pointer;
 }
 
 .hero-stats {
@@ -4308,7 +4311,8 @@ main {
     font-size: 13px;
   }
 
-  .load-more a {
+  .load-more a,
+  .load-more button {
     width: 100%;
     min-height: 42px;
     border-radius: 14px;

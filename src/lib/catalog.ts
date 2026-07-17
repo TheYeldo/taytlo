@@ -70,7 +70,7 @@ export function getCatalogStats() {
 
 export function queryCatalog(query: CatalogQuery = {}): CatalogResult {
   const page = Math.max(1, Number(query.page || 1));
-  const limit = Math.min(60, Math.max(6, Number(query.limit || 24)));
+  const limit = Math.min(1000, Math.max(6, Number(query.limit || 24)));
   const search = normalize(query.search);
   const genre = normalize(query.genre);
   const franchise = normalize(query.franchise);

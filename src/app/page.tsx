@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { AnimeCard } from "@/components/AnimeCard";
 import { AnimeRoulette } from "@/components/AnimeRoulette";
+import { CatalogGrid } from "@/components/CatalogGrid";
 import { ExplorePanel } from "@/components/ExplorePanel";
 import { HomeCollections } from "@/components/HomeCollections";
 import { HomeDiscovery } from "@/components/HomeDiscovery";
@@ -31,9 +31,11 @@ export default function HomePage({ searchParams }: HomeProps) {
     franchise: first(searchParams.franchise),
     availability: first(searchParams.availability) === "episodes" ? "episodes" : undefined,
     sort: (first(searchParams.sort) as CatalogQuery["sort"]) || "popular",
-    limit: Number(first(searchParams.limit) || 24),
+    limit: 1000,
     page: 1
   };
+  const initialCatalogLimit = Number(first(searchParams.limit) || 24);
+  const catalogKey = [query.search || "", query.genre || "", query.franchise || "", query.availability || "", query.sort || ""].join("|");
   const result = queryCatalog(query);
   const stats = getCatalogStats();
   const schedule = getUpcomingSchedule(6);
@@ -47,12 +49,6 @@ export default function HomePage({ searchParams }: HomeProps) {
     name: franchise,
     count: catalog.filter((anime) => anime.franchise === franchise).length
   }));
-  const nextLimit = Math.min((query.limit || 24) + 24, result.total);
-  const loadMoreParams = new URLSearchParams();
-  for (const [key, value] of Object.entries({ ...query, limit: nextLimit })) {
-    if (value) loadMoreParams.set(key, String(value));
-  }
-
   return (
     <main>
       <section className="hero hero-product">
@@ -119,20 +115,7 @@ export default function HomePage({ searchParams }: HomeProps) {
         <SectionTitle eyebrow="Каталог" title="Найди, что посмотреть" />
         <SearchFilters genres={getGenres()} franchises={getFranchises()} query={query} />
         {result.items.length ? (
-          <>
-            <div className="anime-grid">
-              {result.items.map((anime) => (
-                <AnimeCard key={anime.id} anime={anime} />
-              ))}
-            </div>
-            {result.hasMore ? (
-              <div className="load-more">
-                <Link href={`/?${loadMoreParams.toString()}`} scroll={false}>
-                  Показать ещё
-                </Link>
-              </div>
-            ) : null}
-          </>
+          <CatalogGrid key={catalogKey} items={result.items} initialLimit={initialCatalogLimit} />
         ) : (
           <p className="empty">Ничего не найдено</p>
         )}
