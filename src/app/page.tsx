@@ -59,8 +59,8 @@ export default function HomePage({ searchParams }: HomeProps) {
             Удобный каталог аниме с нормальными страницами тайтлов, рейтингами Shikimori, календарем выхода серий,
             избранным, историей просмотра и подборками под настроение.
           </p>
-          <form className="hero-search" action="/" method="get">
-            <input name="search" placeholder="Найти аниме, жанр или франшизу" />
+          <form className="hero-search" action="/#catalog" method="get">
+            <input name="search" defaultValue={query.search || ""} placeholder="Найти аниме, жанр или франшизу" />
             <button type="submit">Найти</button>
           </form>
           <div className="hero-actions">
